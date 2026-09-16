@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Victrix Guard brim: the watch the wearer keeps -->
+	<HediffDef>
+		<defName>BEWH_VictrixAura</defName>
+		<label>Victrix watch</label>
+		<description>The wearer stands guard over those beside them, their shield and stance angled to cover an ally as readily as themselves.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<makesAlert>false</makesAlert>
+		<comps>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>3.9</range>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetColonists>true</onlyTargetColonists>
+				</targetingParameters>
+				<hediff>BEWH_VictrixWard</hediff>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Victrix Guard brim: what nearby allies get -->
+	<HediffDef ParentName="BEWH_StatAlteringHediffDef">
+		<defName>BEWH_VictrixWard</defName>
+		<label>Victrix ward</label>
+		<description>A Victrix Guard is covering this position. Blows meant for them land on a shield instead.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps Inherit="False">
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+
+	<!-- Internal upgrade: life support -->
+	<HediffDef>
+		<defName>BEWH_LifeSupportSystems</defName>
+		<label>life-support systems</label>
+		<description>Coagulants, counterseptics and oxygenated fluid are fed straight into the wearer's bloodstream by the suit's internal plumbing.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<makesAlert>false</makesAlert>
+		<stages>
+			<li>
+				<totalBleedFactor>0.6</totalBleedFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Internal upgrade: Sus-an auto-injector -->
+	<HediffDef>
+		<defName>BEWH_SusAnAutoInjector</defName>
+		<label>Sus-an auto-injector</label>
+		<description>A sealed reservoir wired to the suit's medicae sensors. Should the wearer fall or bleed out, it triggers the Sus-an membrane without waiting for an Apothecary.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<makesAlert>false</makesAlert>
+		<comps>
+			<li Class="Core40k.HediffCompProperties_AutoInjector">
+				<hediffToApply>BEWH_SusAnMembraneStasis</hediffToApply>
+				<triggerOnDowned>true</triggerOnDowned>
+				<triggerOnBloodLoss>0.6</triggerOnBloodLoss>
+				<rearmDelayTicks>60000</rearmDelayTicks>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

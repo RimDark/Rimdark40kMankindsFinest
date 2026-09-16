@@ -119,7 +119,18 @@ public class Building_GeneTable : Building_WorkTable
                 Find.WindowStack.Add(new Dialog_CraftPrimarchEmbryo(Map, this));
             }
         };
+
+        var embryoRecipe = Genes40kDefOf.BEWH_MakePrimarchEmbryo;
+
+        if (!embryoRecipe.AvailableNow)
+        {
+            var research = embryoRecipe.researchPrerequisite != null ? embryoRecipe.researchPrerequisite.LabelCap : embryoRecipe.LabelCap;
+            command_Action.Disable("BEWH.MankindsFinest.GeneManupulationTable.ResearchMissing".Translate(research));
+        }
+
         yield return command_Action;
+
+        yield return Genes40kUtils.ViewSangprimusPortumGizmo(Map);
     }
 
     public override void ExposeData()

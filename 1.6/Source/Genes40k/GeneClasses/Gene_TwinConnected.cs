@@ -2,10 +2,12 @@
 
 namespace Genes40k;
 
-public class Gene_TwinConnected : Gene
+public class Gene_TwinConnected : Gene, ITwinGene
 {
     private Pawn twin = null;
     public Pawn Twin => twin;
+
+    public bool TwinCapable => true;
         
     public void SetTwin(Pawn twinPawn)
     {

@@ -4,7 +4,7 @@
     <!-- Visors -->
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_Visor_1</defName>
-        <label>Visor</label>
+        <label>Apothecary visor</label>
         <description>...</description>
         <iconPath>UI/Decoration/Icons/Astartes/Headgear/BEWH_Deco_ApothecaryVisor_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/Visor/BEWH_Deco_ApothecaryVisor</drawnTextureIconPath>
@@ -45,6 +45,15 @@
         <defaultColourThree>(31,128,31)</defaultColourThree>
         <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
         <decorationType>BEWH_DecoCategory_Misc</decorationType>
+        <pawnStatOffsets>
+            <MedicalSurgerySuccessChance>0.10</MedicalSurgerySuccessChance>
+            <MedicalTendQuality>0.10</MedicalTendQuality>
+        </pawnStatOffsets>
+        <cost>
+            <Plasteel>5</Plasteel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>        <!-- MkVII Helmet -->

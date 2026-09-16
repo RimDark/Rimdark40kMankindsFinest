@@ -10,4 +10,5 @@ public class DefModExtension_GeneMatrix : DefModExtension
 
     public bool canUseChapterMaterial = false;
     public bool canUsePrimarchMaterial = false;
+    public bool usesDisciplineCustomization = false;
 }

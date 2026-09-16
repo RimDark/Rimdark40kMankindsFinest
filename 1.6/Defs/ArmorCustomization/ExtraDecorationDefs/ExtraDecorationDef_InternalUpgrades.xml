@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Internal upgrades. No texture is drawn; they spend BEWH_InternalUpgradeSlots instead. -->
+    <Core40k.ExtraDecorationDef Name="BEWH_InternalUpgradeBodyBase" Abstract="True">
+        <isInternal>true</isInternal>
+        <iconPath>UI/Gizmos/BEWH_CogIcon</iconPath>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmor</li>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+            <li>BEWH_LivingSaintArmor</li>
+        </appliesTo>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef Name="BEWH_InternalUpgradeHeadBase" Abstract="True">
+        <isInternal>true</isInternal>
+        <iconPath>UI/Gizmos/BEWH_CogIcon</iconPath>
+        <appliesTo>
+            <li>BEWH_MkIPowerArmorHelmet</li>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorChaplainHelmet</li>
+        </appliesTo>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- ===== Body ===== -->
+
+    <Core40k.ExtraDecorationDef ParentName="BEWH_InternalUpgradeBodyBase">
+        <defName>BEWH_Upgrade_ReactivePlating</defName>
+        <label>reactive plating</label>
+        <description>Ablative cells layered beneath the ceramite, fired outward by the impact they are struck with. Heavy, and it fills most of the suit's internal volume.</description>
+        <sortOrder>1</sortOrder>
+        <slotCost>3</slotCost>
+        <statOffsets>
+            <Mass>4</Mass>
+        </statOffsets>
+        <pawnStatOffsets>
+            <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+        </pawnStatOffsets>
+        <cost>
+            <Plasteel>60</Plasteel>
+            <ComponentSpacer>3</ComponentSpacer>
+            <Uranium>20</Uranium>
+        </cost>
+        <workAmount>3000</workAmount>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef ParentName="BEWH_InternalUpgradeBodyBase">
+        <defName>BEWH_Upgrade_ShockUnderlayer</defName>
+        <label>shock-absorbent underlayer</label>
+        <description>A thick impact-gel lining between plate and body glove. It turns the hammer blow into a shove, at the price of most of the suit's internal volume.</description>
+        <sortOrder>2</sortOrder>
+        <slotCost>3</slotCost>
+        <statOffsets>
+            <Mass>2</Mass>
+        </statOffsets>
+        <pawnStatOffsets>
+            <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+        </pawnStatOffsets>
+        <cost>
+            <Plasteel>60</Plasteel>
+            <ComponentSpacer>3</ComponentSpacer>
+            <Uranium>20</Uranium>
+        </cost>
+        <workAmount>3000</workAmount>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef ParentName="BEWH_InternalUpgradeBodyBase">
+        <defName>BEWH_Upgrade_LifeSupport</defName>
+        <label>life-support systems</label>
+        <description>Reservoirs of coagulant and counterseptic plumbed into the black carapace, feeding the wearer as they fight.</description>
+        <sortOrder>3</sortOrder>
+        <slotCost>2</slotCost>
+        <givesHediffs>
+            <li>BEWH_LifeSupportSystems</li>
+        </givesHediffs>
+        <cost>
+            <Plasteel>40</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Uranium>10</Uranium>
+        </cost>
+        <workAmount>2000</workAmount>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef ParentName="BEWH_InternalUpgradeBodyBase">
+        <defName>BEWH_Upgrade_SusAnInjector</defName>
+        <label>Sus-an auto-injector</label>
+        <description>Wired to the suit's medicae sensors. If the wearer falls or bleeds out, it puts them into Sus-an stasis rather than letting them die waiting for an Apothecary.</description>
+        <sortOrder>4</sortOrder>
+        <slotCost>2</slotCost>
+        <givesHediffs>
+            <li>BEWH_SusAnAutoInjector</li>
+        </givesHediffs>
+        <cost>
+            <Plasteel>40</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Uranium>10</Uranium>
+        </cost>
+        <workAmount>2000</workAmount>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef ParentName="BEWH_InternalUpgradeBodyBase">
+        <defName>BEWH_Upgrade_ToolHarness</defName>
+        <label>magnetic tool harness</label>
+        <description>Induction clamps and a servo-fed tool rack set into the suit's back and forearms, so nothing has to be fetched, held or set down.</description>
+        <sortOrder>5</sortOrder>
+        <slotCost>1</slotCost>
+        <pawnStatFactors>
+            <WorkSpeedGlobal>1.08</WorkSpeedGlobal>
+        </pawnStatFactors>
+        <cost>
+            <Plasteel>25</Plasteel>
+            <ComponentSpacer>1</ComponentSpacer>
+        </cost>
+        <workAmount>1200</workAmount>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- ===== Helmet ===== -->
+
+    <Core40k.ExtraDecorationDef ParentName="BEWH_InternalUpgradeHeadBase">
+        <defName>BEWH_Upgrade_AutoSenses</defName>
+        <label>auto-senses suite</label>
+        <description>Preysight, range-finding and target acquisition fed straight to the wearer's optic nerve.</description>
+        <sortOrder>10</sortOrder>
+        <slotCost>1</slotCost>
+        <pawnStatOffsets>
+            <ShootingAccuracyPawn>0.05</ShootingAccuracyPawn>
+        </pawnStatOffsets>
+        <cost>
+            <Plasteel>25</Plasteel>
+            <ComponentSpacer>1</ComponentSpacer>
+        </cost>
+        <workAmount>1200</workAmount>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef ParentName="BEWH_InternalUpgradeHeadBase">
+        <defName>BEWH_Upgrade_NullShield</defName>
+        <label>null-shield lining</label>
+        <description>A lattice of psychically inert alloy worked into the helm. It dulls the warp's touch, whether that touch was welcome or not.</description>
+        <sortOrder>11</sortOrder>
+        <slotCost>2</slotCost>
+        <pawnStatFactors>
+            <PsychicSensitivity>0.70</PsychicSensitivity>
+        </pawnStatFactors>
+        <incompatibleDecorations>
+            <li>BEWH_Upgrade_PsychicHood</li>
+        </incompatibleDecorations>
+        <cost>
+            <Plasteel>40</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Uranium>10</Uranium>
+        </cost>
+        <workAmount>2000</workAmount>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef ParentName="BEWH_InternalUpgradeHeadBase">
+        <defName>BEWH_Upgrade_PsychicHood</defName>
+        <label>psychic hood</label>
+        <description>A fan of psycho-conductive filaments rising from the gorget, focusing the wearer's own gift and turning aside another's.</description>
+        <sortOrder>12</sortOrder>
+        <slotCost>2</slotCost>
+        <pawnStatFactors>
+            <PsychicSensitivity>1.25</PsychicSensitivity>
+        </pawnStatFactors>
+        <mustHaveGeneOneAmong>
+            <li>BEWH_IotaPsyker</li>
+            <li>BEWH_EpsilonPsyker</li>
+            <li>BEWH_DeltaPsyker</li>
+            <li>BEWH_BetaPsyker</li>
+            <li>BEWH_AlphaPsyker</li>
+        </mustHaveGeneOneAmong>
+        <incompatibleDecorations>
+            <li>BEWH_Upgrade_NullShield</li>
+        </incompatibleDecorations>
+        <cost>
+            <Plasteel>40</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Uranium>10</Uranium>
+        </cost>
+        <workAmount>2000</workAmount>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

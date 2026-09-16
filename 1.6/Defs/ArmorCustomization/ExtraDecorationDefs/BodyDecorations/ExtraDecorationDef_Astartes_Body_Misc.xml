@@ -35,6 +35,13 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
+        <pawnStatOffsets>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">4</TerrorSource>
+        </pawnStatOffsets>
+        <cost>
+            <Steel>5</Steel>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -74,6 +81,18 @@
         <useParentColourAsDefault>true</useParentColourAsDefault>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
+        <pawnStatOffsets>
+            <ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.02</ArmorRating_Blunt>
+        </pawnStatOffsets>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_Rondel2</li>
+        </incompatibleDecorations>
+        <cost>
+            <Plasteel>10</Plasteel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -113,6 +132,18 @@
         <useParentColourAsDefault>true</useParentColourAsDefault>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
+        <pawnStatOffsets>
+            <ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.02</ArmorRating_Blunt>
+        </pawnStatOffsets>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_Rondel1</li>
+        </incompatibleDecorations>
+        <cost>
+            <Plasteel>10</Plasteel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

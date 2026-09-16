@@ -29,10 +29,25 @@ public class WorkerClass_ImplantLegionMaterial : Recipe_Surgery
         {
             return false;
         }
-        
-        var neededMaterial = recipe.GetModExtension<DefModExtension_LegionMaterialCreation>().requiredLegionMaterial;
 
-        return GameComp.HasMaterial(neededMaterial);
+        var defMod = recipe.GetModExtension<DefModExtension_LegionMaterialCreation>();
+
+        if (defMod == null)
+        {
+            return false;
+        }
+
+        if (defMod.selectsChapter)
+        {
+            return ChapterChoiceUtility.AnyChoice();
+        }
+
+        if (ChapterChoiceUtility.GenericChapterRecipeExists)
+        {
+            return false;
+        }
+
+        return GameComp.HasMaterial(defMod.requiredLegionMaterial);
     }
 
     public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
@@ -50,8 +65,14 @@ public class WorkerClass_ImplantLegionMaterial : Recipe_Surgery
 
     protected override void OnSurgerySuccess(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
     {
-        var material = recipe.GetModExtension<DefModExtension_LegionMaterialCreation>().requiredLegionMaterial;
-        var addedGene = material.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene;
-        pawn.genes.AddGene(addedGene, true);
+        var addedGene = (bill as Bill_ApplyChapter)?.chapterGene;
+
+        if (addedGene == null)
+        {
+            var material = recipe.GetModExtension<DefModExtension_LegionMaterialCreation>()?.requiredLegionMaterial;
+            addedGene = material?.GetModExtension<DefModExtension_GeneFromMaterial>()?.addedGene;
+        }
+
+        CustomChapterGeneUtility.AddChapterGene(pawn, addedGene, false);
     }
 }

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- One perk per primarch material, each a watered-down echo of that primarch's own gene. -->
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_HuntersPatience</defName>
+        <label>Hunter's Patience</label>
+        <description>The First's stillness before the strike, thinned but intact. Blows aimed at this lineage find nothing there.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lion</iconPath>
+        <displayOrder>1301</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialI</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Dodge</li>
+        </exclusionTags>
+        <statOffsets>
+            <MeleeDodgeChance>3</MeleeDodgeChance>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_PhoenicianPoise</defName>
+        <label>Phoenician Poise</label>
+        <description>A measured dose of the Phoenician's grace. Beautiful, persuasive, and aware of both.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Fulgrim</iconPath>
+        <displayOrder>1303</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialIII</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Social</li>
+        </exclusionTags>
+        <statFactors>
+            <SocialImpact>1.4</SocialImpact>
+        </statFactors>
+        <statOffsets>
+            <PawnBeauty>1</PawnBeauty>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_LogiciansEye</defName>
+        <label>Logician's Eye</label>
+        <description>The Lord of Iron's cold arithmetic: angles, loads, tolerances, all seen at a glance.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Perturabo</iconPath>
+        <displayOrder>1304</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialIV</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Construct</li>
+        </exclusionTags>
+        <statOffsets>
+            <ResearchSpeed>0.5</ResearchSpeed>
+        </statOffsets>
+        <statFactors>
+            <ConstructionSpeed>1.1</ConstructionSpeed>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_Stormborn</defName>
+        <label>Stormborn</label>
+        <description>The Khan's restlessness. This lineage is never where the enemy last aimed.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Khan</iconPath>
+        <displayOrder>1305</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialV</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Speed</li>
+        </exclusionTags>
+        <statFactors>
+            <MoveSpeed>1.1</MoveSpeed>
+            <CaravanRidingSpeedFactor>1.5</CaravanRidingSpeedFactor>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_Winterhardened</defName>
+        <label>Winterhardened</label>
+        <description>Fenris in the blood. Cold is a comfort and a raised voice is an invitation.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Russ</iconPath>
+        <displayOrder>1306</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialVI</li>
+        </requiredAnyMaterial>
+        <statOffsets>
+            <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+        </statOffsets>
+        <socialFightChanceFactor>1.15</socialFightChanceFactor>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_UnbreakableLine</defName>
+        <label>Unbreakable Line</label>
+        <description>Dorn's instinct for the wall. Whatever this lineage builds, it builds right the first time.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Dorn</iconPath>
+        <displayOrder>1307</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialVII</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Construct</li>
+        </exclusionTags>
+        <statOffsets>
+            <ConstructionSpeed>0.25</ConstructionSpeed>
+            <ConstructSuccessChance>0.25</ConstructSuccessChance>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_TerrorOfTheDark</defName>
+        <label>Terror of the Dark</label>
+        <description>Nostramo's gift. In darkness this lineage is faster and far more precise.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Curze</iconPath>
+        <displayOrder>1308</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialVIII</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Darkness</li>
+        </exclusionTags>
+        <conditionalStatAffecters>
+            <li Class="VEF.Genes.ConditionalStatAffecter_Darkness">
+                <statFactors>
+                    <MoveSpeed>1.15</MoveSpeed>
+                    <MeleeHitChance>1.25</MeleeHitChance>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_AngelsGrace</defName>
+        <label>Angel's Grace</label>
+        <description>No wings, but the Angel's balance and lightness of foot.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Sanguinius</iconPath>
+        <displayOrder>1309</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialIX</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Dodge</li>
+        </exclusionTags>
+        <statOffsets>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>1.2</postFactor>
+            </li>
+        </capMods>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_GorgonsHands</defName>
+        <label>Gorgon's Hands</label>
+        <description>The Gorgon's craft without the Gorgon's silver. Everything this lineage makes is made well.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Manus</iconPath>
+        <displayOrder>1310</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialX</li>
+        </requiredAnyMaterial>
+        <aptitudes>
+            <Crafting>3</Crafting>
+        </aptitudes>
+        <statOffsets>
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_ButchersThreshold</defName>
+        <label>Butcher's Threshold</label>
+        <description>Pain registers as information and nothing more.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
+        <displayOrder>1312</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXII</li>
+        </requiredAnyMaterial>
+        <painFactor>0.5</painFactor>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_AdministratumMind</defName>
+        <label>Administratum Mind</label>
+        <description>Guilliman's genius for order. Work flows, ledgers balance, negotiations close.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Robot</iconPath>
+        <displayOrder>1313</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXIII</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Work</li>
+            <li>BEWH_PrimarchTrait_Social</li>
+        </exclusionTags>
+        <statFactors>
+            <WorkSpeedGlobal>1.15</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+            <NegotiationAbility>0.5</NegotiationAbility>
+        </statOffsets>
+        <aptitudes>
+            <Social>2</Social>
+        </aptitudes>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_ReapersConstitution</defName>
+        <label>Reaper's Constitution</label>
+        <description>Barbarus bred this lineage to breathe poison. Disease finds nothing to hold.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Morty</iconPath>
+        <displayOrder>1314</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXIV</li>
+        </requiredAnyMaterial>
+        <statOffsets>
+            <ToxicResistance>5</ToxicResistance>
+            <ToxicEnvironmentResistance>5</ToxicEnvironmentResistance>
+        </statOffsets>
+        <statFactors>
+            <ImmunityGainSpeed>2</ImmunityGainSpeed>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_CrimsonInheritance</defName>
+        <label>Crimson Inheritance</label>
+        <description>A fragment of the Crimson King's sight. The warp answers this lineage readily, and a psyker gene comes with it.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Mangus</iconPath>
+        <displayOrder>1315</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXV</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Psyker</li>
+        </exclusionTags>
+        <statFactors>
+            <PsychicSensitivity>1.4</PsychicSensitivity>
+        </statFactors>
+        <customEffectDescriptions>
+            <li>Gives a psyker gene.</li>
+        </customEffectDescriptions>
+        <geneGrant>
+            <possibleGenesToGive>
+                <li>
+                    <key>BEWH_EpsilonPsyker</key>
+                    <value>100</value>
+                </li>
+                <li>
+                    <key>BEWH_DeltaPsyker</key>
+                    <value>15</value>
+                </li>
+            </possibleGenesToGive>
+        </geneGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_WarmastersVoice</defName>
+        <label>Warmaster's Voice</label>
+        <description>The Warmaster's charisma, diluted. People still listen.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_TheBaldOne</iconPath>
+        <displayOrder>1316</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXVI</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Social</li>
+        </exclusionTags>
+        <statFactors>
+            <SocialImpact>1.25</SocialImpact>
+            <ArrestSuccessChance>1.5</ArrestSuccessChance>
+        </statFactors>
+        <aptitudes>
+            <Social>2</Social>
+        </aptitudes>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_FerventWord</defName>
+        <label>Fervent Word</label>
+        <description>The Urizen's conviction. This lineage preaches, and is believed.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lorgar</iconPath>
+        <displayOrder>1317</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXVII</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Social</li>
+        </exclusionTags>
+        <statFactors>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</ConversionPower>
+            <SocialImpact>1.2</SocialImpact>
+        </statFactors>
+        <statOffsets>
+            <PsychicSensitivity>0.5</PsychicSensitivity>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_PrometheanHeart</defName>
+        <label>Promethean Heart</label>
+        <description>Nocturne's fire runs in this lineage. Heat is welcome, flame is harmless, and kindness comes easily.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Vulkan</iconPath>
+        <displayOrder>1318</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXVIII</li>
+        </requiredAnyMaterial>
+        <statFactors>
+            <Flammability>0.5</Flammability>
+        </statFactors>
+        <statOffsets>
+            <ComfyTemperatureMax>25</ComfyTemperatureMax>
+        </statOffsets>
+        <forcedTraits>
+            <li>
+                <def>Kind</def>
+            </li>
+        </forcedTraits>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_ShadowedStep</defName>
+        <label>Shadowed Step</label>
+        <description>Deliverance taught this lineage to move unseen. Darkness makes it faster and near invisible to prey.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Corvus</iconPath>
+        <displayOrder>1319</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXIX</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Darkness</li>
+        </exclusionTags>
+        <conditionalStatAffecters>
+            <li Class="VEF.Genes.ConditionalStatAffecter_Darkness">
+                <statFactors>
+                    <MoveSpeed>1.25</MoveSpeed>
+                    <HuntingStealth>2</HuntingStealth>
+                </statFactors>
+            </li>
+        </conditionalStatAffecters>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_ManyFaces</defName>
+        <label>Many Faces</label>
+        <description>Nobody is ever quite sure who they are dealing with, which turns out to be an advantage at the table.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_AlphaOmega</iconPath>
+        <displayOrder>1320</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXX</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_PrimarchTrait_Social</li>
+        </exclusionTags>
+        <statOffsets>
+            <NegotiationAbility>0.5</NegotiationAbility>
+            <TradePriceImprovement>0.3</TradePriceImprovement>
+        </statOffsets>
+        <aptitudes>
+            <Social>2</Social>
+        </aptitudes>
+    </Genes40k.ChapterTraitDef>
+
+</Defs>

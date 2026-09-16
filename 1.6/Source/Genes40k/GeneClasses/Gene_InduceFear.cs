@@ -7,17 +7,36 @@ namespace Genes40k;
 
 public class Gene_InduceFear : Gene
 {
-    private const int tickInterval = 625;
-    private const float effectRadius = 7.9f;
-    private const int chanceToFear = 50;
-
     private DefModExtension_GeneInducedFear cachedDefMod;
-    private DefModExtension_GeneInducedFear DefMod => cachedDefMod ??= def.GetModExtension<DefModExtension_GeneInducedFear>();
-        
+    private bool defModResolved;
+
+    private DefModExtension_GeneInducedFear DefMod
+    {
+        get
+        {
+            if (defModResolved)
+            {
+                return cachedDefMod;
+            }
+
+            cachedDefMod = def.GetModExtension<DefModExtension_GeneInducedFear>();
+            defModResolved = true;
+            return cachedDefMod;
+        }
+    }
+
     public override void Tick()
     {
         base.Tick();
-        if (!pawn.IsHashIntervalTick(tickInterval) || pawn.Faction == null)
+
+        var defMod = DefMod;
+
+        if (defMod == null)
+        {
+            return;
+        }
+
+        if (!pawn.IsHashIntervalTick(defMod.tickInterval) || pawn.Faction == null)
         {
             return;
         }
@@ -31,15 +50,13 @@ public class Gene_InduceFear : Gene
         {
             return;
         }
-            
-        var pawns = GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, effectRadius, useCenter: true).OfType<Pawn>().ToList();
-        AffectPawns(pawn, pawns);
-    }
-        
-    private void AffectPawns(Pawn p, List<Pawn> pawns)
-    {
-        var defMod = DefMod;
 
+        var pawns = GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, defMod.effectRadius, useCenter: true).OfType<Pawn>().ToList();
+        AffectPawns(pawn, pawns, defMod);
+    }
+
+    private void AffectPawns(Pawn p, List<Pawn> pawns, DefModExtension_GeneInducedFear defMod)
+    {
         if (pawns.NullOrEmpty() || defMod == null)
         {
             return;
@@ -68,7 +85,7 @@ public class Gene_InduceFear : Gene
                 continue;
             }
 
-            if (!Rand.Chance(chanceToFear / 100f))
+            if (!Rand.Chance(defMod.chanceToFear / 100f))
             {
                 continue;
             }

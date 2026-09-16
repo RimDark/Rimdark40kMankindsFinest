@@ -39,6 +39,16 @@
         </drawData>
         <shaderType>Cutout</shaderType>
         <decorationType>BEWH_DecoCategory_Brims</decorationType>
+        <pawnStatOffsets>
+            <MeleeDodgeChance>3</MeleeDodgeChance>
+        </pawnStatOffsets>
+        <pawnStatFactors>
+            <MeleeDamageFactor>1.05</MeleeDamageFactor>
+        </pawnStatFactors>
+        <cost>
+            <Plasteel>10</Plasteel>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -84,6 +94,17 @@
         <shaderType>Cutout</shaderType>
         <defaultColour>(240,176,29)</defaultColour>
         <decorationType>BEWH_DecoCategory_Brims</decorationType>
+        <pawnStatOffsets>
+            <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+        </pawnStatOffsets>
+        <givesHediffs>
+            <li>BEWH_VictrixAura</li>
+        </givesHediffs>
+        <cost>
+            <Plasteel>10</Plasteel>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -129,6 +150,17 @@
         <shaderType>Cutout</shaderType>
         <defaultColour>(240,176,29)</defaultColour>
         <decorationType>BEWH_DecoCategory_Brims</decorationType>
+        <pawnStatOffsets>
+            <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+        </pawnStatOffsets>
+        <givesHediffs>
+            <li>BEWH_VictrixAura</li>
+        </givesHediffs>
+        <cost>
+            <Plasteel>10</Plasteel>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

@@ -36,28 +36,43 @@ public class WorkerClass_PhaseDevelopment : Recipe_Surgery
             }
             TaleRecorder.RecordTale(TaleDefOf.DidSurgery, billDoer, pawn);
         }
-        var defMod = recipe.GetModExtension<DefModExtension_PhaseDevelopment>();
-        if (!defMod.addsGenes.NullOrEmpty() && pawn.genes != null)
-        {
-            foreach (var gene in defMod.addsGenes)
-            {
-                pawn.genes.AddGene(gene, true);
-            }
-        }
-        if (defMod.addHediff != null)
-        {
-            pawn.health.AddHediff(defMod.addHediff);
-        }
 
         if (recipe.removesHediff == null)
         {
             return;
         }
-            
+
         var hediffToRemove = pawn.health.hediffSet.GetFirstHediffOfDef(recipe.removesHediff);
-        if (hediffToRemove != null)
+
+        if (hediffToRemove == null)
+        {
+            return;
+        }
+
+        if (hediffToRemove.TryGetComp<HediffComp_PhaseDevelopment>() != null)
         {
             pawn.health.RemoveHediff(hediffToRemove);
+            return;
         }
+
+        var defMod = recipe.GetModExtension<DefModExtension_PhaseDevelopment>();
+
+        if (defMod != null)
+        {
+            if (!defMod.addsGenes.NullOrEmpty() && pawn.genes != null)
+            {
+                foreach (var gene in defMod.addsGenes)
+                {
+                    pawn.genes.AddGene(gene, true);
+                }
+            }
+
+            if (defMod.addHediff != null)
+            {
+                pawn.health.AddHediff(defMod.addHediff);
+            }
+        }
+
+        pawn.health.RemoveHediff(hediffToRemove);
     }
 }

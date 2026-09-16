@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
     <!-- Grenades -->
@@ -36,6 +36,19 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Grenades</decorationType>
+        <givesVFEAbilities>
+            <li>BEWH_Ability_ThrowFragGrenade</li>
+        </givesVFEAbilities>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_Grenade_2</li>
+            <li>BEWH_Deco_KrGrenade_1</li>
+            <li>BEWH_Deco_KrGrenade_2</li>
+        </incompatibleDecorations>
+        <cost>
+            <Steel>20</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -72,6 +85,19 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Grenades</decorationType>
+        <givesVFEAbilities>
+            <li>BEWH_Ability_ThrowFragGrenadePair</li>
+        </givesVFEAbilities>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_Grenade_1</li>
+            <li>BEWH_Deco_KrGrenade_1</li>
+            <li>BEWH_Deco_KrGrenade_2</li>
+        </incompatibleDecorations>
+        <cost>
+            <Steel>60</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -108,6 +134,19 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Grenades</decorationType>
+        <givesVFEAbilities>
+            <li>BEWH_Ability_ThrowKrakGrenade</li>
+        </givesVFEAbilities>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_Grenade_1</li>
+            <li>BEWH_Deco_Grenade_2</li>
+            <li>BEWH_Deco_KrGrenade_2</li>
+        </incompatibleDecorations>
+        <cost>
+            <Steel>30</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -144,6 +183,19 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Grenades</decorationType>
+        <givesVFEAbilities>
+            <li>BEWH_Ability_ThrowKrakGrenadePair</li>
+        </givesVFEAbilities>
+        <incompatibleDecorations>
+            <li>BEWH_Deco_Grenade_1</li>
+            <li>BEWH_Deco_Grenade_2</li>
+            <li>BEWH_Deco_KrGrenade_1</li>
+        </incompatibleDecorations>
+        <cost>
+            <Steel>90</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

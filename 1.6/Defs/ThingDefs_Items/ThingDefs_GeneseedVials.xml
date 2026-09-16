@@ -60,6 +60,9 @@
         <failureChancePerAgePast>5</failureChancePerAgePast>
         <failChanceCap>85</failChanceCap>
         <baseFailureChance>10</baseFailureChance>
+        <usesImplantPicker>true</usesImplantPicker>
+        <implantWorkAmount>5000</implantWorkAmount>
+        <implantMedicineSkill>8</implantMedicineSkill>
       </li>
     </modExtensions>
   </ThingDef>
@@ -96,6 +99,9 @@
         <failureChancePerAgePast>9</failureChancePerAgePast>
         <failChanceCap>90</failChanceCap>
         <baseFailureChance>10</baseFailureChance>
+        <usesImplantPicker>true</usesImplantPicker>
+        <implantWorkAmount>6500</implantWorkAmount>
+        <implantMedicineSkill>10</implantMedicineSkill>
       </li>
     </modExtensions>
   </ThingDef>
@@ -122,6 +128,9 @@
         <failureChancePerAgePast>19</failureChancePerAgePast>
         <failChanceCap>95</failChanceCap>
         <baseFailureChance>20</baseFailureChance>
+        <usesImplantPicker>true</usesImplantPicker>
+        <implantWorkAmount>15000</implantWorkAmount>
+        <implantMedicineSkill>13</implantMedicineSkill>
       </li>
     </modExtensions>
   </ThingDef>

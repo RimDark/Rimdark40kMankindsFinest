@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_CrimsonLegacy</defName>
+        <label>Crimson Legacy</label>
+        <description>With substitution protocols refined, the Fifteenth's inheritance can be carried whole rather than in fragments. The warp answers these marines far more readily, and more often.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVThousandSons</iconPath>
+        <displayOrder>510</displayOrder>
+        <stabilityOffset>-4</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXV</li>
+        </requiredAnyMaterial>
+        <requiredResearch>BEWH_AdvancedProteinSubstitution</requiredResearch>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Psyker</li>
+        </exclusionTags>
+        <statFactors>
+            <PsychicSensitivity>1.25</PsychicSensitivity>
+            <MeditationFocusGain>1.2</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate>1.2</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <customEffectDescriptions>
+            <li>Gives a psyker gene, of a higher tier than lesser splices.</li>
+        </customEffectDescriptions>
+        <geneGrant>
+            <possibleGenesToGive>
+                <li>
+                    <key>BEWH_DeltaPsyker</key>
+                    <value>100</value>
+                </li>
+                <li>
+                    <key>BEWH_BetaPsyker</key>
+                    <value>10</value>
+                </li>
+            </possibleGenesToGive>
+        </geneGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_AuramiteMarrow</defName>
+        <label>Auramite Marrow</label>
+        <description>A thin echo of the Ten Thousand's immunis leucocyte, cultured down to something a marine's body will tolerate. Disease finds no purchase and wounds knit clean.</description>
+        <iconPath>UI/Genes/Custodes/BEWH_Custodes_ImmunisLeucocyte</iconPath>
+        <displayOrder>511</displayOrder>
+        <stabilityOffset>-4</stabilityOffset>
+        <requiredResearch>BEWH_CustodesCreation</requiredResearch>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Constitution</li>
+            <li>BEWH_ChapterTrait_Healing</li>
+        </exclusionTags>
+        <statFactors>
+            <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+            <InjuryHealingFactor>1.15</InjuryHealingFactor>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <offset>0.3</offset>
+            </li>
+        </capMods>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_ThalaxComposure</defName>
+        <label>Thalax Composure</label>
+        <description>Primarch-project work applied to a mortal-born mind: a cortex that learns at frightening speed and does not flinch.</description>
+        <iconPath>UI/Genes/Primarch/BEWH_PrimarchThalaxCortex</iconPath>
+        <displayOrder>512</displayOrder>
+        <stabilityOffset>-4</stabilityOffset>
+        <requiredResearch>BEWH_PrimarchProject</requiredResearch>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Temper</li>
+            <li>BEWH_ChapterTrait_Intellect</li>
+        </exclusionTags>
+        <statOffsets>
+            <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+            <GlobalLearningFactor>1.2</GlobalLearningFactor>
+        </statFactors>
+        <aptitudes>
+            <Intellectual>2</Intellectual>
+        </aptitudes>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_NostramanNight</defName>
+        <label>Nostraman Night</label>
+        <description>Perfected gene-seed carries the Eighth's terror at full strength. Enemies break and run before the chapter's marines reach them, as the Night Haunter intended.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
+        <displayOrder>513</displayOrder>
+        <stabilityOffset>-4</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialVIII</li>
+        </requiredAnyMaterial>
+        <requiredResearch>BEWH_GeneseedPerfection</requiredResearch>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Fear</li>
+        </exclusionTags>
+        <statOffsets>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">20</TerrorSource>
+        </statOffsets>
+        <customEffectDescriptions>
+            <li>Chance to induce fear in nearby enemies, causing them to flee.</li>
+        </customEffectDescriptions>
+        <inducedFear>
+            <effectRadius>7.9</effectRadius>
+            <chanceToFear>50</chanceToFear>
+            <genesCausesImmunityToFear>
+                <li>BEWH_ChapterVIIINightLords</li>
+                <li>BEWH_MnemosyneMindshield</li>
+                <li>BEWH_ThalaxCortex</li>
+                <li>BEWH_LivingSaintBeingOfFaith</li>
+            </genesCausesImmunityToFear>
+            <traitCausesImmunityToFear>
+                <Psychopath>0</Psychopath>
+            </traitCausesImmunityToFear>
+        </inducedFear>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_PurifiedLineage</defName>
+        <label>Purified Lineage</label>
+        <description>Generations of culling every flawed strand. The gene-seed gains nothing new, but it takes to a host as readily as a First Founding line.</description>
+        <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_ProgenoidsIcon</iconPath>
+        <displayOrder>520</displayOrder>
+        <stabilityOffset>3</stabilityOffset>
+        <requiredResearch>BEWH_GeneseedPerfection</requiredResearch>
+    </Genes40k.ChapterTraitDef>
+
+</Defs>

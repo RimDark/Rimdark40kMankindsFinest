@@ -9,6 +9,9 @@ namespace Genes40k;
 public class WorkerClass_ImplantGeneseed : Recipe_Surgery
 {
     private GeneseedVial geneseedVialForText = null;
+
+    private static bool? genericImplantRecipeExists;
+    private static bool GenericImplantRecipeExists => genericImplantRecipeExists ??= DefDatabase<RecipeDef>.AllDefsListForReading.Any(recipeDef => recipeDef.GetModExtension<DefModExtension_GeneseedVialRecipe>()?.selectsVialKind == true);
     
     public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
     {
@@ -35,6 +38,22 @@ public class WorkerClass_ImplantGeneseed : Recipe_Surgery
 
         var defMod = recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>();
 
+        if (defMod == null)
+        {
+            return false;
+        }
+
+        if (defMod.selectsVialKind)
+        {
+            geneseedVialForText = null;
+            return true;
+        }
+
+        if (GenericImplantRecipeExists && GeneseedVialKindUtility.UsesPicker(defMod.geneseedVial))
+        {
+            return false;
+        }
+
         var list = pawn.Map.listerThings.ThingsOfDef(defMod.geneseedVial);
 
         foreach (var item in list)
@@ -44,7 +63,7 @@ public class WorkerClass_ImplantGeneseed : Recipe_Surgery
                 continue;
             }
 
-            if (defMod.geneFromMaterial != geneseedVial.extraGeneFromMaterial)
+            if (!defMod.MatchesVial(geneseedVial))
             {
                 continue;
             }
@@ -58,6 +77,11 @@ public class WorkerClass_ImplantGeneseed : Recipe_Surgery
 
     public override TaggedString GetConfirmation(Pawn pawn)
     {
+        if (recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>()?.selectsVialKind == true)
+        {
+            return null;
+        }
+
         return Genes40kUtils.GetGeneseedImplantationSuccessChanceDesc(pawn, geneseedVialForText);
     }
 
@@ -107,16 +131,13 @@ public class WorkerClass_ImplantGeneseed : Recipe_Surgery
             }
         }
 
-        if (geneseedVial.extraGeneFromMaterial != null)
-        {
-            pawn.genes.AddGene(geneseedVial.extraGeneFromMaterial, true);
-        }
-
         if (defMod.appliesHediff != null)
         {
             pawn.health.AddHediff(defMod.appliesHediff);
         }
 
         pawn.genes.iconDef = geneseedVial.iconDef;
+
+        CustomChapterGeneUtility.AddChapterGeneFromVial(pawn, geneseedVial);
     }
 }

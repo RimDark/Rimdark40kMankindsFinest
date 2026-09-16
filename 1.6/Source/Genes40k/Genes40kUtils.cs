@@ -209,6 +209,36 @@ public static class Genes40kUtils
     public static HashSet<GeneDef> RelatedPrimarchGenes => relatedPrimarchGenes ??= new HashSet<GeneDef>(ChapterGeneToPrimarchGene.Values);
 
     /// <summary>
+    /// Drops the chapter-to-primarch caches so a generated chapter gene registered after startup is picked up on next use.
+    /// </summary>
+    public static void InvalidatePrimarchRelationCache()
+    {
+        chapterGeneToPrimarchGene = null;
+        relatedPrimarchGenes = null;
+    }
+
+    /// <summary>
+    /// The pawn's active twin-capable gene (Alpharius/Omegon, shipped or custom), or null.
+    /// </summary>
+    public static ITwinGene TwinGene(this Pawn pawn)
+    {
+        if (pawn?.genes == null)
+        {
+            return null;
+        }
+
+        foreach (var gene in pawn.genes.GenesListForReading)
+        {
+            if (gene is ITwinGene { TwinCapable: true } twinGene && gene.Active)
+            {
+                return twinGene;
+            }
+        }
+
+        return null;
+    }
+
+    /// <summary>
     /// The primarch gene tied to whichever chapter gene this pawn carries, or null if they carry none.
     /// </summary>
     public static GeneDef RelatedPrimarchGeneFor(this Pawn pawn)
@@ -530,6 +560,10 @@ public static class Genes40kUtils
             if (gene != null)
             {
                 geneseedVial.extraGeneFromMaterial = gene.def;
+                if (CustomChapterGeneDefBuilder.IsGeneratedChapterGene(gene.def))
+                {
+                    geneseedVial.newGeneseedVialTexture = CustomChapterGeneUtility.Tuning.vialTexturePath;
+                }
             }
         }
 
@@ -593,11 +627,6 @@ public static class Genes40kUtils
             pawn.genes.AddGene(gene, true);
         }
 
-        if (geneseedVial.extraGeneFromMaterial != null)
-        {
-            pawn.genes.AddGene(geneseedVial.extraGeneFromMaterial, true);
-        }
-
         var xenotypeDef = XenotypeDefOf.Baseliner;
 
         if (geneseedVial.xenotype != null)
@@ -606,6 +635,8 @@ public static class Genes40kUtils
         }
 
         pawn.genes.SetXenotypeDirect(xenotypeDef);
+
+        CustomChapterGeneUtility.AddChapterGeneFromVial(pawn, geneseedVial, false);
             
         Find.WindowStack.Add(new Dialog_ViewGenes(pawn));
             
@@ -613,9 +644,94 @@ public static class Genes40kUtils
         Find.WorldPawns.RemoveAndDiscardPawnViaGC(pawn);
     }
 
+    /// <summary>
+    /// The primarch line a vial represents: its custom design name, the gene its material granted, or its xenotype.
+    /// </summary>
+    public static string PrimarchLineLabel(GeneseedVial geneseedVial)
+    {
+        if (geneseedVial == null)
+        {
+            return null;
+        }
+
+        var customChapter = geneseedVial.CustomChapter;
+
+        if (customChapter != null && !customChapter.name.NullOrEmpty())
+        {
+            return customChapter.name;
+        }
+
+        if (geneseedVial.extraGeneFromMaterial != null)
+        {
+            return geneseedVial.extraGeneFromMaterial.LabelCap;
+        }
+
+        if (geneseedVial.xenotype != null)
+        {
+            return geneseedVial.xenotype.LabelCap;
+        }
+
+        return geneseedVial.LabelCap;
+    }
+
+    /// <summary>
+    /// Shows the gene card of the primarch embryo the given vial and human embryo would produce, without making one.
+    /// </summary>
+    public static void InspectProspectivePrimarchGenes(GeneseedVial geneseedVial, HumanEmbryo humanEmbryo)
+    {
+        if (geneseedVial == null)
+        {
+            return;
+        }
+
+        var pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
+        pawn.ageTracker.AgeBiologicalTicks = 3600000 * 25;
+
+        foreach (var gene in pawn.genes.GenesListForReading.ToList())
+        {
+            pawn.genes.RemoveGene(gene);
+        }
+
+        if (humanEmbryo?.GeneSet != null)
+        {
+            foreach (var gene in humanEmbryo.GeneSet.GenesListForReading)
+            {
+                pawn.genes.AddGene(gene, false);
+            }
+        }
+
+        if (geneseedVial.GeneSet != null)
+        {
+            foreach (var gene in geneseedVial.GeneSet.GenesListForReading)
+            {
+                pawn.genes.AddGene(gene, true);
+            }
+        }
+
+        if (geneseedVial.extraGeneFromMaterial != null)
+        {
+            pawn.genes.AddGene(geneseedVial.extraGeneFromMaterial, true);
+        }
+
+        pawn.genes.SetXenotypeDirect(geneseedVial.xenotype ?? Genes40kDefOf.BEWH_Primarch);
+
+        Find.WindowStack.Add(new Dialog_ViewGenes(pawn));
+
+        pawn.Destroy();
+        Find.WorldPawns.RemoveAndDiscardPawnViaGC(pawn);
+    }
+
     public static int GetGeneseedImplantationSuccessChance(Pawn pawn, GeneseedVial geneseedVial)
     {
-        var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
+        return GetGeneseedImplantationFailChance(pawn, geneseedVial.def, geneseedVial.extraGeneFromMaterial);
+    }
+
+    /// <summary>
+    /// Failure chance in percent for implanting a vial of the given def and chapter gene into the pawn, capped like the vial defines.
+    /// </summary>
+    public static int GetGeneseedImplantationFailChance(Pawn pawn, ThingDef vialDef, GeneDef chapterGene)
+    {
+        var defMod = vialDef.GetModExtension<DefModExtension_GeneseedVial>();
 
         var failChanceAgeOffset = 0;
         if (pawn.ageTracker.AgeBiologicalYears < defMod.minAgeImplant)
@@ -628,15 +744,7 @@ public static class Genes40kUtils
         }
         failChanceAgeOffset *= defMod.failureChancePerAgePast;
             
-        var failChanceGeneOffset = 0;
-        var failChanceCapGeneOffset = 0;
-
-        if (geneseedVial.extraGeneFromMaterial != null && geneseedVial.extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
-        {
-            var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
-            failChanceGeneOffset += geneDefMod.additionalChanceOffset;
-            failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
-        }
+        CustomChapterGeneUtility.TryGetChapterGenePurityOffsets(chapterGene, out var failChanceGeneOffset, out var failChanceCapGeneOffset, out _);
             
         var failChance = defMod.baseFailureChance;
         failChance += failChanceAgeOffset + failChanceGeneOffset;
@@ -673,10 +781,30 @@ public static class Genes40kUtils
         {
             return string.Empty;
         }
-            
-        var text = "BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc".Translate(pawn, geneseedVial.xenotypeName);
-        var defMod = geneseedVial.def.GetModExtension<DefModExtension_GeneseedVial>();
+
+        return GetGeneseedImplantationFailChanceDesc(pawn, geneseedVial.def, geneseedVial.extraGeneFromMaterial, true, true, true);
+    }
+
+    /// <summary>
+    /// The implantation failure breakdown for a vial kind. The intro sentence, chapter line and confirmation prompt are
+    /// optional so the same text serves the legacy confirmation box and the vial picker's tooltip.
+    /// </summary>
+    public static string GetGeneseedImplantationFailChanceDesc(Pawn pawn, ThingDef vialDef, GeneDef chapterGene, bool includeIntro, bool includeChapterLine, bool includeContinuePrompt)
+    {
+        var defMod = vialDef.GetModExtension<DefModExtension_GeneseedVial>();
+        var parts = new List<string>();
         var failChanceCausedBy = new List<string>();
+
+        if (includeIntro)
+        {
+            parts.Add("BEWH.MankindsFinest.GeneseedVial.ImplantGeneseedDesc".Translate(pawn, defMod.xenotype.label));
+        }
+
+        var chapterLabel = CustomChapterGeneUtility.ChapterLabelOf(chapterGene);
+        if (includeChapterLine && !chapterLabel.NullOrEmpty())
+        {
+            parts.Add("BEWH.MankindsFinest.GeneseedVial.ChapterMaterial".Translate(chapterLabel.CapitalizeFirst()));
+        }
             
         failChanceCausedBy.Add("\t* " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(defMod.baseFailureChance, "BEWH.MankindsFinest.GeneseedVial.BaseFailureChance".Translate()));
             
@@ -695,16 +823,10 @@ public static class Genes40kUtils
             failChanceAgeOffset *= defMod.failureChancePerAgePast;
             failChanceCausedBy.Add("\t* " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(failChanceAgeOffset, "BEWH.MankindsFinest.GeneseedVial.OutsideOptimalAgeRange".Translate(pawn, defMod.minAgeImplant, defMod.maxAgeImplant)));
         }
-            
-        var failChanceGeneOffset = 0;
-        var failChanceCapGeneOffset = 0;
 
-        if (geneseedVial.extraGeneFromMaterial != null && geneseedVial.extraGeneFromMaterial.HasModExtension<DefModExtension_GeneseedPurity>())
+        if (CustomChapterGeneUtility.TryGetChapterGenePurityOffsets(chapterGene, out var failChanceGeneOffset, out var failChanceCapGeneOffset, out var puritySourceLabel) && failChanceGeneOffset != 0)
         {
-            var geneDefMod = geneseedVial.extraGeneFromMaterial.GetModExtension<DefModExtension_GeneseedPurity>();
-            failChanceCapGeneOffset += geneDefMod.additionalChanceCapOffset;
-            failChanceGeneOffset += geneDefMod.additionalChanceOffset;
-            failChanceCausedBy.Add("\t* " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(geneDefMod.additionalChanceOffset, geneseedVial.extraGeneFromMaterial.label));
+            failChanceCausedBy.Add("\t* " + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCause".Translate(failChanceGeneOffset, puritySourceLabel));
         }
 
         var failChance = defMod.baseFailureChance;
@@ -739,24 +861,25 @@ public static class Genes40kUtils
 
         if (failChance > 0)
         {
-            text += "\n\n" + "BEWH.MankindsFinest.GeneseedVial.CurrentFailureChance".Translate(failChance);
-
-            text += "\n\n" + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy".Translate();
-
-            foreach (var failChanceCause in failChanceCausedBy)
-            {
-                text += "\n" + failChanceCause;
-            }
+            parts.Add("BEWH.MankindsFinest.GeneseedVial.CurrentFailureChance".Translate(failChance));
+            parts.Add("BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy".Translate() + "\n" + failChanceCausedBy.ToLineList());
 
             if (wasCapped)
             {
-                text += "\n\n" + "BEWH.MankindsFinest.GeneseedVial.FailureChanceCapped".Translate(failCapChance);
+                parts.Add("BEWH.MankindsFinest.GeneseedVial.FailureChanceCapped".Translate(failCapChance));
             }
         }
+        else if (!includeIntro)
+        {
+            parts.Add("BEWH.MankindsFinest.GeneseedVial.NoFailureChance".Translate());
+        }
 
-        text += "\n\n" + "WouldYouLikeToContinue".Translate();
+        if (includeContinuePrompt)
+        {
+            parts.Add("WouldYouLikeToContinue".Translate());
+        }
 
-        return text;
+        return string.Join("\n\n", parts);
     }
 
     private static bool? alteredCarbonActive;
@@ -786,5 +909,31 @@ public static class Genes40kUtils
         }
 
         return false;
+    }
+
+    /// <summary>
+    /// Gizmo that pans the camera to the map's Sangprimus Portum, disabled when there is none.
+    /// </summary>
+    public static Gizmo ViewSangprimusPortumGizmo(Map map)
+    {
+        var sangprimusPortum = map?.listerBuildings.AllBuildingsColonistOfDef(Genes40kDefOf.BEWH_SangprimusPortum).FirstOrDefault();
+
+        var command = new Command_Action
+        {
+            defaultLabel = "BEWH.MankindsFinest.Containers.ViewSangprimusPortum".Translate(),
+            defaultDesc = "BEWH.MankindsFinest.Containers.ViewSangprimusPortumDesc".Translate(),
+            icon = Genes40kDefOf.BEWH_SangprimusPortum.uiIcon,
+            action = delegate
+            {
+                CameraJumper.TryJumpAndSelect(sangprimusPortum);
+            }
+        };
+
+        if (sangprimusPortum == null)
+        {
+            command.Disable("BEWH.MankindsFinest.GeneGestator.NoSangprimus".Translate());
+        }
+
+        return command;
     }
 }

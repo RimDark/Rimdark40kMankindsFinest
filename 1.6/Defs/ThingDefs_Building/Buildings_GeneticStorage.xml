@@ -48,7 +48,7 @@
   <ThingDef ParentName="BEWH_GeneticStorage">
     <defName>BEWH_SangprimusPortum</defName>
     <label>Sangprimus Portum vault</label>
-    <description>This device replicates the function of the sanctified Sangprimus Portum. However, it does not contain the full range of genetic materials by default and must be filled with specific Legion and Primarch materials. Once filled, it enables the creation of gene-seed with the chosen traits when linked to a Gene-seed Gestator.\n\nWhilst near a gestator it is able to duplicate the material within to complete the matrices of Firstborn, Primaris and Primarchs.\nCan only store one copy of each material.</description>
+    <description>This device replicates the function of the sanctified Sangprimus Portum. However, it does not contain the full range of genetic materials by default and must be filled with specific Legion and Primarch materials. Once filled, it enables the creation of gene-seed with the chosen traits in any Gene-seed Gestator on the map.\n\nIts archive is available to every gestator on the map, duplicating the material within to complete the matrices of Firstborn, Primaris and Primarchs.\nCan only store one copy of each material.</description>
     <thingClass>Genes40k.Building_SangprimusPortum</thingClass>
     <graphicData>
       <texPath>Things/Building/SangprimusPortum/BEWH_SangprimusPortum</texPath>
@@ -94,17 +94,12 @@
       </defaultStorageSettings>
     </building>
     <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>Core40k.PlaceWorker_OnlyOnePerMap</li>
     </placeWorkers>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>500</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Facility">
-        <maxSimultaneous>0</maxSimultaneous>
-        <maxDistance>0</maxDistance>
       </li>
     </comps>
     <modExtensions>

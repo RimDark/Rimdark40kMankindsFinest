@@ -12,14 +12,8 @@ public class ThoughtWorker_XXTwinDead : ThoughtWorker
             return false;
         }
             
-        var gene = p.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX);
-        if (gene == null)
-        {
-            return false;
-        }
-
-        var twinGene = (Gene_TwinConnected)gene;
-        if (twinGene.Twin == null)
+        var twinGene = p.TwinGene();
+        if (twinGene?.Twin == null)
         {
             return false;
         }

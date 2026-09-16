@@ -96,6 +96,9 @@
     <Compile Include="Comps\MapComponent_PrimarchPresence.cs" />
     <Compile Include="Comps\GameComponent_Perpetual.cs" />
     <Compile Include="Comps\GameComponent_UnlockedMaterials.cs" />
+    <Compile Include="Comps\GameComponent_CustomChapterGenes.cs" />
+    <Compile Include="Comps\HediffCompProperties_PhaseDevelopment.cs" />
+    <Compile Include="Comps\HediffComp_PhaseDevelopment.cs" />
     <Compile Include="Comps\LivingSaint\CompAbilityEffect_DivineGraceCost.cs" />
     <Compile Include="Comps\LivingSaint\CompAbilityEffect_ProofOfFaith.cs" />
     <Compile Include="Comps\LivingSaint\CompProperties_AbilityDivineGraceCost.cs" />
@@ -156,6 +159,7 @@
     <Compile Include="GeneClasses\Gene_WarpShield.cs" />
     <Compile Include="GeneClasses\GeneGizmo_ResourceDivineGrace.cs" />
     <Compile Include="GeneClasses\Gene_DivineGrace.cs" />
+    <Compile Include="GeneClasses\Gene_CustomChapter.cs" />
     <Compile Include="GeneClasses\Gene_Furybound.cs" />
     <Compile Include="GeneClasses\Gene_InduceFear.cs" />
     <Compile Include="GeneClasses\Gene_Perpetual.cs" />
@@ -167,6 +171,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_DeathacidifierProgenoidGlands.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_DomitarMechExclusive.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ImplantGeneseedCorrectIngredient.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_CreateSurgeryBillVialPicker.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_LivingSaintDestroyRemoveCount.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_MoreArtJoy.cs" />
     <Compile Include="HarmonyPatches\ManualHarmonyPatches.cs" />
@@ -206,6 +211,7 @@
     <Compile Include="ThingClasses\Building_GeneticStorage.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneseedPurity.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ChapterGene.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_CustomChapterGenerated.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_KeepPrerequisitePermit.cs" />
     <Compile Include="DefModExtensions\DefModExtension_LivingSaint.cs" />
@@ -214,6 +220,7 @@
     <Compile Include="DefModExtensions\DefModExtension_GeneseedVial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_ChapterMaterial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PrimarchMaterial.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_PrimarchGestation.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneMatrixRecipe.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneMatrix.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneGestator.cs" />
@@ -236,6 +243,12 @@
     <Compile Include="Windows\Dialog_ChangeDefaultChapterColour.cs" />
     <Compile Include="Windows\Dialog_ChangeFlagColour.cs" />
     <Compile Include="Windows\Dialog_CraftPrimarchEmbryo.cs" />
+    <Compile Include="Windows\Dialog_CreateChapterGene.cs" />
+    <Compile Include="Windows\Dialog_CustodesCustomization.cs" />
+    <Compile Include="Windows\Dialog_CustomChapterGeneList.cs" />
+    <Compile Include="Windows\Dialog_SelectFlagIcon.cs" />
+    <Compile Include="Windows\Dialog_SelectGeneseedVial.cs" />
+    <Compile Include="Windows\Dialog_SelectChapter.cs" />
     <Compile Include="Windows\Dialog_ViewGenesEmbryo.cs" />
     <Compile Include="Windows\ITab_ContentsGeneticStorage.cs" />
     <Compile Include="Windows\ITab_SangprimusPortum.cs" />
@@ -264,6 +277,9 @@
     <Compile Include="Workers\Recipe_MakePrimarchEmbryo.cs" />
     <Compile Include="Workers\WorkerClass_PhaseDevelopment.cs" />
     <Compile Include="Workers\WorkerClass_ImplantGeneseed.cs" />
+    <Compile Include="Workers\Bill_GeneseedImplant.cs" />
+    <Compile Include="Workers\Bill_ApplyChapter.cs" />
+    <Compile Include="Workers\Bill_PrimarchEmbryo.cs" />
     <Compile Include="Workers\WorkGiver_CarryMatrixToGeneGestator.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
     <Compile Include="GeneClasses\Gene_Pariah.cs" />
@@ -276,6 +292,19 @@
     <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalSpaceMarine.cs" />
     <Compile Include="Workers\WorkerClass_GeneProgenoidRemovalBase.cs" />
     <Compile Include="Genes40kUtils.cs" />
+    <Compile Include="CustomChapterGene.cs" />
+    <Compile Include="CustomGeneKind.cs" />
+    <Compile Include="CustodesDisciplineDef.cs" />
+    <Compile Include="CustodesDisciplineLevel.cs" />
+    <Compile Include="ITwinGene.cs" />
+    <Compile Include="CustomChapterGeneUtility.cs" />
+    <Compile Include="CustomChapterGeneDefBuilder.cs" />
+    <Compile Include="CustomChapterGeneTemplateDef.cs" />
+    <Compile Include="ChapterTraitDef.cs" />
+    <Compile Include="Workers\ChapterTraitWorker.cs" />
+    <Compile Include="Workers\ChapterTraitWorker_FleshChange.cs" />
+    <Compile Include="GeneseedVialKindUtility.cs" />
+    <Compile Include="ChapterChoiceUtility.cs" />
     <Compile Include="Genes40kDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Ability traits: each grants the ability of the primarch whose material unlocks it. Abilities defined as
+         VEF.Abilities.AbilityDef go through vefAbilityGrant; vanilla AbilityDefs through abilities. Perturabo's Iron Circle
+         is deliberately left out (Domitar control is bound to his own gene). -->
+
+    <!-- Legion I - Lion El'Jonson: the in-map blink only; the world-map stride stays with the real material -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_PathOfCaliban</defName>
+        <label>Path of Caliban</label>
+        <description>A short stride through the shadowed forests of Caliban. This lineage can vanish from one place and appear in another, taking those beside it along.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lion</iconPath>
+        <displayOrder>1501</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialI</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Enables short-range Forestwalking.</li>
+        </customEffectDescriptions>
+        <vefAbilityGrant>
+            <abilityDefs>
+                <li>BEWH_ForestWalkShort</li>
+            </abilityDefs>
+        </vefAbilityGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion V - Jaghatai Khan -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_AlakhGeh</defName>
+        <label>Alakh Geh</label>
+        <description>The thought and will alone to kill is enough to kill.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Khan</iconPath>
+        <displayOrder>1505</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialV</li>
+        </requiredAnyMaterial>
+        <abilities>
+            <li>BEWH_AlakhGeh</li>
+        </abilities>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion VI - Leman Russ -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_DenyTheWitch</defName>
+        <label>Deny the Witch</label>
+        <description>The Wolf King's contempt for sorcery, made into a weapon. This lineage can smother a psyker's power at a glance.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Russ</iconPath>
+        <displayOrder>1506</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialVI</li>
+        </requiredAnyMaterial>
+        <abilities>
+            <li MayRequire="Ludeon.RimWorld.Royalty">BEWH_DenyTheWitch</li>
+        </abilities>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion VII - Rogal Dorn -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_RaiseBastion</defName>
+        <label>Raise Bastion</label>
+        <description>Dorn's gift for fortification. This lineage can raise a temporary bastion of walls, barricades and turrets.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Dorn</iconPath>
+        <displayOrder>1507</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialVII</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Gives the power to raise a temporary bastion to hold back attackers.</li>
+        </customEffectDescriptions>
+        <vefAbilityGrant>
+            <abilityDefs>
+                <li>BEWH_RaiseBastion</li>
+            </abilityDefs>
+        </vefAbilityGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion VIII - Konrad Curze -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_VeilOfDarkness</defName>
+        <label>Veil of Darkness</label>
+        <description>The Night Haunter's scream. Lights die, enemies reel, and the dark belongs to this lineage.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Curze</iconPath>
+        <displayOrder>1508</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialVIII</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Able to let out a psychic scream, destroying lighting sources and stunning enemies.</li>
+        </customEffectDescriptions>
+        <vefAbilityGrant>
+            <abilityDefs>
+                <li>BEWH_PsychicEmp</li>
+            </abilityDefs>
+        </vefAbilityGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion IX - Sanguinius -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_Winged</defName>
+        <label>Winged</label>
+        <description>The Angel's wings, grown true. This lineage can take to the air.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Sanguinius</iconPath>
+        <displayOrder>1509</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-4</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialIX</li>
+        </requiredAnyMaterial>
+        <geneExclusionTags>
+            <li>Wing</li>
+            <li>Wings</li>
+        </geneExclusionTags>
+        <customEffectDescriptions>
+            <li>Ignores speed penalty from obstacles.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>BEWH_AngelicFlight</li>
+        </abilities>
+        <hediffToWholeBody>BEWH_WingsHover</hediffToWholeBody>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/AngelicWings/BEWH_AngelicWings</texPath>
+                <drawSize>1.2</drawSize>
+                <parentTagDef>Body</parentTagDef>
+                <color>(255, 255, 255)</color>
+                <drawData>
+                    <defaultData>
+                        <layer>-1</layer>
+                    </defaultData>
+                    <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    <dataNorth>
+                        <layer>97</layer>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, -0.1, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, -0.1, 0)</offset>
+                    </dataEast>
+                    <dataWest>
+                        <offset>(0, -0.1, 0)</offset>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion XII - Angron -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_SharedBurden</defName>
+        <label>Shared Burden</label>
+        <description>By psychically tapping into another's mind, this lineage can feel and share their emotion, taking their burdens onto itself.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
+        <displayOrder>1512</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXII</li>
+        </requiredAnyMaterial>
+        <abilities>
+            <li>BEWH_ChillgronEmpathy</li>
+        </abilities>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion XIII - Roboute Guilliman -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_OpusMaxima</defName>
+        <label>Opus Maxima</label>
+        <description>Guilliman's meticulous planning. This lineage can temporarily raise the productivity of every colonist on the map.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Robot</iconPath>
+        <displayOrder>1513</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXIII</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Ability to increase productivity of colony pawns.</li>
+        </customEffectDescriptions>
+        <vefAbilityGrant>
+            <abilityDefs>
+                <li>BEWH_OpusMaxima</li>
+            </abilityDefs>
+        </vefAbilityGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion XVI - Horus Lupercal -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_WarPlanning</defName>
+        <label>War Planning</label>
+        <description>The Warmaster's eye for a battle. This lineage can form a war plan that sharpens every colonist on the map.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_TheBaldOne</iconPath>
+        <displayOrder>1516</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXVI</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Ability to increase combat usefulness of colony pawns.</li>
+        </customEffectDescriptions>
+        <vefAbilityGrant>
+            <abilityDefs>
+                <li>BEWH_WarPlanning</li>
+            </abilityDefs>
+        </vefAbilityGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion XVII - Lorgar -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_WordOfAuthority</defName>
+        <label>Word of Authority</label>
+        <description>Lorgar's voice. This lineage's words carry such weight that a listener can be compelled to join its cause outright.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lorgar</iconPath>
+        <displayOrder>1517</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-5</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXVII</li>
+        </requiredAnyMaterial>
+        <abilities>
+            <li>BEWH_LorgarWordOfAuthority</li>
+        </abilities>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion XIX - Corvus Corax -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_Conceal</defName>
+        <label>Conceal</label>
+        <description>The Raven's trick. This lineage can become one with its surroundings and move unnoticed.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Corvus</iconPath>
+        <displayOrder>1519</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXIX</li>
+        </requiredAnyMaterial>
+        <abilities>
+            <li>BEWH_Conceal</li>
+        </abilities>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Legion XX - Alpharius/Omegon: the vat grows two, linked as twins -->
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_Twinned</defName>
+        <label>Twinned</label>
+        <description>The Hydra's secret. The vat brings this lineage to term as two, bound to each other across any distance.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_AlphaOmega</iconPath>
+        <displayOrder>1520</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>-3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXX</li>
+        </requiredAnyMaterial>
+        <twinLinked>true</twinLinked>
+        <customEffectDescriptions>
+            <li>You have a twin!</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>BEWH_TwinTeleportation</li>
+            <li>BEWH_TwinLink</li>
+        </abilities>
+    </Genes40k.ChapterTraitDef>
+
+</Defs>

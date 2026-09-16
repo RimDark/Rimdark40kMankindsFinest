@@ -61,13 +61,26 @@
   <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
     <defName>BEWH_GeneseedPerfection</defName>
     <label>Gene-seed perfection</label>
-    <description>Unlocks the creation of enhanced astartes, by futher improving and refining the gene-seed creation process.</description>
+    <description>Unlocks the creation of enhanced astartes, by futher improving and refining the gene-seed creation process. Also allows one more trait to be chosen when designing a chapter gene-seed.</description>
     <prerequisites>
       <li>BEWH_GeneseedPurification</li>
     </prerequisites>
     <baseCost>6000</baseCost>
     <researchViewX>2</researchViewX>
     <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- Gene-seed divergence -->
+  <ResearchProjectDef ParentName="BEWH_ImperiumResearchBase">
+    <defName>BEWH_GeneseedDivergence</defName>
+    <label>Gene-seed divergence</label>
+    <description>Deliberate divergence of a cultivated gene-seed line, holding more traits stable in a single strand. Allows one more trait to be chosen when designing a chapter gene-seed.</description>
+    <prerequisites>
+      <li>BEWH_GeneseedPerfection</li>
+    </prerequisites>
+    <baseCost>12000</baseCost>
+    <researchViewX>3</researchViewX>
+    <researchViewY>0</researchViewY>
   </ResearchProjectDef>
 
   <!-- Gene-seed Extraction (Space Marine) -->

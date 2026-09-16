@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Flesh Change -->
+	<HediffDef>
+		<defName>BEWH_FleshChange</defName>
+		<label>flesh change</label>
+		<description>The gene-seed of this lineage never truly settles. Warp activity stirs it: bone lengthens where it should not, skin thickens in patches, and the hands the marine was trained with are no longer quite the hands he has. Left unused, the psyker's gift lets the flesh settle again, slowly.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.6, 0.4, 0.75)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<tendable>false</tendable>
+		<isBad>true</isBad>
+		<initialSeverity>0.05</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<stages>
+			<li>
+				<label>dormant</label>
+				<minSeverity>0</minSeverity>
+			</li>
+			<li>
+				<label>twitching</label>
+				<minSeverity>0.25</minSeverity>
+				<statOffsets>
+					<PawnBeauty>-0.5</PawnBeauty>
+				</statOffsets>
+			</li>
+			<li>
+				<label>mutating</label>
+				<minSeverity>0.5</minSeverity>
+				<statOffsets>
+					<PawnBeauty>-1</PawnBeauty>
+					<SocialImpact>-0.15</SocialImpact>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.95</postFactor>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>unravelling</label>
+				<minSeverity>0.8</minSeverity>
+				<statOffsets>
+					<PawnBeauty>-1.5</PawnBeauty>
+					<SocialImpact>-0.25</SocialImpact>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.85</postFactor>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.95</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

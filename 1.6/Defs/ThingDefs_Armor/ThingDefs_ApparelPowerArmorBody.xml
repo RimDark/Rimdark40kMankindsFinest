@@ -8,6 +8,7 @@
     <!-- MK 7 -->
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkVIIPowerArmor</defName>
+        <tickerType>Normal</tickerType>
         <label>Mk VII Power Armor</label>
         <description>The MK VII "Aquila" Power Armor is an advanced battle plate worn by the Adeptus Astartes. It features dense ceramite plating, reinforced servo-musculature, and the iconic Aquila chest plate. It provides excellent protection against ballistic and energy weapons, making it ideal for prolonged engagements in hostile environments.</description>
         <recipeMaker>
@@ -28,6 +29,9 @@
             <Insulation_Heat>20</Insulation_Heat>
 
             <BEWH_InternalUpgradeSlots>4</BEWH_InternalUpgradeSlots>
+            <!-- Zero unless a fitted conversion field raises it; the StatDef default is 1. -->
+            <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
+            <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
@@ -87,9 +91,13 @@
             </renderNodeProperties>
         </apparel>
         <comps>
+            <li Class="Core40k.CompProperties_ConversionField" />
             <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
             <li Class="Core40k.CompProperties_Decorative">
                 <drawRenderNodesOnGround>true</drawRenderNodesOnGround>
+                <decorations>
+                    <li>BEWH_Deco_ChestAquila</li>
+                </decorations>
             </li>
         </comps>
         <modExtensions>
@@ -124,6 +132,7 @@
     <!-- MK 10 -->
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmor</defName>
+        <tickerType>Normal</tickerType>
         <label>Mk X Power Armor</label>
         <description>The MK X "Tacticus" Power Armor is a modernized battle plate worn by Primaris Space Marines. Combining the durability of earlier marks with increased mobility, it features advanced ceramite-composite plating and enhanced servo systems. Its modular design allows for field adaptability across diverse combat roles, offering superior protection and efficiency in extended operations.</description>
         <recipeMaker>
@@ -144,6 +153,9 @@
             <Insulation_Heat>30</Insulation_Heat>
 
             <BEWH_InternalUpgradeSlots>5</BEWH_InternalUpgradeSlots>
+            <!-- Zero unless a fitted conversion field raises it; the StatDef default is 1. -->
+            <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
+            <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">17</TerrorSource>
@@ -203,9 +215,13 @@
             </renderNodeProperties>
         </apparel>
         <comps>
+            <li Class="Core40k.CompProperties_ConversionField" />
             <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
             <li Class="Core40k.CompProperties_Decorative">
                 <drawRenderNodesOnGround>true</drawRenderNodesOnGround>
+                <decorations>
+                    <li>BEWH_Deco_ChestAquila</li>
+                </decorations>
             </li>
         </comps>
         <modExtensions>
@@ -240,6 +256,7 @@
     <!-- MK 10 Chaplain -->
     <ThingDef ParentName="BEWH_PowerArmorBase_ChapterColour">
         <defName>BEWH_MkXPowerArmorChaplain</defName>
+        <tickerType>Normal</tickerType>
         <label>Mk X Chaplain Power Armor</label>
         <description>This MK X Power Armor is a specialized variant of the Tacticus pattern, worn by Primaris Chaplains. Built upon the same durable and mobile frame, it is adorned with grim iconography to embody the Emperor's judgment and inspire unwavering zeal in those who follow.\n\nIncreases the terror of nearby prisoners.</description>
         <recipeMaker>
@@ -260,6 +277,9 @@
             <Insulation_Heat>30</Insulation_Heat>
 
             <BEWH_InternalUpgradeSlots>5</BEWH_InternalUpgradeSlots>
+            <!-- Zero unless a fitted conversion field raises it; the StatDef default is 1. -->
+            <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
+            <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">65</TerrorSource>
@@ -318,6 +338,7 @@
             </renderNodeProperties>
         </apparel>
         <comps>
+            <li Class="Core40k.CompProperties_ConversionField" />
             <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration">
                 <defaultPrimaryColor>(61,61,61)</defaultPrimaryColor>
                 <defaultSecondaryColor>(223,164,29)</defaultSecondaryColor>
@@ -339,6 +360,7 @@
     <!-- Living Saint Armor -->
     <ThingDef ParentName="BEWH_PowerArmorBase">
         <defName>BEWH_LivingSaintArmor</defName>
+        <tickerType>Normal</tickerType>
         <label>Living Saint Armor</label>
         <description>A sanctified warplate worn by a Living Saint, adorned with the symbols of the Ecclesiarchy. It shines with a faint golden hue and, while lacking advanced systems, offers impressive protection. Some claim it has a calming or inspiring effect on nearby allies. Despite its imposing appearance, it moves easily with the wearer, providing both resilience and mobility.</description>
         <graphicData>
@@ -365,6 +387,10 @@
             <Insulation_Heat>50</Insulation_Heat>
             <Beauty>5</Beauty>
             <DeteriorationRate>0</DeteriorationRate>
+            <BEWH_InternalUpgradeSlots>6</BEWH_InternalUpgradeSlots>
+            <!-- Zero unless a fitted conversion field raises it; the StatDef default is 1. -->
+            <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
+            <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">80</TerrorSource>
@@ -406,6 +432,7 @@
             </renderNodeProperties>
         </apparel>
         <comps>
+            <li Class="Core40k.CompProperties_ConversionField" />
             <li Class="CompProperties_Biocodable" />
             <li Class="Core40k.CompProperties_MultiColor">
                 <defaultPrimaryColor>(0.8358, 0.619, 0.298)</defaultPrimaryColor>

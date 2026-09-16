@@ -35,11 +35,6 @@
         <glowRadius>3</glowRadius>
         <glowColor>(255,255,255,0)</glowColor>
       </li>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>BEWH_SangprimusPortum</li>
-        </linkableFacilities>
-      </li>
       <li Class="CompProperties_Breakdownable"/>
     </comps>
     <graphicData>
@@ -130,7 +125,6 @@
     </costList>
     <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
     <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <building>
@@ -144,11 +138,6 @@
       <li Class="CompProperties_Glower">
         <glowRadius>2</glowRadius>
         <glowColor>(255,255,255,0)</glowColor>
-      </li>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>BEWH_SangprimusPortum</li>
-        </linkableFacilities>
       </li>
       <li Class="CompProperties_Flickable" />
     </comps>

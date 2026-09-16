@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseFragGrenadeProjectile">
+		<defName>BEWH_Proj_KrakGrenade</defName>
+		<label>krak grenade</label>
+		<projectile>
+			<explosionRadius>1.2</explosionRadius>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>80</damageAmountBase>
+			<armorPenetrationBase>1.0</armorPenetrationBase>
+			<explosionDelay>60</explosionDelay>
+		</projectile>
+	</ThingDef>
+
+</Defs>

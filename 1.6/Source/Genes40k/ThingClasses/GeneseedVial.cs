@@ -18,6 +18,8 @@ public class GeneseedVial : ThingWithComps
 
     public GeneDef extraGeneFromMaterial = null;
 
+    public CustomChapterGene CustomChapter => GameComponent_CustomChapterGenes.Instance?.GetByGeneDef(extraGeneFromMaterial);
+
     public string newGeneseedVialTexture = null;
 
     [Unsaved]
@@ -161,6 +163,17 @@ public class GeneseedVial : ThingWithComps
     {
         var text = base.GetInspectString();
         tmpGeneLabels.Clear();
+
+        var chapterLabel = CustomChapterGeneUtility.ChapterLabelOf(this);
+        if (!chapterLabel.NullOrEmpty())
+        {
+            if (!text.NullOrEmpty())
+            {
+                text += "\n";
+            }
+            text += "BEWH.MankindsFinest.GeneseedVial.ChapterMaterial".Translate(chapterLabel.CapitalizeFirst());
+        }
+
         if (geneSet == null || !geneSet.GenesListForReading.Any()) return text;
             
         if (!text.NullOrEmpty())

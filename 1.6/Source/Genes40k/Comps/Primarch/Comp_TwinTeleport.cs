@@ -13,7 +13,9 @@ public class Comp_TwinTeleport : CompAbilityEffect
     {
         var caster = parent.pawn;
 
-        if (caster.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX) is not Gene_TwinConnected twinGene || twinGene.Twin == null)
+        var twinGene = caster.TwinGene();
+
+        if (twinGene?.Twin == null)
         {
             return;
         }

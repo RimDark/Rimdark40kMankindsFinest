@@ -37,6 +37,18 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
+        <pawnStatOffsets>
+            <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">6</TerrorSource>
+        </pawnStatOffsets>
+        <pawnStatFactors>
+            <GlobalLearningFactor>1.05</GlobalLearningFactor>
+            <BEWH_RankLearningFactor>0.90</BEWH_RankLearningFactor>
+        </pawnStatFactors>
+        <cost>
+            <Plasteel>10</Plasteel>
+            <ComponentSpacer>1</ComponentSpacer>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

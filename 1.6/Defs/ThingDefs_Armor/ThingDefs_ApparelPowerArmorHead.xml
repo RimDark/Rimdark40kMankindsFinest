@@ -116,6 +116,7 @@
             <Insulation_Cold>6</Insulation_Cold>
             <Insulation_Heat>4</Insulation_Heat>
 
+            <BEWH_InternalUpgradeSlots>4</BEWH_InternalUpgradeSlots>
         </statBases>
         <equippedStatOffsets>
             <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">35</TerrorSource>

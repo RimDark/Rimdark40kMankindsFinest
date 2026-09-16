@@ -11,7 +11,7 @@ public class Comp_TwinDisable : AbilityComp
     public override bool GizmoDisabled(out string reason)
     {
         var caster = parent.pawn;
-        if (caster.genes?.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX) is Gene_TwinConnected { Active: true } gene)
+        if (caster.TwinGene() is { } gene)
         {
             if (gene.Twin == null)
             {

@@ -69,6 +69,7 @@ public class WorkGiver_DoBillPsychic : WorkGiver_DoBill
         }
         finally
         {
+            tmpOriginalBills.RemoveAll(bill => !bill.CompletableEver);
             bills.Clear();
             bills.AddRange(tmpOriginalBills);
             tmpOriginalBills.Clear();

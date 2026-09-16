@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Sliders of the Custodes ascension pattern editor. Per-level modifiers scale linearly with the chosen level
+         (offset = value * level, factor = 1 + value * level); tiers add the effects that should not scale once the level
+         reaches their minLevel. Point pool and soft cap live on BEWH_CustomCustodesGene. -->
+
+    <Genes40k.CustodesDisciplineDef>
+        <defName>BEWH_CustodesDiscipline_Melee</defName>
+        <label>melee prowess</label>
+        <description>How far the ascension pushed the Custodian's close-combat conditioning: muscle recruitment, reach and the killing instinct that guides a guardian spear.</description>
+        <iconPath>UI/Genes/Custodes/BEWH_Custodes_AtlasMorphogen</iconPath>
+        <displayOrder>1</displayOrder>
+        <statFactorsPerLevel>
+            <MeleeDamageFactor>0.06</MeleeDamageFactor>
+        </statFactorsPerLevel>
+        <statOffsetsPerLevel>
+            <MeleeHitChance>0.5</MeleeHitChance>
+        </statOffsetsPerLevel>
+    </Genes40k.CustodesDisciplineDef>
+
+    <Genes40k.CustodesDisciplineDef>
+        <defName>BEWH_CustodesDiscipline_Ranged</defName>
+        <label>ranged prowess</label>
+        <description>Optical refinement and a stilled hand. Every level brings the bolt caster's aim closer to certainty.</description>
+        <iconPath>UI/Genes/Custodes/BEWH_Custodes_FulguriteNervePlexus</iconPath>
+        <displayOrder>2</displayOrder>
+        <statOffsetsPerLevel>
+            <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
+        </statOffsetsPerLevel>
+        <statFactorsPerLevel>
+            <ShootingAccuracyFactor_Long>0.04</ShootingAccuracyFactor_Long>
+            <AimingDelayFactor>-0.02</AimingDelayFactor>
+        </statFactorsPerLevel>
+    </Genes40k.CustodesDisciplineDef>
+
+    <Genes40k.CustodesDisciplineDef>
+        <defName>BEWH_CustodesDiscipline_Resilience</defName>
+        <label>resilience</label>
+        <description>Densified bone, layered dermis and a body that refuses to break. At its height, no wound leaves a mark.</description>
+        <iconPath>UI/Genes/Custodes/BEWH_Custodes_ImmunisLeucocyte</iconPath>
+        <displayOrder>3</displayOrder>
+        <statOffsetsPerLevel>
+            <ArmorRating_Sharp>0.025</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.025</ArmorRating_Blunt>
+        </statOffsetsPerLevel>
+        <statFactorsPerLevel>
+            <IncomingDamageFactor>-0.02</IncomingDamageFactor>
+        </statFactorsPerLevel>
+        <tiers>
+            <li>
+                <minLevel>8</minLevel>
+                <preventPermanentWounds>true</preventPermanentWounds>
+                <customEffectDescriptions>
+                    <li>Never suffers permanent wounds.</li>
+                </customEffectDescriptions>
+            </li>
+        </tiers>
+    </Genes40k.CustodesDisciplineDef>
+
+    <Genes40k.CustodesDisciplineDef>
+        <defName>BEWH_CustodesDiscipline_Vitality</defName>
+        <label>vitality</label>
+        <description>Accelerated cellular repair and an immune system that outpaces anything the galaxy can throw at it.</description>
+        <iconPath>UI/Genes/Custodes/BEWH_Custodes_AthanaticVitae</iconPath>
+        <displayOrder>4</displayOrder>
+        <statFactorsPerLevel>
+            <InjuryHealingFactor>0.25</InjuryHealingFactor>
+            <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+        </statFactorsPerLevel>
+        <tiers>
+            <li>
+                <minLevel>6</minLevel>
+                <makeImmuneTo>
+                    <li>WoundInfection</li>
+                </makeImmuneTo>
+                <customEffectDescriptions>
+                    <li>Immune to wound infection.</li>
+                </customEffectDescriptions>
+            </li>
+        </tiers>
+    </Genes40k.CustodesDisciplineDef>
+
+    <Genes40k.CustodesDisciplineDef>
+        <defName>BEWH_CustodesDiscipline_Swiftness</defName>
+        <label>swiftness</label>
+        <description>Reflex arcs shortened and stride lengthened. The Custodian closes distances and slips blows that should have landed.</description>
+        <iconPath>UI/Genes/Custodes/BEWH_Custodes_FulgurVitaliumstrand</iconPath>
+        <displayOrder>5</displayOrder>
+        <statOffsetsPerLevel>
+            <MoveSpeed>0.08</MoveSpeed>
+            <MeleeDodgeChance>0.6</MeleeDodgeChance>
+        </statOffsetsPerLevel>
+    </Genes40k.CustodesDisciplineDef>
+
+    <Genes40k.CustodesDisciplineDef>
+        <defName>BEWH_CustodesDiscipline_Social</defName>
+        <label>social aptitude</label>
+        <description>The bearing of a warrior raised beside the Throne: measured speech, an unreadable face and a presence that settles rooms.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Loremasters</iconPath>
+        <displayOrder>6</displayOrder>
+        <statFactorsPerLevel>
+            <SocialImpact>0.05</SocialImpact>
+        </statFactorsPerLevel>
+        <statOffsetsPerLevel>
+            <NegotiationAbility>0.1</NegotiationAbility>
+        </statOffsetsPerLevel>
+        <tiers>
+            <li>
+                <minLevel>4</minLevel>
+                <aptitudes>
+                    <Social>2</Social>
+                </aptitudes>
+            </li>
+            <li>
+                <minLevel>8</minLevel>
+                <aptitudes>
+                    <Social>2</Social>
+                </aptitudes>
+            </li>
+        </tiers>
+    </Genes40k.CustodesDisciplineDef>
+
+    <Genes40k.CustodesDisciplineDef>
+        <defName>BEWH_CustodesDiscipline_Erudition</defName>
+        <label>erudition</label>
+        <description>A mind built for the Tower of Hegemon's archives. Learns fast and reasons faster.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_KeenSenses</iconPath>
+        <displayOrder>7</displayOrder>
+        <statOffsetsPerLevel>
+            <ResearchSpeed>0.08</ResearchSpeed>
+        </statOffsetsPerLevel>
+        <statFactorsPerLevel>
+            <GlobalLearningFactor>0.05</GlobalLearningFactor>
+        </statFactorsPerLevel>
+        <tiers>
+            <li>
+                <minLevel>4</minLevel>
+                <aptitudes>
+                    <Intellectual>2</Intellectual>
+                </aptitudes>
+            </li>
+            <li>
+                <minLevel>8</minLevel>
+                <aptitudes>
+                    <Intellectual>2</Intellectual>
+                </aptitudes>
+            </li>
+        </tiers>
+    </Genes40k.CustodesDisciplineDef>
+
+    <Genes40k.CustodesDisciplineDef>
+        <defName>BEWH_CustodesDiscipline_Warden</defName>
+        <label>psychic wardenship</label>
+        <description>A mind hardened against the warp's whisper. High levels let the Custodian smother a witch's power outright.</description>
+        <iconPath>UI/Genes/Custodes/BEWH_Custodes_MnemosyneMindshield</iconPath>
+        <displayOrder>8</displayOrder>
+        <statFactorsPerLevel>
+            <PsychicSensitivity>-0.05</PsychicSensitivity>
+        </statFactorsPerLevel>
+        <tiers>
+            <li MayRequire="Ludeon.RimWorld.Royalty">
+                <minLevel>7</minLevel>
+                <abilities>
+                    <li>BEWH_DenyTheWitch</li>
+                </abilities>
+                <customEffectDescriptions>
+                    <li>Can Deny the Witch.</li>
+                </customEffectDescriptions>
+            </li>
+        </tiers>
+    </Genes40k.CustodesDisciplineDef>
+
+</Defs>

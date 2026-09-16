@@ -42,6 +42,13 @@
             <li>BEWH_DecoPaletteLeatherGrey</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
+        <statOffsets>
+            <Insulation_Cold>8</Insulation_Cold>
+        </statOffsets>
+        <cost>
+            <Cloth>20</Cloth>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -84,6 +91,14 @@
         <colourable>true</colourable>
         <useParentColourAsDefault>true</useParentColourAsDefault>
         <decorationType>BEWH_DecoCategory_Pouches</decorationType>
+        <pawnStatFactors>
+            <AimingDelayFactor>0.92</AimingDelayFactor>
+        </pawnStatFactors>
+        <cost>
+            <Plasteel>5</Plasteel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>

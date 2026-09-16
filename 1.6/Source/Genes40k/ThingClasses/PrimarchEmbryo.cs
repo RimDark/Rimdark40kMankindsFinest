@@ -18,7 +18,7 @@ public class PrimarchEmbryo : GeneSetHolderBase
 
     public Pawn Mother => mother ??= FindOrGenerateParent(Gender.Female);
 
-    public Pawn Father => father ??= FindOrGenerateParent(Gender.Male);
+    public Pawn Father => father;
 
     private static Pawn FindOrGenerateParent(Gender gender)
     {
@@ -110,16 +110,12 @@ public class PrimarchEmbryo : GeneSetHolderBase
 
     public override void Notify_DebugSpawned()
     {
-        if (Map.mapPawns.AllPawns.Where(x => x.RaceProps.Humanlike && x.gender == Gender.Male).TryRandomElement(out var result))
-        {
-            father = result;
-        }
         if (Map.mapPawns.AllPawns.Where( x => x.RaceProps.Humanlike && x.gender == Gender.Female).TryRandomElement(out var result2))
         {
             mother = result2;
         }
         
-        birthGenes = PregnancyUtility.GetInheritedGeneSet(father, Mother);
+        birthGenes = PregnancyUtility.GetInheritedGeneSet(null, Mother);
 
         geneSet = new GeneSet();
         foreach (var gene in birthGenes.GenesListForReading)

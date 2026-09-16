@@ -99,6 +99,7 @@
         <ticksToGestate>900000</ticksToGestate>
         <makesGeneVial>BEWH_GeneseedVialCustodes</makesGeneVial>
         <researchNeeded>BEWH_CustodesCreation</researchNeeded>
+        <usesDisciplineCustomization>true</usesDisciplineCustomization>
       </li>
     </modExtensions>
   </ThingDef>

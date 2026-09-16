@@ -34,7 +34,7 @@ public class Recipe_MakePrimarchEmbryo : RecipeWorker
             primarchGenes.AddGene(geneseedVial.extraGeneFromMaterial);
         }
             
-        embryo.Initialize(hEmbryo.Mother, hEmbryo.Father, primarchGenes, hEmbryo.GeneSet, geneseedVial.iconDef, geneseedVial.xenotype);
+        embryo.Initialize(hEmbryo.Mother, null, primarchGenes, hEmbryo.GeneSet, geneseedVial.iconDef, geneseedVial.xenotype);
 
         if (billDoer != null)
         {

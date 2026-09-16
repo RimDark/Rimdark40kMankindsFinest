@@ -215,6 +215,15 @@
             <li>BEWH_Deco_MkVII_VictrixBrim</li>
             <li>BEWH_Deco_MkX_VictrixBrim</li>
         </incompatibleDecorations>
+        <pawnStatOffsets>
+            <SocialImpact>0.15</SocialImpact>
+            <NegotiationAbility>0.15</NegotiationAbility>
+        </pawnStatOffsets>
+        <cost>
+            <Plasteel>5</Plasteel>
+            <Gold>1</Gold>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

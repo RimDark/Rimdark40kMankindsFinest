@@ -44,6 +44,17 @@
         <colourable>true</colourable>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Relics</decorationType>
+        <pawnStatOffsets>
+            <ShootingAccuracyPawn>0.05</ShootingAccuracyPawn>
+        </pawnStatOffsets>
+        <incompatibleDecorations>
+            <li>BEWH_DecoRelic_2</li>
+        </incompatibleDecorations>
+        <cost>
+            <Plasteel>10</Plasteel>
+            <ComponentSpacer>1</ComponentSpacer>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -88,6 +99,17 @@
         <colourable>true</colourable>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Relics</decorationType>
+        <pawnStatOffsets>
+            <PsychicSensitivity>0.15</PsychicSensitivity>
+        </pawnStatOffsets>
+        <incompatibleDecorations>
+            <li>BEWH_DecoRelic_1</li>
+        </incompatibleDecorations>
+        <cost>
+            <Plasteel>10</Plasteel>
+            <ComponentSpacer>1</ComponentSpacer>
+        </cost>
+        <workAmount>900</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

@@ -17,6 +17,14 @@ public class Building_GeneGestator : Building
     public Thing containedMatrix = null;
 
     public ThingDef selectedMaterial = null;
+    public int selectedCustomChapterId = -1;
+    public List<CustodesDisciplineLevel> selectedDisciplines = [];
+
+    private CustomChapterGene SelectedCustomChapter => selectedCustomChapterId < 0 ? null : GameComponent_CustomChapterGenes.Instance?.Get(selectedCustomChapterId);
+
+    private DefModExtension_GeneMatrix ContainedMatrixMod => containedMatrix?.def.GetModExtension<DefModExtension_GeneMatrix>();
+
+    private bool HasDisciplinePattern => selectedDisciplines.Any(entry => entry?.def != null && entry.level > 0);
 
     private bool doWork = false;
     private float totalTime = 0;
@@ -34,6 +42,7 @@ public class Building_GeneGestator : Building
     private static readonly Texture2D EmptyChapterMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/ChapterMaterial/BEWH_ChapterMaterial_None");
     private static readonly Texture2D EmptyPrimarchMaterialIcon = ContentFinder<Texture2D>.Get("Things/Item/PrimarchMaterial/BEWH_PrimarchMaterial_None");
     private static readonly Texture2D MatrixSelectionTex = ContentFinder<Texture2D>.Get("Things/Item/GeneMatrix/BEWH_GeneMatrix_Empty");
+    private static readonly Texture2D ConfigurePatternIcon = ContentFinder<Texture2D>.Get("UI/Gizmos/BEWH_CogIcon");
 
     public bool PowerOn => PowerTraderComp.PowerOn;
     [Unsaved(false)]
@@ -136,6 +145,20 @@ public class Building_GeneGestator : Building
             geneseedVial.extraGeneFromMaterial = defMod.addedGene;
             geneseedVial.newGeneseedVialTexture = defMod.newGeneseedVialTexture;
         }
+        else if (SelectedCustomChapter != null)
+        {
+            var customChapter = SelectedCustomChapter;
+            geneseedVial.extraGeneFromMaterial = customChapter.GeneDef;
+            geneseedVial.newGeneseedVialTexture = customChapter.Template.vialTexturePath;
+            customChapter.locked = true;
+        }
+        else if (HasDisciplinePattern && GameComponent_CustomChapterGenes.Instance != null)
+        {
+            var design = GameComponent_CustomChapterGenes.Instance.GetOrCreateCustodesDesign(selectedDisciplines);
+            geneseedVial.extraGeneFromMaterial = design.GeneDef;
+            geneseedVial.newGeneseedVialTexture = design.Template.vialTexturePath;
+            design.locked = true;
+        }
         
         GenSpawn.Spawn(geneseedVial, InteractionCell, Map);
 
@@ -164,6 +187,8 @@ public class Building_GeneGestator : Building
         }
         containedMatrix = null;
         selectedMaterial = null;
+        selectedCustomChapterId = -1;
+        selectedDisciplines = [];
     }
 
     private void TryDropContainedMatrix()
@@ -192,6 +217,16 @@ public class Building_GeneGestator : Building
         {
             stringBuilder.Append("\n");
             stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.ContainsExtraMaterial".Translate(selectedMaterial.label));
+        }
+        else if (SelectedCustomChapter != null)
+        {
+            stringBuilder.Append("\n");
+            stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.ContainsExtraMaterial".Translate(SelectedCustomChapter.name));
+        }
+        else if (HasDisciplinePattern)
+        {
+            stringBuilder.Append("\n");
+            stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.ContainsPattern".Translate(CustomChapterGeneUtility.PatternCode(selectedDisciplines)));
         }
 
         if (!doWork)
@@ -237,27 +272,46 @@ public class Building_GeneGestator : Building
                 if (CanUseAnyMaterial())
                 {
                     var availableMaterial = new List<ThingDef>();
+                    var availableCustomChapters = new List<CustomChapterGene>();
                     string geneticType;
 
                     Texture2D emptyMaterialIcon = null;
-                    if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
+                    if (ContainedMatrixMod.canUsePrimarchMaterial)
                     {
                         availableMaterial.AddRange(GameComp.UnlockedPrimarchMaterial);
+                        if (GameComponent_CustomChapterGenes.Instance != null)
+                        {
+                            availableCustomChapters.AddRange(GameComponent_CustomChapterGenes.Instance.DesignsOf(CustomGeneKind.Primarch));
+                        }
                         geneticType = "BEWH.MankindsFinest.CommonKeywords.Primarch".Translate();
                         emptyMaterialIcon = EmptyPrimarchMaterialIcon;
                     }
                     else
                     {
                         availableMaterial.AddRange(GameComp.UnlockedChapterMaterial);
+                        if (GameComponent_CustomChapterGenes.Instance != null)
+                        {
+                            availableCustomChapters.AddRange(GameComponent_CustomChapterGenes.Instance.DesignsOf(CustomGeneKind.Chapter));
+                        }
                         geneticType = "BEWH.MankindsFinest.CommonKeywords.Chapter".Translate();
                         emptyMaterialIcon = EmptyChapterMaterialIcon;
+                    }
+
+                    var materialIcon = emptyMaterialIcon;
+                    if (selectedMaterial != null)
+                    {
+                        materialIcon = selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon;
+                    }
+                    else if (SelectedCustomChapter != null)
+                    {
+                        materialIcon = SelectedCustomChapter.GeneDef.Icon;
                     }
                     
                     var command_Action10 = new Command_Action
                     {
                         defaultLabel = "BEWH.MankindsFinest.GeneGestator.SelectXMaterial".Translate(geneticType),
                         defaultDesc = "BEWH.MankindsFinest.GeneGestator.SelectXMaterialDesc".Translate(geneticType),
-                        icon = selectedMaterial == null ? emptyMaterialIcon : selectedMaterial.GetModExtension<DefModExtension_GeneFromMaterial>().addedGene.Icon,
+                        icon = materialIcon,
                         action = delegate
                         {
                             var list = new List<FloatMenuOption>();
@@ -270,11 +324,29 @@ public class Building_GeneGestator : Building
                                 list.Add(new FloatMenuOption(material.LabelCap, delegate
                                 {
                                     selectedMaterial = material;
+                                    selectedCustomChapterId = -1;
                                 }));
                             }
-                            if (selectedMaterial != null)
+                            foreach (var customChapter in availableCustomChapters)
                             {
-                                list.Add(new FloatMenuOption("NoneBrackets".Translate(), delegate { selectedMaterial = null; }));
+                                if (selectedCustomChapterId == customChapter.id)
+                                {
+                                    continue;
+                                }
+                                var optionKey = customChapter.Kind == CustomGeneKind.Primarch ? "BEWH.MankindsFinest.CustomPrimarch.GestatorOption" : "BEWH.MankindsFinest.CustomChapter.GestatorOption";
+                                list.Add(new FloatMenuOption(optionKey.Translate(customChapter.name), delegate
+                                {
+                                    selectedMaterial = null;
+                                    selectedCustomChapterId = customChapter.id;
+                                }));
+                            }
+                            if (selectedMaterial != null || SelectedCustomChapter != null)
+                            {
+                                list.Add(new FloatMenuOption("NoneBrackets".Translate(), delegate
+                                {
+                                    selectedMaterial = null;
+                                    selectedCustomChapterId = -1;
+                                }));
                             }
                             if (!list.Any())
                             {
@@ -297,6 +369,32 @@ public class Building_GeneGestator : Building
 
                     yield return command_Action10;
                 }
+
+                //CONFIGURE CUSTODES PATTERN
+                if (ContainedMatrixMod.usesDisciplineCustomization)
+                {
+                    var configureCommand = new Command_Action
+                    {
+                        defaultLabel = "BEWH.MankindsFinest.CustomCustodes.ConfigureGizmo".Translate(),
+                        defaultDesc = "BEWH.MankindsFinest.CustomCustodes.ConfigureGizmoDesc".Translate(),
+                        icon = ConfigurePatternIcon,
+                        action = delegate
+                        {
+                            Find.WindowStack.Add(new Dialog_CustodesCustomization(this));
+                        }
+                    };
+
+                    if (!Map.listerBuildings.ColonistsHaveBuilding(Genes40kDefOf.BEWH_SangprimusPortum))
+                    {
+                        configureCommand.Disable("BEWH.MankindsFinest.GeneGestator.NoSangprimus".Translate());
+                    }
+                    else if (!Map.listerBuildings.ColonistsHaveBuildingWithPowerOn(Genes40kDefOf.BEWH_SangprimusPortum))
+                    {
+                        configureCommand.Disable("BEWH.MankindsFinest.GeneGestator.NoPoweredSangprimus".Translate());
+                    }
+
+                    yield return configureCommand;
+                }
                 
                 //STARTS MACHINE
                 var command_Action2 = new Command_Action
@@ -307,17 +405,23 @@ public class Building_GeneGestator : Building
                     activateSound = SoundDefOf.Designate_Cancel,
                     action = delegate
                     {
-                        if (selectedMaterial == null && CanUseAnyMaterial())
+                        if (selectedMaterial == null && SelectedCustomChapter == null && !HasDisciplinePattern && CanConfigureMatrix())
                         {
                             var availableMaterialAmount = 0;
                             
-                            if (containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial)
+                            if (ContainedMatrixMod.usesDisciplineCustomization)
+                            {
+                                availableMaterialAmount += 1;
+                            }
+                            else if (ContainedMatrixMod.canUsePrimarchMaterial)
                             {
                                 availableMaterialAmount += GameComp.UnlockedPrimarchMaterial.Count;
+                                availableMaterialAmount += GameComponent_CustomChapterGenes.Instance?.DesignsOf(CustomGeneKind.Primarch).Count ?? 0;
                             }
                             else
                             {
                                 availableMaterialAmount += GameComp.UnlockedChapterMaterial.Count;
+                                availableMaterialAmount += GameComponent_CustomChapterGenes.Instance?.DesignsOf(CustomGeneKind.Chapter).Count ?? 0;
                             }
 
                             if (availableMaterialAmount > 0)
@@ -432,6 +536,8 @@ public class Building_GeneGestator : Building
             }
         }
 
+        yield return Genes40kUtils.ViewSangprimusPortumGizmo(Map);
+
         if (!DebugSettings.ShowDevGizmos)
         {
             yield break;
@@ -456,8 +562,12 @@ public class Building_GeneGestator : Building
 
     private bool CanUseAnyMaterial()
     {
-        return containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUsePrimarchMaterial ||
-                containedMatrix.def.GetModExtension<DefModExtension_GeneMatrix>().canUseChapterMaterial;
+        return ContainedMatrixMod.canUsePrimarchMaterial || ContainedMatrixMod.canUseChapterMaterial;
+    }
+
+    private bool CanConfigureMatrix()
+    {
+        return CanUseAnyMaterial() || ContainedMatrixMod.usesDisciplineCustomization;
     }
 
     public override void ExposeData()
@@ -468,6 +578,14 @@ public class Building_GeneGestator : Building
         Scribe_Values.Look(ref doWork, "doWork");
         Scribe_Defs.Look(ref selectedMatrix, "selectedMatrix");
         Scribe_Defs.Look(ref selectedMaterial, "selectedMaterial");
+        Scribe_Values.Look(ref selectedCustomChapterId, "selectedCustomChapterId", -1);
+        Scribe_Collections.Look(ref selectedDisciplines, "selectedDisciplines", LookMode.Deep);
+
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            selectedDisciplines ??= [];
+            selectedDisciplines.RemoveAll(entry => entry?.def == null);
+        }
         Scribe_Deep.Look(ref containedMatrix, "containedMatrix");
     }
 }

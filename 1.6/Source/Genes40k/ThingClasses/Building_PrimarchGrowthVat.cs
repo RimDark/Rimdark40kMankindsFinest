@@ -42,10 +42,19 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     
     
     private int startTick = -1;
-    private const int EmbryoGestationTicks = 600000;
+    public const int EmbryoGestationTicks = 600000;
+    private int gestationTicksTotal = EmbryoGestationTicks;
     private int EmbryoGestationTicksRemaining => startTick - Find.TickManager.TicksGame;
-    private const int EmbryoLateStageGraphicTicksRemaining = EmbryoGestationTicks/2;
-    private float EmbryoGestationPct => 1f - Mathf.Clamp01((float)EmbryoGestationTicksRemaining / EmbryoGestationTicks);
+    private int EmbryoLateStageGraphicTicksRemaining => gestationTicksTotal / 2;
+    private float EmbryoGestationPct => 1f - Mathf.Clamp01((float)EmbryoGestationTicksRemaining / gestationTicksTotal);
+
+    /// <summary>
+    /// The gestation this embryo needs: the base time adjusted by the complexity of any custom primarch design it carries.
+    /// </summary>
+    private static int GestationTicksFor(PrimarchEmbryo embryo)
+    {
+        return CustomChapterGeneUtility.GestationTicksFor(embryo?.PrimarchGenes?.GenesListForReading, EmbryoGestationTicks);
+    }
 
     
     private const float FetusMinSize = 0.4f;
@@ -335,10 +344,9 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     private Pawn GenerateNewbornPrimarch()
     {
         var embryoMother = containedEmbryo.Mother;
-        var embryoFather = containedEmbryo.Father;
         var faction = Faction.OfPlayer;
 
-        var lastName = ((embryoFather ?? embryoMother)?.Name as NameTriple)?.Last;
+        var lastName = (embryoMother?.Name as NameTriple)?.Last;
 
         var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
             faction?.def?.basicMemberKind ?? PawnKindDefOf.Colonist,
@@ -365,16 +373,12 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
         {
             pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, embryoMother);
         }
-        if (embryoFather != null)
-        {
-            pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, embryoFather);
-        }
 
         // FIX: the old code read Faction.OfPlayer.ideos.PrimaryIdeo unguarded, which is
         // a NullReferenceException on its own for anyone playing without Ideology.
         if (ModsConfig.IdeologyActive && pawn.ideo != null)
         {
-            var ideo = embryoMother?.Ideo ?? embryoFather?.Ideo ?? faction?.ideos?.PrimaryIdeo;
+            var ideo = embryoMother?.Ideo ?? faction?.ideos?.PrimaryIdeo;
             if (ideo != null)
             {
                 pawn.ideo.SetIdeo(ideo);
@@ -477,7 +481,7 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
     {
         Pawn firstTwin = null;
 
-        foreach (var child in children.Where(c => c.genes != null && c.genes.HasActiveGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)))
+        foreach (var child in children.Where(c => c.TwinGene() != null))
         {
             if (firstTwin == null)
             {
@@ -485,8 +489,8 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
                 continue;
             }
 
-            ((Gene_TwinConnected)firstTwin.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).SetTwin(child);
-            ((Gene_TwinConnected)child.genes.GetGene(Genes40kDefOf.BEWH_PrimarchSpecificGeneXX)).SetTwin(firstTwin);
+            firstTwin.TwinGene().SetTwin(child);
+            child.TwinGene().SetTwin(firstTwin);
 
             firstTwin.relations.AddDirectRelation(PawnRelationDefOf.Sibling, child);
             child.relations.AddDirectRelation(PawnRelationDefOf.Sibling, firstTwin);
@@ -673,7 +677,8 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
 
                     void Action()
                     {
-                        startTick = Find.TickManager.TicksGame + EmbryoGestationTicks;
+                        gestationTicksTotal = GestationTicksFor(containedEmbryo);
+                        startTick = Find.TickManager.TicksGame + gestationTicksTotal;
                         selectedEmbryo = null;
                     }
                 }
@@ -733,11 +738,22 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
                         foreach (var embryo in embryos)
                         {
                             var embryoName = "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother".Translate(embryo.Mother.Name.ToStringFull);
+                            embryoName += "\n";
+                            embryoName += "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather".Translate("BEWH.MankindsFinest.CommonKeywords.Emperor".Translate());
+
                             var primarchChapterGenes = embryo.PrimarchGenes.GenesListForReading.Where(gene => gene.HasModExtension<DefModExtension_PrimarchMaterial>()).ToList();
                             if (primarchChapterGenes.Any())
                             {
                                 embryoName += "\n";
-                                embryoName += "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather".Translate(primarchChapterGenes.First().label);
+                                embryoName += "BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchLine".Translate(CustomChapterGeneUtility.ChapterLabelOf(primarchChapterGenes.First()).CapitalizeFirst());
+                            }
+
+                            var embryoGestation = GestationTicksFor(embryo);
+
+                            if (embryoGestation != EmbryoGestationTicks)
+                            {
+                                embryoName += "\n";
+                                embryoName += "BEWH.MankindsFinest.PrimarchGrowthVat.GestationTime".Translate(embryoGestation.ToStringTicksToPeriod());
                             }
                             list.Add(new FloatMenuOption(embryoName, delegate
                             {
@@ -955,6 +971,7 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
         Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
         Scribe_Deep.Look(ref nutritionContainer, "nutritionContainer", this);
         Scribe_Values.Look(ref startTick, "startTick", -1);
+        Scribe_Values.Look(ref gestationTicksTotal, "gestationTicksTotal", EmbryoGestationTicks);
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {

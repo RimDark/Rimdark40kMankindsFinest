@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Chest aquila -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_ChestAquila</defName>
+        <label>Chest aquila</label>
+        <description>The Imperial Aquila, borne upon the breastplate as a mark of fealty to the Emperor of Mankind.</description>
+        <iconPath>UI/Decoration/Icons/Astartes/Armor/BEWH_Deco_ChestAquila_south</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_ChestAquila</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>1</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>East</li>
+            <li>West</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>30</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>30</layer>
+            </dataEast>
+            <dataWest>
+                <layer>30</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <colourable>true</colourable>
+        <defaultColour>(240,176,29)</defaultColour>
+        <availablePresets>
+            <li>BEWH_DecoPaletteGold</li>
+            <li>BEWH_DecoPaletteSilver</li>
+            <li>BEWH_DecoPaletteBronze</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <hasParentColourPaletteOption>true</hasParentColourPaletteOption>
+        <flipable>false</flipable>
+        <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

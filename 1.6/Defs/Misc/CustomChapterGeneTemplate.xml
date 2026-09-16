@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Tuning and template for player-designed chapter gene-seeds. Generated chapter GeneDefs copy the gene fields below
+         and are registered at runtime by CustomChapterGeneDefBuilder; trait options live in Defs/ChapterTraitDefs. -->
+    <Genes40k.CustomChapterGeneTemplateDef>
+        <defName>BEWH_CustomChapterGene</defName>
+        <label>custom chapter gene-seed</label>
+        <kind>Chapter</kind>
+        <geneLabel>Gene-seed Material</geneLabel>
+        <geneDescription>Your gene-seed comes from a lineage cultivated by this colony rather than from one of the Emperor's sons. Its stability decides how readily it takes to a new host.</geneDescription>
+        <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_ProgenoidsIcon</iconPath>
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <displayOrderInCategory>99</displayOrderInCategory>
+        <exclusionTags>
+            <li>BEWH_ChapterGene</li>
+        </exclusionTags>
+        <biostatCpx>1</biostatCpx>
+        <marketValueFactor>1.05</marketValueFactor>
+        <minAgeActive>0</minAgeActive>
+        <failChancePerStabilityPoint>5</failChancePerStabilityPoint>
+        <failChanceCapPerStabilityPoint>5</failChanceCapPerStabilityPoint>
+        <rubiconPerStabilityPoint>0.1</rubiconPerStabilityPoint>
+        <stabilityRange>-5~5</stabilityRange>
+        <maxTraits>4</maxTraits>
+        <extraTraitSlotResearches>
+            <li>BEWH_GeneseedPerfection</li>
+            <li>BEWH_GeneseedDivergence</li>
+        </extraTraitSlotResearches>
+        <maxCustomChapters>20</maxCustomChapters>
+    </Genes40k.CustomChapterGeneTemplateDef>
+
+    <!-- Player-designed primarch lineages. Budget is Genetic Complexity: a negative total lengthens the growth vat's
+         gestation by gestationTicksPerPoint per point, a positive total shortens it. Trait options are the ChapterTraitDefs
+         with kind Primarch (Defs/ChapterTraitDefs/PrimarchTraitDefs_*.xml). -->
+    <Genes40k.CustomChapterGeneTemplateDef>
+        <defName>BEWH_CustomPrimarchGene</defName>
+        <label>custom primarch lineage</label>
+        <kind>Primarch</kind>
+        <geneLabel>Primarch Lineage</geneLabel>
+        <geneDescription>This primarch was not cut from one of the Emperor's twenty templates but from a lineage assembled by this colony. Its complexity decides how long the growth vat needs to bring it to term.</geneDescription>
+        <iconPath>UI/Genes/Primarch/BEWH_PrimarchHelixomeArray</iconPath>
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <displayOrderInCategory>399</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <marketValueFactor>1.05</marketValueFactor>
+        <minAgeActive>0</minAgeActive>
+        <stabilityRange>-5~5</stabilityRange>
+        <maxTraits>3</maxTraits>
+        <extraTraitSlotResearches>
+            <li>BEWH_AdvancedProteinSubstitution</li>
+        </extraTraitSlotResearches>
+        <maxCustomChapters>10</maxCustomChapters>
+        <gestationTicksPerPoint>60000</gestationTicksPerPoint>
+        <minGestationTicks>150000</minGestationTicks>
+    </Genes40k.CustomChapterGeneTemplateDef>
+
+    <!-- Custodes ascension patterns. Budget is a point pool spent across CustodesDisciplineDefs (Defs/Misc/CustodesDisciplineDefs.xml);
+         levels above softCapLevel cost softCapCostPerLevel each. -->
+    <Genes40k.CustomChapterGeneTemplateDef>
+        <defName>BEWH_CustomCustodesGene</defName>
+        <label>custodes ascension pattern</label>
+        <kind>Custodes</kind>
+        <geneLabel>Ascension Pattern</geneLabel>
+        <geneDescription>The disciplines this Custodian's ascension emphasised. Every pattern is a choice of where the Emperor's gene-craft was pushed furthest.</geneDescription>
+        <iconPath>UI/Genes/Custodes/BEWH_Custodes_AtlasMorphogen</iconPath>
+        <displayCategory>BEWH_ImperialGenes</displayCategory>
+        <displayOrderInCategory>299</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <marketValueFactor>1.05</marketValueFactor>
+        <minAgeActive>0</minAgeActive>
+        <maxCustomChapters>40</maxCustomChapters>
+        <disciplinePoints>20</disciplinePoints>
+        <extraPointsPerResearch>3</extraPointsPerResearch>
+        <extraPointResearches>
+            <li>BEWH_AdvancedProteinSubstitution</li>
+            <li>BEWH_PrimarchProject</li>
+        </extraPointResearches>
+        <softCapLevel>7</softCapLevel>
+        <softCapCostPerLevel>2</softCapCostPerLevel>
+    </Genes40k.CustomChapterGeneTemplateDef>
+
+</Defs>

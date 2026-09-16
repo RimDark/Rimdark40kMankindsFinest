@@ -16,6 +16,12 @@ public static class Genes40kDefOf
     public static GeneDef BEWH_Hyperanatomica;
     public static GeneDef BEWH_Furybound;
 
+    //Custom chapter gene template and default flag icon
+    public static CustomChapterGeneTemplateDef BEWH_CustomChapterGene;
+    public static CustomChapterGeneTemplateDef BEWH_CustomPrimarchGene;
+    public static CustomChapterGeneTemplateDef BEWH_CustomCustodesGene;
+    public static FlagIconDef BEWH_FlagAquila;
+
     //Space marine genes
     public static GeneDef BEWH_SecondaryHeart;
     public static GeneDef BEWH_Ossmodula;
@@ -140,6 +146,7 @@ public static class Genes40kDefOf
     public static ThingDef BEWH_GeneseedVialFirstborn;
     public static ThingDef BEWH_GeneseedVialPrimaris;
     public static ThingDef BEWH_GeneseedVialPrimarch;
+    public static ThingDef BEWH_GeneseedVialCustodes;
 
     public static ThingDef BEWH_PrimarchEmbryo;
 

@@ -36,6 +36,14 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Pseals</decorationType>
+        <pawnStatOffsets>
+            <MentalBreakThreshold>-0.01</MentalBreakThreshold>
+        </pawnStatOffsets>
+        <cost>
+            <Cloth>10</Cloth>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -72,6 +80,14 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Pseals</decorationType>
+        <pawnStatOffsets>
+            <MentalBreakThreshold>-0.01</MentalBreakThreshold>
+        </pawnStatOffsets>
+        <cost>
+            <Cloth>10</Cloth>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -109,6 +125,14 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Pseals</decorationType>
+        <pawnStatOffsets>
+            <MentalBreakThreshold>-0.01</MentalBreakThreshold>
+        </pawnStatOffsets>
+        <cost>
+            <Cloth>10</Cloth>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -141,6 +165,14 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Pseals</decorationType>
+        <pawnStatOffsets>
+            <MentalBreakThreshold>-0.01</MentalBreakThreshold>
+        </pawnStatOffsets>
+        <cost>
+            <Cloth>10</Cloth>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -174,6 +206,14 @@
         </drawData>
         <flipable>true</flipable>
         <decorationType>BEWH_DecoCategory_Pseals</decorationType>
+        <pawnStatOffsets>
+            <MentalBreakThreshold>-0.01</MentalBreakThreshold>
+        </pawnStatOffsets>
+        <cost>
+            <Cloth>10</Cloth>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

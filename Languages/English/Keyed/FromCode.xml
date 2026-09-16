@@ -74,6 +74,7 @@
   <BEWH.MankindsFinest.CommonKeywords.Acquired> (acquired)</BEWH.MankindsFinest.CommonKeywords.Acquired>
 
   <BEWH.MankindsFinest.CommonKeywords.Unknown>Unknown</BEWH.MankindsFinest.CommonKeywords.Unknown>
+  <BEWH.MankindsFinest.CommonKeywords.Emperor>The Emperor of Mankind</BEWH.MankindsFinest.CommonKeywords.Emperor>
 
   <BEWH.MankindsFinest.RankSystem.ShoulderIconUnlock>Power armor shoulder icon:</BEWH.MankindsFinest.RankSystem.ShoulderIconUnlock>
 
@@ -122,7 +123,8 @@
   <BEWH.MankindsFinest.PrimarchGrowthVat.EjectPrimarchEmbryo>Eject Embryo</BEWH.MankindsFinest.PrimarchGrowthVat.EjectPrimarchEmbryo>
   <BEWH.MankindsFinest.PrimarchGrowthVat.EjectPrimarchEmbryoDesc>Eject currently loaded primarch embryo.</BEWH.MankindsFinest.PrimarchGrowthVat.EjectPrimarchEmbryoDesc>
 
-  <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather>Primarch Father: {0}</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather>
+  <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather>Father: {0}</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchFather>
+  <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchLine>Primarch line: {0}</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchLine>
   <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother>Mother: {0}</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchMother>
 
   <BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchBorn>Primarch born</BEWH.MankindsFinest.PrimarchGrowthVat.PrimarchBorn>
@@ -142,11 +144,39 @@
   <BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryo>Craft primarch embryo</BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryo>
   <BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc>Select ascendance vial and human embryo for creation of a primarch embryo.</BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoDesc>
 
+  <BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoSubtitle>Combine a primarch ascendance vial with a human embryo. The result must be gestated in a primarch growth vat.</BEWH.MankindsFinest.GeneManupulationTable.CraftPrimarchEmbryoSubtitle>
+  <BEWH.MankindsFinest.GeneManupulationTable.BillLabel>Make primarch embryo ({0})</BEWH.MankindsFinest.GeneManupulationTable.BillLabel>
+  <BEWH.MankindsFinest.GeneManupulationTable.EmbryoParents>{0} and {1}</BEWH.MankindsFinest.GeneManupulationTable.EmbryoParents>
+  <BEWH.MankindsFinest.GeneManupulationTable.GeneCount>{0} genes</BEWH.MankindsFinest.GeneManupulationTable.GeneCount>
+  <BEWH.MankindsFinest.GeneManupulationTable.ResultParents>Parents: {0}</BEWH.MankindsFinest.GeneManupulationTable.ResultParents>
+  <BEWH.MankindsFinest.GeneManupulationTable.ResultCraftWork>Crafting work: {0}</BEWH.MankindsFinest.GeneManupulationTable.ResultCraftWork>
+  <BEWH.MankindsFinest.GeneManupulationTable.ResultCraftWorkBy>Crafting time: {0} for {1}</BEWH.MankindsFinest.GeneManupulationTable.ResultCraftWorkBy>
+  <BEWH.MankindsFinest.GeneManupulationTable.ResultGestation>Vat gestation: {0}</BEWH.MankindsFinest.GeneManupulationTable.ResultGestation>
+  <BEWH.MankindsFinest.GeneManupulationTable.ResultGestationOffset>({0} from genetic complexity)</BEWH.MankindsFinest.GeneManupulationTable.ResultGestationOffset>
+  <BEWH.MankindsFinest.GeneManupulationTable.InspectResultGenes>Resulting genes</BEWH.MankindsFinest.GeneManupulationTable.InspectResultGenes>
+  <BEWH.MankindsFinest.GeneManupulationTable.NeedVial>Select a primarch ascendance vial</BEWH.MankindsFinest.GeneManupulationTable.NeedVial>
+  <BEWH.MankindsFinest.GeneManupulationTable.NeedEmbryo>Select a human embryo</BEWH.MankindsFinest.GeneManupulationTable.NeedEmbryo>
+  <BEWH.MankindsFinest.GeneManupulationTable.NeedCrafter>Select a crafter</BEWH.MankindsFinest.GeneManupulationTable.NeedCrafter>
+  <BEWH.MankindsFinest.GeneManupulationTable.ResearchMissing>Requires research: {0}</BEWH.MankindsFinest.GeneManupulationTable.ResearchMissing>
+  <BEWH.MankindsFinest.GeneManupulationTable.CouldNotStartNow>{0} could not start crafting right now. The bill has been added to the gene manipulation table.</BEWH.MankindsFinest.GeneManupulationTable.CouldNotStartNow>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedForbidden>It is forbidden.</BEWH.MankindsFinest.GeneManupulationTable.BlockedForbidden>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedAlreadyPinned>Already set aside for another primarch embryo bill.</BEWH.MankindsFinest.GeneManupulationTable.BlockedAlreadyPinned>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedTableUnusable>The gene manipulation table cannot be used right now.</BEWH.MankindsFinest.GeneManupulationTable.BlockedTableUnusable>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedReserved>It is already reserved for something else.</BEWH.MankindsFinest.GeneManupulationTable.BlockedReserved>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedUnreachable>No available colonist can reach it.</BEWH.MankindsFinest.GeneManupulationTable.BlockedUnreachable>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnIncapable>Not capable of working right now.</BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnIncapable>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnMentalState>Not in control of themselves.</BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnMentalState>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnDrafted>Currently drafted.</BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnDrafted>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnWorkDisabled>Cannot do {0} work.</BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnWorkDisabled>
+  <BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnCannotReach>Cannot reach the gene manipulation table.</BEWH.MankindsFinest.GeneManupulationTable.BlockedPawnCannotReach>
+
   <BEWH.MankindsFinest.GeneManupulationTable.PsychicSensitivityRequired>Cannot craft {0}, requires psychic sensitivity higher than 0%</BEWH.MankindsFinest.GeneManupulationTable.PsychicSensitivityRequired>
-  <BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial>Cannot craft {0}, requires {1} to be in linked Sangprimus</BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial>
+  <BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial>Cannot craft {0}, requires {1} to be in the Sangprimus Portum</BEWH.MankindsFinest.GeneManupulationTable.MissingLegionMaterial>
 
   <!-- Containers -->
   <BEWH.MankindsFinest.Containers.SangprimusPortumAcquired>Materials</BEWH.MankindsFinest.Containers.SangprimusPortumAcquired>
+  <BEWH.MankindsFinest.Containers.ViewSangprimusPortum>View Sangprimus Portum</BEWH.MankindsFinest.Containers.ViewSangprimusPortum>
+  <BEWH.MankindsFinest.Containers.ViewSangprimusPortumDesc>Jump to the Sangprimus Portum vault on this map.</BEWH.MankindsFinest.Containers.ViewSangprimusPortumDesc>
   <BEWH.MankindsFinest.Containers.SangprimusPortumMoreInfo>Click for more info on this gene.</BEWH.MankindsFinest.Containers.SangprimusPortumMoreInfo>
 
   <!-- Flag -->
@@ -278,9 +308,122 @@
   <BEWH.MankindsFinest.GeneseedVial.BaseFailureChance>base failure chance</BEWH.MankindsFinest.GeneseedVial.BaseFailureChance>
   <BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy>Current failure chance breakdown:</BEWH.MankindsFinest.GeneseedVial.FailureChanceCausedBy>
   <BEWH.MankindsFinest.GeneseedVial.FailureChanceCause>{0}% - caused by {1}</BEWH.MankindsFinest.GeneseedVial.FailureChanceCause>
+  <BEWH.MankindsFinest.GeneseedVial.NoFailureChance>No failure chance for this patient.</BEWH.MankindsFinest.GeneseedVial.NoFailureChance>
   <BEWH.MankindsFinest.GeneseedVial.FailureChanceCapped>Procedure failure chance was capped at {0}%</BEWH.MankindsFinest.GeneseedVial.FailureChanceCapped>
 
   <BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial>{0} ascendance vial</BEWH.MankindsFinest.GeneseedVial.NamedGeneseedVial>
+  <BEWH.MankindsFinest.GeneseedVial.ChapterMaterial>Chapter gene-seed: {0}</BEWH.MankindsFinest.GeneseedVial.ChapterMaterial>
+
+  <!-- Custom chapter gene-seeds -->
+  <BEWH.MankindsFinest.CustomChapter.DesignGizmo>Design gene-seed</BEWH.MankindsFinest.CustomChapter.DesignGizmo>
+  <BEWH.MankindsFinest.CustomChapter.DesignGizmoDesc>Design a new chapter gene-seed or primarch lineage for the colony from the available traits. Legion and primarch materials stored in the vault and completed research unlock additional traits.</BEWH.MankindsFinest.CustomChapter.DesignGizmoDesc>
+  <BEWH.MankindsFinest.CustomChapter.ListGizmo>Gene-seed designs</BEWH.MankindsFinest.CustomChapter.ListGizmo>
+  <BEWH.MankindsFinest.CustomChapter.ListGizmoDesc>View, edit or delete the colony's designed chapter gene-seeds, primarch lineages and Custodes ascension patterns. A design that has been gestated or implanted is locked and can no longer be changed.</BEWH.MankindsFinest.CustomChapter.ListGizmoDesc>
+  <BEWH.MankindsFinest.CustomChapter.CreateHeader>Design chapter gene-seed</BEWH.MankindsFinest.CustomChapter.CreateHeader>
+  <BEWH.MankindsFinest.CustomChapter.EditHeader>Edit chapter gene-seed</BEWH.MankindsFinest.CustomChapter.EditHeader>
+  <BEWH.MankindsFinest.CustomChapter.ViewHeader>Chapter gene-seed: {0}</BEWH.MankindsFinest.CustomChapter.ViewHeader>
+  <BEWH.MankindsFinest.CustomChapter.ListHeader>Gene-seed designs</BEWH.MankindsFinest.CustomChapter.ListHeader>
+  <BEWH.MankindsFinest.CustomChapter.SelectedTraits>Selected traits ({0} / {1})</BEWH.MankindsFinest.CustomChapter.SelectedTraits>
+  <BEWH.MankindsFinest.CustomChapter.AvailableTraits>Chapter traits</BEWH.MankindsFinest.CustomChapter.AvailableTraits>
+  <BEWH.MankindsFinest.CustomChapter.GroupDefault>Common traits</BEWH.MankindsFinest.CustomChapter.GroupDefault>
+  <BEWH.MankindsFinest.CustomChapter.GroupUnlocked>Unlocked traits</BEWH.MankindsFinest.CustomChapter.GroupUnlocked>
+  <BEWH.MankindsFinest.CustomChapter.GroupLocked>Locked traits</BEWH.MankindsFinest.CustomChapter.GroupLocked>
+  <BEWH.MankindsFinest.CustomChapter.RequiresMaterial>Requires legion material in the Sangprimus Portum: {0}</BEWH.MankindsFinest.CustomChapter.RequiresMaterial>
+  <BEWH.MankindsFinest.CustomChapter.RequiresResearch>Requires research: {0}</BEWH.MankindsFinest.CustomChapter.RequiresResearch>
+  <BEWH.MankindsFinest.CustomChapter.StabilityTip>Gene-seed stability: {0}</BEWH.MankindsFinest.CustomChapter.StabilityTip>
+  <BEWH.MankindsFinest.CustomChapter.Stability>Gene-seed stability</BEWH.MankindsFinest.CustomChapter.Stability>
+  <BEWH.MankindsFinest.CustomChapter.StabilityRange>must be between {0} and {1}</BEWH.MankindsFinest.CustomChapter.StabilityRange>
+  <BEWH.MankindsFinest.CustomChapter.StabilityDesc>How readily this gene-seed takes to a new host. Beneficial traits lower stability, drawbacks raise it. Positive stability lowers the implantation failure chance and its cap and improves rubicon surgery odds; negative stability does the opposite.</BEWH.MankindsFinest.CustomChapter.StabilityDesc>
+  <BEWH.MankindsFinest.CustomChapter.StabilityEffects>Implantation failure chance {0}%, failure chance cap {1}%, rubicon surgery quality {2}</BEWH.MankindsFinest.CustomChapter.StabilityEffects>
+  <BEWH.MankindsFinest.CustomChapter.ChapterName>Chapter name</BEWH.MankindsFinest.CustomChapter.ChapterName>
+  <BEWH.MankindsFinest.CustomChapter.Save>Save</BEWH.MankindsFinest.CustomChapter.Save>
+  <BEWH.MankindsFinest.CustomChapter.Saved>Chapter gene-seed "{0}" saved.</BEWH.MankindsFinest.CustomChapter.Saved>
+  <BEWH.MankindsFinest.CustomChapter.NameTaken>A design named "{0}" already exists.</BEWH.MankindsFinest.CustomChapter.NameTaken>
+  <BEWH.MankindsFinest.CustomChapter.TooManyChapters>The colony cannot keep more than {0} designs of this kind.</BEWH.MankindsFinest.CustomChapter.TooManyChapters>
+  <BEWH.MankindsFinest.CustomChapter.NoTraits>Select at least one trait.</BEWH.MankindsFinest.CustomChapter.NoTraits>
+  <BEWH.MankindsFinest.CustomChapter.TooManyTraits>A design can hold at most {0} traits.</BEWH.MankindsFinest.CustomChapter.TooManyTraits>
+  <BEWH.MankindsFinest.CustomChapter.TraitConflict>{0} cannot be combined with {1}.</BEWH.MankindsFinest.CustomChapter.TraitConflict>
+  <BEWH.MankindsFinest.CustomChapter.StabilityOutOfRange>Gene-seed stability of {0} is outside the allowed range of {1} to {2}.</BEWH.MankindsFinest.CustomChapter.StabilityOutOfRange>
+  <BEWH.MankindsFinest.CustomChapter.Locked>"{0}" has already been gestated or implanted and can no longer be changed.</BEWH.MankindsFinest.CustomChapter.Locked>
+  <BEWH.MankindsFinest.CustomChapter.LockedShort>locked</BEWH.MankindsFinest.CustomChapter.LockedShort>
+  <BEWH.MankindsFinest.CustomChapter.NoChapters>Nothing of this kind has been designed yet.</BEWH.MankindsFinest.CustomChapter.NoChapters>
+  <BEWH.MankindsFinest.CustomChapter.NewChapter>New chapter gene-seed</BEWH.MankindsFinest.CustomChapter.NewChapter>
+  <BEWH.MankindsFinest.CustomChapter.View>View</BEWH.MankindsFinest.CustomChapter.View>
+  <BEWH.MankindsFinest.CustomChapter.Edit>Edit</BEWH.MankindsFinest.CustomChapter.Edit>
+  <BEWH.MankindsFinest.CustomChapter.Delete>Delete</BEWH.MankindsFinest.CustomChapter.Delete>
+  <BEWH.MankindsFinest.CustomChapter.ConfirmDelete>Delete the design "{0}"?</BEWH.MankindsFinest.CustomChapter.ConfirmDelete>
+  <BEWH.MankindsFinest.CustomChapter.GestatorOption>Chapter gene-seed: {0}</BEWH.MankindsFinest.CustomChapter.GestatorOption>
+  <BEWH.MankindsFinest.CustomChapter.SelectIcon>Select chapter icon</BEWH.MankindsFinest.CustomChapter.SelectIcon>
+  <BEWH.MankindsFinest.CustomChapter.SelectIconDesc>The chapter's badge, shown on its gene. Click to choose from the chapter flag icons.</BEWH.MankindsFinest.CustomChapter.SelectIconDesc>
+  <BEWH.MankindsFinest.ApplyChapter.BillLabel>Introduce chapter material: {0}</BEWH.MankindsFinest.ApplyChapter.BillLabel>
+  <BEWH.MankindsFinest.ApplyChapter.SelectChapter>Select chapter for {0}</BEWH.MankindsFinest.ApplyChapter.SelectChapter>
+  <BEWH.MankindsFinest.ApplyChapter.SelectChapterDesc>Each chapter is listed once. Greyed entries need their legion material recovered first.</BEWH.MankindsFinest.ApplyChapter.SelectChapterDesc>
+  <BEWH.MankindsFinest.ApplyChapter.LockedChapter>Not yet unlocked:</BEWH.MankindsFinest.ApplyChapter.LockedChapter>
+  <BEWH.MankindsFinest.ImplantGeneseed.BillLabel>Implant gene-seed: {0}</BEWH.MankindsFinest.ImplantGeneseed.BillLabel>
+  <BEWH.MankindsFinest.ImplantGeneseed.KindChapterless>{0} (chapterless)</BEWH.MankindsFinest.ImplantGeneseed.KindChapterless>
+  <BEWH.MankindsFinest.ImplantGeneseed.KindWithChapter>{0} - {1}</BEWH.MankindsFinest.ImplantGeneseed.KindWithChapter>
+  <BEWH.MankindsFinest.ImplantGeneseed.SelectVial>Select gene-seed for {0}</BEWH.MankindsFinest.ImplantGeneseed.SelectVial>
+  <BEWH.MankindsFinest.ImplantGeneseed.SelectVialDesc>Each vial kind is listed once. Greyed entries have no vial on the map; hover to see how to gestate or unlock them.</BEWH.MankindsFinest.ImplantGeneseed.SelectVialDesc>
+  <BEWH.MankindsFinest.ImplantGeneseed.FailChanceShort>{0}% fail</BEWH.MankindsFinest.ImplantGeneseed.FailChanceShort>
+  <BEWH.MankindsFinest.ImplantGeneseed.AvailableCount>{0} vial(s) available on this map.</BEWH.MankindsFinest.ImplantGeneseed.AvailableCount>
+  <BEWH.MankindsFinest.ImplantGeneseed.LockedKind>Not yet unlocked:</BEWH.MankindsFinest.ImplantGeneseed.LockedKind>
+  <BEWH.MankindsFinest.ImplantGeneseed.GestateHint>No vials available. Gestate a {0} in the Gene Gestator.</BEWH.MankindsFinest.ImplantGeneseed.GestateHint>
+  <BEWH.MankindsFinest.ImplantGeneseed.GestateHintMaterial>No vials available. Gestate a {0} in the Gene Gestator with {1} selected.</BEWH.MankindsFinest.ImplantGeneseed.GestateHintMaterial>
+  <BEWH.MankindsFinest.ImplantGeneseed.GestateHintCustom>No vials available. Gestate a {0} in the Gene Gestator with the chapter gene-seed "{1}" selected.</BEWH.MankindsFinest.ImplantGeneseed.GestateHintCustom>
+  <BEWH.MankindsFinest.ImplantGeneseed.RequiresSkill>Requires a surgeon with Medicine {0}.</BEWH.MankindsFinest.ImplantGeneseed.RequiresSkill>
+  <BEWH.MankindsFinest.ImplantGeneseed.ClickToSelect>Click to select.</BEWH.MankindsFinest.ImplantGeneseed.ClickToSelect>
+  <BEWH.MankindsFinest.ImplantGeneseed.NoPawnWithSkill>No colonist has the Medicine {0} needed for this implantation.</BEWH.MankindsFinest.ImplantGeneseed.NoPawnWithSkill>
+  <BEWH.MankindsFinest.CustomChapter.TraitsLine>Chapter traits: {0}.</BEWH.MankindsFinest.CustomChapter.TraitsLine>
+  <BEWH.MankindsFinest.CustomChapter.StabilityEffectLine>Gene-seed stability {0}: {1}% gene-seed implantation failure chance.</BEWH.MankindsFinest.CustomChapter.StabilityEffectLine>
+
+  <!-- Gene-seed designs: shared / primarch / Custodes -->
+  <BEWH.MankindsFinest.CustomChapter.KindLabel>Chapters</BEWH.MankindsFinest.CustomChapter.KindLabel>
+  <BEWH.MankindsFinest.CustomChapter.RelatedPrimarch>Related primarch</BEWH.MankindsFinest.CustomChapter.RelatedPrimarch>
+  <BEWH.MankindsFinest.CustomChapter.RelatedPrimarchDesc>The primarch this chapter descends from. Marines of the chapter react to that primarch's presence as the shipped legions do to theirs. Can be one of the Emperor's sons or a primarch lineage designed here.</BEWH.MankindsFinest.CustomChapter.RelatedPrimarchDesc>
+  <BEWH.MankindsFinest.CustomChapter.AdHocPatternName>Pattern {0}</BEWH.MankindsFinest.CustomChapter.AdHocPatternName>
+  <BEWH.MankindsFinest.CustomPrimarch.KindLabel>Primarchs</BEWH.MankindsFinest.CustomPrimarch.KindLabel>
+  <BEWH.MankindsFinest.CustomPrimarch.Complexity>Genetic complexity</BEWH.MankindsFinest.CustomPrimarch.Complexity>
+  <BEWH.MankindsFinest.CustomPrimarch.ComplexityDesc>How demanding this lineage is to bring to term. Beneficial traits lower complexity, drawbacks raise it. Negative complexity lengthens the growth vat's gestation; positive complexity shortens it.</BEWH.MankindsFinest.CustomPrimarch.ComplexityDesc>
+  <BEWH.MankindsFinest.CustomPrimarch.ComplexityEffects>Growth vat gestation {0} days</BEWH.MankindsFinest.CustomPrimarch.ComplexityEffects>
+  <BEWH.MankindsFinest.CustomPrimarch.ComplexityEffectLine>Genetic complexity {0}: {1} days of growth vat gestation.</BEWH.MankindsFinest.CustomPrimarch.ComplexityEffectLine>
+  <BEWH.MankindsFinest.CustomPrimarch.ComplexityOutOfRange>Genetic complexity of {0} is outside the allowed range of {1} to {2}.</BEWH.MankindsFinest.CustomPrimarch.ComplexityOutOfRange>
+  <BEWH.MankindsFinest.CustomPrimarch.TraitsLine>Lineage traits: {0}.</BEWH.MankindsFinest.CustomPrimarch.TraitsLine>
+  <BEWH.MankindsFinest.CustomPrimarch.GestatorOption>Primarch lineage: {0}</BEWH.MankindsFinest.CustomPrimarch.GestatorOption>
+  <BEWH.MankindsFinest.CustomPrimarch.CreateHeader>Design primarch lineage</BEWH.MankindsFinest.CustomPrimarch.CreateHeader>
+  <BEWH.MankindsFinest.CustomPrimarch.EditHeader>Edit primarch lineage</BEWH.MankindsFinest.CustomPrimarch.EditHeader>
+  <BEWH.MankindsFinest.CustomPrimarch.ViewHeader>Primarch lineage: {0}</BEWH.MankindsFinest.CustomPrimarch.ViewHeader>
+  <BEWH.MankindsFinest.CustomPrimarch.AvailableTraits>Lineage traits</BEWH.MankindsFinest.CustomPrimarch.AvailableTraits>
+  <BEWH.MankindsFinest.CustomPrimarch.DesignName>Lineage name</BEWH.MankindsFinest.CustomPrimarch.DesignName>
+  <BEWH.MankindsFinest.CustomPrimarch.Saved>Primarch lineage "{0}" saved.</BEWH.MankindsFinest.CustomPrimarch.Saved>
+  <BEWH.MankindsFinest.CustomPrimarch.NewDesign>New primarch lineage</BEWH.MankindsFinest.CustomPrimarch.NewDesign>
+  <BEWH.MankindsFinest.CustomCustodes.KindLabel>Custodes</BEWH.MankindsFinest.CustomCustodes.KindLabel>
+  <BEWH.MankindsFinest.CustomCustodes.Points>Discipline points</BEWH.MankindsFinest.CustomCustodes.Points>
+  <BEWH.MankindsFinest.CustomCustodes.PointsDesc>The pool of points an ascension pattern can spend across its disciplines. Research adds to the pool; levels above the soft cap cost more.</BEWH.MankindsFinest.CustomCustodes.PointsDesc>
+  <BEWH.MankindsFinest.CustomCustodes.PointsSpent>Points spent: {0} / {1}</BEWH.MankindsFinest.CustomCustodes.PointsSpent>
+  <BEWH.MankindsFinest.CustomCustodes.DisciplinesLine>Disciplines: {0}.</BEWH.MankindsFinest.CustomCustodes.DisciplinesLine>
+  <BEWH.MankindsFinest.CustomCustodes.ConfigureGizmo>Configure ascension pattern</BEWH.MankindsFinest.CustomCustodes.ConfigureGizmo>
+  <BEWH.MankindsFinest.CustomCustodes.ConfigureGizmoDesc>Spend the discipline points of this Custodes matrix across melee, ranged, resilience and the other disciplines. Patterns can be saved as presets and loaded again.</BEWH.MankindsFinest.CustomCustodes.ConfigureGizmoDesc>
+  <BEWH.MankindsFinest.CustomCustodes.ConfigureHeader>Configure ascension pattern</BEWH.MankindsFinest.CustomCustodes.ConfigureHeader>
+  <BEWH.MankindsFinest.CustomCustodes.CreateHeader>New ascension pattern</BEWH.MankindsFinest.CustomCustodes.CreateHeader>
+  <BEWH.MankindsFinest.CustomCustodes.EditHeader>Edit ascension pattern</BEWH.MankindsFinest.CustomCustodes.EditHeader>
+  <BEWH.MankindsFinest.CustomCustodes.ViewHeader>Ascension pattern: {0}</BEWH.MankindsFinest.CustomCustodes.ViewHeader>
+  <BEWH.MankindsFinest.CustomCustodes.ConfigureDesc>Each level costs one point up to level {0}; every level above that costs {1}. Hover a discipline for its effects.</BEWH.MankindsFinest.CustomCustodes.ConfigureDesc>
+  <BEWH.MankindsFinest.CustomCustodes.CostShort>{0} pts</BEWH.MankindsFinest.CustomCustodes.CostShort>
+  <BEWH.MankindsFinest.CustomCustodes.NoPointsLeft>No discipline points left.</BEWH.MankindsFinest.CustomCustodes.NoPointsLeft>
+  <BEWH.MankindsFinest.CustomCustodes.NextTier>At level {0}:</BEWH.MankindsFinest.CustomCustodes.NextTier>
+  <BEWH.MankindsFinest.CustomCustodes.NextLevelCost>Next level costs {0} point(s).</BEWH.MankindsFinest.CustomCustodes.NextLevelCost>
+  <BEWH.MankindsFinest.CustomCustodes.PresetName>Preset name</BEWH.MankindsFinest.CustomCustodes.PresetName>
+  <BEWH.MankindsFinest.CustomCustodes.SaveAsPreset>Save as preset</BEWH.MankindsFinest.CustomCustodes.SaveAsPreset>
+  <BEWH.MankindsFinest.CustomCustodes.LoadPreset>Load preset...</BEWH.MankindsFinest.CustomCustodes.LoadPreset>
+  <BEWH.MankindsFinest.CustomCustodes.NoPresets>No saved presets.</BEWH.MankindsFinest.CustomCustodes.NoPresets>
+  <BEWH.MankindsFinest.CustomCustodes.NoLevels>Raise at least one discipline.</BEWH.MankindsFinest.CustomCustodes.NoLevels>
+  <BEWH.MankindsFinest.CustomCustodes.TooManyPoints>{0} points spent, but only {1} are available.</BEWH.MankindsFinest.CustomCustodes.TooManyPoints>
+  <BEWH.MankindsFinest.CustomCustodes.PresetSaved>Ascension pattern "{0}" saved.</BEWH.MankindsFinest.CustomCustodes.PresetSaved>
+  <BEWH.MankindsFinest.CustomCustodes.ShowUnnamed>Show unnamed patterns from the gestator</BEWH.MankindsFinest.CustomCustodes.ShowUnnamed>
+  <BEWH.MankindsFinest.CustomCustodes.NewPreset>New ascension pattern</BEWH.MankindsFinest.CustomCustodes.NewPreset>
+  <BEWH.MankindsFinest.GeneGestator.ContainsPattern>Ascension pattern: {0}</BEWH.MankindsFinest.GeneGestator.ContainsPattern>
+  <BEWH.MankindsFinest.ImplantGeneseed.GestateHintCustodes>No vials available. Gestate a {0} in the Gene Gestator with the ascension pattern "{1}" configured.</BEWH.MankindsFinest.ImplantGeneseed.GestateHintCustodes>
+  <BEWH.MankindsFinest.PrimarchGrowthVat.GestationTime>Gestation: {0}</BEWH.MankindsFinest.PrimarchGrowthVat.GestationTime>
 
 
   <!--=== Events ===-->

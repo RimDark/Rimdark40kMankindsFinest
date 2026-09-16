@@ -44,6 +44,17 @@
         <flipable>true</flipable>
         <defaultColour>(114,114,114)</defaultColour>
         <decorationType>BEWH_DecoCategory_Pouches</decorationType>
+        <pawnStatOffsets>
+            <CarryingCapacity>15</CarryingCapacity>
+        </pawnStatOffsets>
+        <incompatibleDecorations>
+            <li>BEWH_DecoPouchBelt</li>
+        </incompatibleDecorations>
+        <cost>
+            <Cloth>10</Cloth>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -87,6 +98,17 @@
         <flipable>true</flipable>
         <defaultColour>(114,114,114)</defaultColour>
         <decorationType>BEWH_DecoCategory_Pouches</decorationType>
+        <pawnStatOffsets>
+            <CarryingCapacity>30</CarryingCapacity>
+        </pawnStatOffsets>
+        <incompatibleDecorations>
+            <li>BEWH_DecoPouch_1</li>
+        </incompatibleDecorations>
+        <cost>
+            <Cloth>10</Cloth>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

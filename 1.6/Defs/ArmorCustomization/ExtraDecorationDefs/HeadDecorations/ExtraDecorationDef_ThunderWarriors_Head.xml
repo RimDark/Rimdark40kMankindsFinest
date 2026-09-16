@@ -215,6 +215,15 @@
             </dataWest>
         </drawData>
         <shaderType>Cutout</shaderType>
+        <pawnStatOffsets>
+            <ToxicResistance>0.5</ToxicResistance>
+            <ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
+        </pawnStatOffsets>
+        <cost>
+            <Plasteel>5</Plasteel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </cost>
+        <workAmount>500</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

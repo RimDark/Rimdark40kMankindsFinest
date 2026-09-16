@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_PursuitOfPerfection</defName>
+        <label>Pursuit of Perfection</label>
+        <description>The Third Legion's appetite for excellence, and its intolerance of anyone else's. The chapter's marines are connoisseurs and rivals in equal measure.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIIIEmperorsChildren</iconPath>
+        <displayOrder>403</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialIII</li>
+        </requiredAnyMaterial>
+        <statFactors>
+            <BEWH_JoyFromArtFactor>2</BEWH_JoyFromArtFactor>
+        </statFactors>
+        <forcedTraits>
+            <li>
+                <def>Jealous</def>
+            </li>
+        </forcedTraits>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_Grudgebearer</defName>
+        <label>Grudgebearer</label>
+        <description>The Fourth's bitterness carries in the gene-seed. These marines remember every slight and forgive none of them.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
+        <displayOrder>404</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialIV</li>
+        </requiredAnyMaterial>
+        <socialFightChanceFactor>1.5</socialFightChanceFactor>
+        <customEffectDescriptions>
+            <li>Chance to have either Psychopath or Transhumanist trait.</li>
+        </customEffectDescriptions>
+        <traitGrant>
+            <possibleTraitsToGive>
+                <li>
+                    <traitDef>Psychopath</traitDef>
+                </li>
+                <li>
+                    <traitDef>Transhumanist</traitDef>
+                </li>
+            </possibleTraitsToGive>
+            <chanceToGrantTrait>50</chanceToGrantTrait>
+        </traitGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_WulfenCurse</defName>
+        <label>Curse of the Wulfen</label>
+        <description>The Canis Helix, imperfectly tamed. Sharper senses, elongated canines and a cold-blooded hardiness, paid for with a temper that turns every breakdown into violence.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVISpaceWolvesFlaw</iconPath>
+        <displayOrder>406</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialVI</li>
+        </requiredAnyMaterial>
+        <statOffsets>
+            <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>1.2</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.1</postFactor>
+            </li>
+        </capMods>
+        <socialFightChanceFactor>1.25</socialFightChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <customEffectDescriptions>
+            <li>Gives elongated canines.</li>
+            <li>Mental breaks are almost always violent.</li>
+        </customEffectDescriptions>
+        <hediffsToBodyParts>
+            <li>
+                <hediff>BEWH_CanisHelixCanines</hediff>
+                <bodyparts>
+                    <li>Head</li>
+                </bodyparts>
+            </li>
+        </hediffsToBodyParts>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_StuntedImplantation</defName>
+        <label>Stunted Implantation</label>
+        <description>The same defect the Seventh carries: two of the nineteen organs never take. The marine is whole enough to fight, and the apothecaries have long since stopped trying to fix it.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIImperialFists</iconPath>
+        <displayOrder>407</displayOrder>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialVII</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Non-functioning Sus-an Membrane.</li>
+            <li>Non-functioning Betcher's Gland.</li>
+        </customEffectDescriptions>
+        <disablesGenes>
+            <li>BEWH_SusAnMembrane</li>
+            <li>BEWH_BetchersGland</li>
+        </disablesGenes>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_MurderBorn</defName>
+        <label>Murder-Born</label>
+        <description>Nostramo's inheritance is not the terror but what is needed to wield it. The chapter's marines feel nothing at all about the work.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
+        <displayOrder>408</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialVIII</li>
+        </requiredAnyMaterial>
+        <forcedTraits>
+            <li>
+                <def>Psychopath</def>
+            </li>
+        </forcedTraits>
+        <socialFightChanceFactor>1.5</socialFightChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>3</aggroMentalBreakSelectionChanceFactor>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_RedRage</defName>
+        <label>Red Rage</label>
+        <description>The Angel's wrath without the Angel's restraint. The chapter's marines crave the press of close combat and lose themselves to fury all too easily.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIXBloodAngelsFlaw</iconPath>
+        <displayOrder>409</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialIX</li>
+        </requiredAnyMaterial>
+        <statOffsets>
+            <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+        <forcedTraits>
+            <li>
+                <def>Bloodlust</def>
+            </li>
+        </forcedTraits>
+        <aggroMentalBreakSelectionChanceFactor>20</aggroMentalBreakSelectionChanceFactor>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_HemogenicThirst</defName>
+        <label>Hemogenic Thirst</label>
+        <description>The Red Thirst in its rawest form. The chapter's marines grow elongated teeth and a hunger for blood that must be fed.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIXBloodAngelsFlaw</iconPath>
+        <displayOrder>409.5</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialIX</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Gives hemogenic gene.</li>
+            <li>Gives bloodfeeder gene.</li>
+            <li>Gives elongated teeth.</li>
+        </customEffectDescriptions>
+        <hediffsToBodyParts>
+            <li>
+                <hediff>BEWH_RedThirstElongatedTeeth</hediff>
+                <bodyparts>
+                    <li>Head</li>
+                </bodyparts>
+            </li>
+        </hediffsToBodyParts>
+        <geneGrant>
+            <possibleGenesToGive>
+                <li>
+                    <key>Hemogenic</key>
+                    <value>100</value>
+                </li>
+                <li>
+                    <key>Bloodfeeder</key>
+                    <value>100</value>
+                </li>
+            </possibleGenesToGive>
+            <amountToGive>2</amountToGive>
+        </geneGrant>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_FleshIsWeak</defName>
+        <label>The Flesh Is Weak</label>
+        <description>Medusa's contempt for meat, inherited wholesale. The chapter's marines would rather be iron, and say so to anyone who is not.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
+        <displayOrder>410</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialX</li>
+        </requiredAnyMaterial>
+        <statOffsets>
+            <SocialImpact>-0.2</SocialImpact>
+        </statOffsets>
+        <forcedTraits>
+            <li>
+                <def>Transhumanist</def>
+            </li>
+            <li>
+                <def>Abrasive</def>
+            </li>
+        </forcedTraits>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_ButchersNails</defName>
+        <label>Butcher's Temper</label>
+        <description>Whatever the Twelfth did to itself on Nuceria left a mark in the gene-seed. The chapter's marines are never far from a fight, and want it that way.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIWorldEaters</iconPath>
+        <displayOrder>412</displayOrder>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXII</li>
+        </requiredAnyMaterial>
+        <statOffsets>
+            <MeleeHitChance>1</MeleeHitChance>
+        </statOffsets>
+        <forcedTraits>
+            <li>
+                <def>Brawler</def>
+            </li>
+        </forcedTraits>
+        <socialFightChanceFactor>2</socialFightChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>5</aggroMentalBreakSelectionChanceFactor>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_PaleConstitution</defName>
+        <label>Pale Constitution</label>
+        <description>The Nineteenth's flaw, carried over with its stealth: two organs that refuse to take, and skin that never sees enough light to matter.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIXRavenGuard</iconPath>
+        <displayOrder>419</displayOrder>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXIX</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Non-functioning Mucranoid.</li>
+            <li>Non-functioning Betcher's Gland.</li>
+        </customEffectDescriptions>
+        <disablesGenes>
+            <li>BEWH_Mucranoid</li>
+            <li>BEWH_BetchersGland</li>
+        </disablesGenes>
+    </Genes40k.ChapterTraitDef>
+
+    <!-- Inherited temperament of the legions whose gene-seed carries no defect of its own -->
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_TheHunt</defName>
+        <label>The Hunt</label>
+        <description>Something in the First Legion's inheritance keeps its own counsel. The chapter's marines carry a private burden they will not name, and trust outsiders with nothing.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIDarkAngels</iconPath>
+        <displayOrder>401</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialI</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Temper</li>
+        </exclusionTags>
+        <statOffsets>
+            <MentalBreakThreshold>0.04</MentalBreakThreshold>
+            <SocialImpact>-0.15</SocialImpact>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_RestlessBlood</defName>
+        <label>Restless Blood</label>
+        <description>The Khan's sons were never meant to stand still. Walls and watch rosters wear on these marines in a way no drill can fix.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVWhiteScars</iconPath>
+        <displayOrder>405</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialV</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Rest</li>
+            <li>BEWH_ChapterTrait_Temper</li>
+        </exclusionTags>
+        <statOffsets>
+            <MentalBreakThreshold>0.03</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+            <RestFallRateFactor>1.15</RestFallRateFactor>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_CodexRigidity</defName>
+        <label>Codex Rigidity</label>
+        <description>Ultramar's discipline taken past its use. The chapter's marines execute the Codex flawlessly and learn anything outside it slowly, if at all.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIIUltramarines</iconPath>
+        <displayOrder>413</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXIII</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Intellect</li>
+        </exclusionTags>
+        <statFactors>
+            <GlobalLearningFactor>0.85</GlobalLearningFactor>
+        </statFactors>
+        <aptitudes>
+            <Intellectual>-1</Intellectual>
+        </aptitudes>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_BarbaranPallor</defName>
+        <label>Barbaran Pallor</label>
+        <description>Barbarus left its mark on the Fourteenth's gene-seed: grey, waxy skin over flesh that closes wounds grudgingly. The marines endure it, as they endure everything.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIVDeathGuard</iconPath>
+        <displayOrder>414</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXIV</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Healing</li>
+        </exclusionTags>
+        <statOffsets>
+            <PawnBeauty>-1</PawnBeauty>
+        </statOffsets>
+        <statFactors>
+            <InjuryHealingFactor>0.85</InjuryHealingFactor>
+        </statFactors>
+        <skinColorOverride>(150, 150, 140)</skinColorOverride>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_FleshChange</defName>
+        <label>The Flesh Change</label>
+        <description>The Fifteenth's oldest curse. The gene-seed will not hold its shape, and the marine's body drifts away from the template it was grown against.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVThousandSons</iconPath>
+        <displayOrder>415</displayOrder>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXV</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Gives the flesh change, which worsens while the marine carries psychic heat and settles again when he does not.</li>
+        </customEffectDescriptions>
+        <hediffToWholeBody>BEWH_FleshChange</hediffToWholeBody>
+        <worker Class="Genes40k.ChapterTraitWorker_FleshChange">
+            <tickInterval>600</tickInterval>
+            <hediff>BEWH_FleshChange</hediff>
+            <entropyThreshold>0.15</entropyThreshold>
+            <severityRise>0.006</severityRise>
+            <severityFall>0.0015</severityFall>
+        </worker>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_WarmastersPride</defName>
+        <label>Warmaster's Pride</label>
+        <description>The Sixteenth's certainty that it deserves the best of everything, inherited whole. Honours, wargear, glory — these marines expect their share and resent anyone who takes it.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVISonsOfHorus</iconPath>
+        <displayOrder>416</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXVI</li>
+        </requiredAnyMaterial>
+        <forcedTraits>
+            <li>
+                <def>Greedy</def>
+            </li>
+        </forcedTraits>
+        <socialFightChanceFactor>1.5</socialFightChanceFactor>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_FanaticDevotion</defName>
+        <label>Fanatic Devotion</label>
+        <description>Faith welded to the marrow. Nothing shakes these marines from what they believe, and they have no patience left for anyone who does not share it.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
+        <displayOrder>417</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXVII</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Social</li>
+        </exclusionTags>
+        <statOffsets>
+            <SocialImpact>-0.15</SocialImpact>
+        </statOffsets>
+        <statFactors>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+        </statFactors>
+        <socialFightChanceFactor>2</socialFightChanceFactor>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_NocturneanMutation</defName>
+        <label>Nocturnean Mutation</label>
+        <description>Nocturne's radiation is written into the Eighteenth's gene-seed: coal-black skin, a furnace-worlder's tolerance for heat, and progenoids that yield far fewer sons than they should.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIISalamanders</iconPath>
+        <displayOrder>418</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXVIII</li>
+        </requiredAnyMaterial>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_HeatTemp</li>
+        </exclusionTags>
+        <statOffsets>
+            <ComfyTemperatureMax>10</ComfyTemperatureMax>
+        </statOffsets>
+        <statFactors>
+            <Fertility>0.5</Fertility>
+        </statFactors>
+        <skinColorOverride>(55, 55, 55)</skinColorOverride>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_EveryoneIsAlpharius</defName>
+        <label>Everyone Is Alpharius</label>
+        <description>The Twentieth taught its gene-seed to lie. Which of these marines is which, and what any of them actually intends, is never quite settled.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXXAlphaLegion</iconPath>
+        <displayOrder>420</displayOrder>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_ChapterMaterialXX</li>
+        </requiredAnyMaterial>
+        <socialFightChanceFactor>1.25</socialFightChanceFactor>
+        <customEffectDescriptions>
+            <li>Chance to have Psychopath, Greedy or Abrasive trait.</li>
+        </customEffectDescriptions>
+        <traitGrant>
+            <possibleTraitsToGive>
+                <li>
+                    <traitDef>Psychopath</traitDef>
+                </li>
+                <li>
+                    <traitDef>Greedy</traitDef>
+                </li>
+                <li>
+                    <traitDef>Abrasive</traitDef>
+                </li>
+            </possibleTraitsToGive>
+            <chanceToGrantTrait>60</chanceToGrantTrait>
+        </traitGrant>
+    </Genes40k.ChapterTraitDef>
+
+</Defs>

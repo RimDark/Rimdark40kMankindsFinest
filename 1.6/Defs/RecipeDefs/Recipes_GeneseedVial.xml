@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- Change descriptions to something like: undergo surgery to transform into x or whatever. Jobstring too.-->
-
     <!-- Base Implant Recipe -->
     <RecipeDef Name="BEWH_RecipeGeneseedVialBase" ParentName="SurgeryFlesh" Abstract="True">
         <workerClass>Genes40k.WorkerClass_ImplantGeneseed</workerClass>
         <hideBodyPartNames>true</hideBodyPartNames>
         <targetsBodyPart>false</targetsBodyPart>
-        <surgeryOutcomeEffect Inherit = "False" />
+        <surgeryOutcomeEffect Inherit="False" />
         <isViolation>true</isViolation>
         <fixedIngredientFilter>
             <thingDefs>
@@ -63,15 +61,15 @@
         </modExtensions>
     </RecipeDef>
 
-    <!-- Custodes -->
+    <!-- Firstborn, Primaris, Custodes -->
     <RecipeDef ParentName="BEWH_RecipeGeneseedVialBase">
-        <defName>BEWH_MakeCustodes</defName>
-        <label>make custodes</label>
-        <description>Implant Custodes genetic material into a patient.</description>
-        <jobString>Implanting Custodes genetic material.</jobString>
-        <researchPrerequisite>BEWH_CustodesCreation</researchPrerequisite>
-        <workAmount>15000</workAmount>
-        <uiIconThing>BEWH_GeneseedVialCustodes</uiIconThing>
+        <defName>BEWH_ImplantGeneseed</defName>
+        <label>implant gene-seed</label>
+        <description>Implant a Firstborn, Primaris or Custodes ascendance vial into a patient. The vial type and chapter are chosen when the operation is ordered; work and skill required depend on the vial.</description>
+        <jobString>Implanting gene-seed.</jobString>
+        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <workAmount>5000</workAmount>
+        <uiIconThing>BEWH_GeneseedVialFirstborn</uiIconThing>
         <ingredients>
             <li>
                 <filter>
@@ -84,6 +82,8 @@
             <li>
                 <filter>
                     <thingDefs>
+                        <li>BEWH_GeneseedVialFirstborn</li>
+                        <li>BEWH_GeneseedVialPrimaris</li>
                         <li>BEWH_GeneseedVialCustodes</li>
                     </thingDefs>
                 </filter>
@@ -92,15 +92,61 @@
         </ingredients>
         <fixedIngredientFilter>
             <thingDefs>
+                <li>BEWH_GeneseedVialFirstborn</li>
+                <li>BEWH_GeneseedVialPrimaris</li>
                 <li>BEWH_GeneseedVialCustodes</li>
             </thingDefs>
         </fixedIngredientFilter>
         <skillRequirements>
-            <Medicine>13</Medicine>
+            <Medicine>8</Medicine>
         </skillRequirements>
         <modExtensions>
             <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
-                <geneseedVial>BEWH_GeneseedVialCustodes</geneseedVial>
+                <selectsVialKind>true</selectsVialKind>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Introduce chapter to chapterless Marines -->
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>BEWH_IntroduceChapterMaterial</defName>
+        <label>introduce chapter material</label>
+        <description>Introduce a chapter's genetic material into a chapterless Space Marine. The chapter is chosen when the operation is ordered.</description>
+        <description>Implant legion material into a patient.</description>
+        <jobString>Implanting legion material.</jobString>
+        <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
+        <workAmount>3500</workAmount>
+        <workerClass>Genes40k.WorkerClass_ImplantLegionMaterial</workerClass>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <surgeryOutcomeEffect Inherit="False" />
+        <surgerySuccessChanceFactor>3</surgerySuccessChanceFactor>
+        <isViolation>true</isViolation>
+        <recipeUsers>
+            <li>Human</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineUltratech</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <skillRequirements>
+            <Medicine>9</Medicine>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_LegionMaterialCreation">
+                <selectsChapter>true</selectsChapter>
             </li>
         </modExtensions>
     </RecipeDef>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Flaws, only for the primarchs whose gene expresses one. Perk and flaw of the same primarch may be taken together. -->
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_Insatiable</defName>
+        <label>Insatiable</label>
+        <description>Perfection is never enough for this lineage, and neither is anything else.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Fulgrim</iconPath>
+        <displayOrder>1403</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialIII</li>
+        </requiredAnyMaterial>
+        <forcedTraits>
+            <li>
+                <def>Greedy</def>
+            </li>
+        </forcedTraits>
+        <statOffsets>
+            <MentalBreakThreshold>0.04</MentalBreakThreshold>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_GrudgeOfOlympia</defName>
+        <label>Grudge of Olympia</label>
+        <description>Every slight is remembered and most are answered.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Perturabo</iconPath>
+        <displayOrder>1404</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialIV</li>
+        </requiredAnyMaterial>
+        <forcedTraits>
+            <li>
+                <def>Abrasive</def>
+            </li>
+        </forcedTraits>
+        <socialFightChanceFactor>1.5</socialFightChanceFactor>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_WulfenBlood</defName>
+        <label>Wulfen Blood</label>
+        <description>The Canis Helix, imperfectly tamed. Elongated canines and a temper that turns every breakdown into violence.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Russ</iconPath>
+        <displayOrder>1406</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialVI</li>
+        </requiredAnyMaterial>
+        <aggroMentalBreakSelectionChanceFactor>10</aggroMentalBreakSelectionChanceFactor>
+        <customEffectDescriptions>
+            <li>Gives elongated canines.</li>
+            <li>Mental breaks are usually violent.</li>
+        </customEffectDescriptions>
+        <hediffsToBodyParts>
+            <li>
+                <hediff>BEWH_CanisHelixCanines</hediff>
+                <bodyparts>
+                    <li>Head</li>
+                </bodyparts>
+            </li>
+        </hediffsToBodyParts>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_NightHauntersVisions</defName>
+        <label>Night Haunter's Visions</label>
+        <description>The visions come unbidden and leave a face nobody wants to look at.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Curze</iconPath>
+        <displayOrder>1408</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialVIII</li>
+        </requiredAnyMaterial>
+        <statOffsets>
+            <MentalBreakThreshold>0.06</MentalBreakThreshold>
+            <PawnBeauty>-2</PawnBeauty>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_ButchersNails</defName>
+        <label>Butcher's Nails</label>
+        <description>Something in this lineage hungers for the fight and cannot be reasoned out of it.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
+        <displayOrder>1412</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>3</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXII</li>
+        </requiredAnyMaterial>
+        <forcedTraits>
+            <li>
+                <def>Bloodlust</def>
+            </li>
+        </forcedTraits>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <statOffsets>
+            <MentalBreakThreshold>0.08</MentalBreakThreshold>
+        </statOffsets>
+        <customEffectDescriptions>
+            <li>Mental breaks are almost always violent.</li>
+        </customEffectDescriptions>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_DeathlyPallor</defName>
+        <label>Deathly Pallor</label>
+        <description>Grey skin, sunken eyes and a smell of rot that no bath removes.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Morty</iconPath>
+        <displayOrder>1414</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>1</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXIV</li>
+        </requiredAnyMaterial>
+        <statOffsets>
+            <PawnBeauty>-2</PawnBeauty>
+        </statOffsets>
+        <statFactors>
+            <SocialImpact>0.7</SocialImpact>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_FleshChangeTaint</defName>
+        <label>Flesh-Change Taint</label>
+        <description>The Crimson King's curse rides along with his gift. The more this lineage reaches into the warp, the more the flesh answers.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Mangus</iconPath>
+        <displayOrder>1415</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXV</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Psychic use slowly advances the flesh-change.</li>
+        </customEffectDescriptions>
+        <worker Class="Genes40k.ChapterTraitWorker_FleshChange">
+            <tickInterval>600</tickInterval>
+            <hediff>BEWH_FleshChange</hediff>
+            <entropyThreshold>0.15</entropyThreshold>
+            <severityRise>0.006</severityRise>
+            <severityFall>0.0015</severityFall>
+        </worker>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_ZealotsDoubt</defName>
+        <label>Zealot's Doubt</label>
+        <description>A preacher first and a warrior a distant second. The blade and the bolter both feel wrong in these hands.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lorgar</iconPath>
+        <displayOrder>1417</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXVII</li>
+        </requiredAnyMaterial>
+        <aptitudes>
+            <Shooting>-3</Shooting>
+        </aptitudes>
+        <statOffsets>
+            <MeleeHitChance>-2</MeleeHitChance>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_PrimarchTrait_NoFixedIdentity</defName>
+        <label>No Fixed Identity</label>
+        <description>Too many masks for too long. Something underneath has gone quiet or gone sideways.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_AlphaOmega</iconPath>
+        <displayOrder>1420</displayOrder>
+        <kind>Primarch</kind>
+        <stabilityOffset>2</stabilityOffset>
+        <requiredAnyMaterial>
+            <li>BEWH_PrimarchMaterialXX</li>
+        </requiredAnyMaterial>
+        <customEffectDescriptions>
+            <li>Chance to have either Psychopath or Nimble trait.</li>
+        </customEffectDescriptions>
+        <traitGrant>
+            <possibleTraitsToGive>
+                <li>
+                    <traitDef>Psychopath</traitDef>
+                </li>
+                <li>
+                    <traitDef>Nimble</traitDef>
+                </li>
+            </possibleTraitsToGive>
+            <chanceToGrantTrait>50</chanceToGrantTrait>
+        </traitGrant>
+    </Genes40k.ChapterTraitDef>
+
+</Defs>

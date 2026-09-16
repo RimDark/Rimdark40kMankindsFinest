@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ===================== Default traits ===================== -->
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_LightningReflexes</defName>
+        <label>Lightning Reflexes</label>
+        <description>The chapter's gene-seed favours fast-twitch muscle and a predator's timing. Its marines hit harder in close combat.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_LightningReflexes</iconPath>
+        <displayOrder>101</displayOrder>
+        <stabilityOffset>-2</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Melee</li>
+        </exclusionTags>
+        <statFactors>
+            <MeleeDamageFactor>1.04</MeleeDamageFactor>
+        </statFactors>
+        <statOffsets>
+            <MeleeHitChance>1</MeleeHitChance>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_ThickenedHide</defName>
+        <label>Thickened Hide</label>
+        <description>Dense dermal layers and reinforced connective tissue. Blows that would cripple another marine are merely painful.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_ThickenedHide</iconPath>
+        <displayOrder>102</displayOrder>
+        <stabilityOffset>-2</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Hide</li>
+        </exclusionTags>
+        <statFactors>
+            <IncomingDamageFactor>0.9</IncomingDamageFactor>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_SteadyAim</defName>
+        <label>Steady Aim</label>
+        <description>An unnaturally still hand and a heartbeat the marine can slow at will. Every bolt finds its mark a little more often.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_SteadyAim</iconPath>
+        <displayOrder>103</displayOrder>
+        <stabilityOffset>-2</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Aim</li>
+        </exclusionTags>
+        <statOffsets>
+            <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_Swift</defName>
+        <label>Swift</label>
+        <description>Longer stride, lighter frame. The chapter's marines close distances their enemies thought safe.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Swift</iconPath>
+        <displayOrder>104</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Speed</li>
+        </exclusionTags>
+        <statOffsets>
+            <MoveSpeed>0.3</MoveSpeed>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_Industrious</defName>
+        <label>Industrious</label>
+        <description>The chapter's marines find no rest in idleness. Whatever the task, it is done a little quicker.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Industrious</iconPath>
+        <displayOrder>105</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Work</li>
+        </exclusionTags>
+        <statFactors>
+            <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_IronWill</defName>
+        <label>Iron Will</label>
+        <description>Hypno-indoctrination takes unusually deep root in this gene-seed. Its marines bend less easily under strain.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_IronWill</iconPath>
+        <displayOrder>106</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Temper</li>
+        </exclusionTags>
+        <statOffsets>
+            <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_RapidCoagulation</defName>
+        <label>Rapid Coagulation</label>
+        <description>Larraman cells that swarm a wound before the blood has finished leaving it. The chapter's marines mend at a pace that unsettles their apothecaries.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_RapidCoagulation</iconPath>
+        <displayOrder>107</displayOrder>
+        <stabilityOffset>-2</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Healing</li>
+        </exclusionTags>
+        <statFactors>
+            <InjuryHealingFactor>1.25</InjuryHealingFactor>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_FleetHunter</defName>
+        <label>Fleet Hunter</label>
+        <description>A loose-jointed, weaving gait that reads a blow before it is thrown. Hard to corner, harder to hit.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_FleetHunter</iconPath>
+        <displayOrder>108</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Dodge</li>
+        </exclusionTags>
+        <statOffsets>
+            <MeleeDodgeChance>3</MeleeDodgeChance>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_MarksmanLineage</defName>
+        <label>Marksman Lineage</label>
+        <description>The occulobe of this lineage resolves detail at absurd distance. Its marines are taught to kill long before the enemy is in earshot.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_MarksmanLineage</iconPath>
+        <displayOrder>109</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_LongRange</li>
+        </exclusionTags>
+        <statFactors>
+            <ShootingAccuracyFactor_Long>1.2</ShootingAccuracyFactor_Long>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_KeenSenses</defName>
+        <label>Keen Senses</label>
+        <description>Lyman's ear and occulobe mature further than the templates intend. Little happens near the chapter's marines that they do not notice.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_KeenSenses</iconPath>
+        <displayOrder>110</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Senses</li>
+        </exclusionTags>
+        <capMods>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>1.2</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.1</postFactor>
+            </li>
+        </capMods>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_ColdForged</defName>
+        <label>Cold-Forged</label>
+        <description>Blood that thickens rather than freezes. The chapter's marines fight in cold that would stall another's hearts.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_ColdForged</iconPath>
+        <displayOrder>111</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_ColdTemp</li>
+        </exclusionTags>
+        <statOffsets>
+            <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_Tireless</defName>
+        <label>Tireless</label>
+        <description>The catalepsean node runs deep in this gene-seed. Sleep is a formality the chapter's marines observe rarely.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Tireless</iconPath>
+        <displayOrder>112</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Rest</li>
+        </exclusionTags>
+        <statFactors>
+            <RestFallRateFactor>0.8</RestFallRateFactor>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_Loremasters</defName>
+        <label>Loremasters</label>
+        <description>A chapter that keeps its own archives and reads them. Curiosity is not discouraged here, whatever the Inquisition thinks of it.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Loremasters</iconPath>
+        <displayOrder>113</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Intellect</li>
+        </exclusionTags>
+        <statOffsets>
+            <ResearchSpeed>0.15</ResearchSpeed>
+        </statOffsets>
+        <aptitudes>
+            <Intellectual>1</Intellectual>
+        </aptitudes>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_StalwartIcon</defName>
+        <label>Stalwart Bearing</label>
+        <description>The melanochrome settles into something statuesque. Mortals stand straighter when these marines pass.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_StalwartIcon</iconPath>
+        <displayOrder>114</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Social</li>
+        </exclusionTags>
+        <statOffsets>
+            <PawnBeauty>0.5</PawnBeauty>
+            <SocialImpact>0.15</SocialImpact>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_Voidborn</defName>
+        <label>Void-Born</label>
+        <description>Multi-lung and mucranoid tuned for hull breaches rather than battlefields. A fleet-based chapter's inheritance.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Voidborn</iconPath>
+        <displayOrder>115</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Vacuum</li>
+        </exclusionTags>
+        <statOffsets>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.15</VacuumResistance>
+        </statOffsets>
+    </Genes40k.ChapterTraitDef>
+
+    <Genes40k.ChapterTraitDef>
+        <defName>BEWH_ChapterTrait_IroncladGut</defName>
+        <label>Ironclad Gut</label>
+        <description>A preomnor that treats poison as seasoning. The chapter's marines eat what the battlefield offers and suffer nothing for it.</description>
+        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_IroncladGut</iconPath>
+        <displayOrder>116</displayOrder>
+        <stabilityOffset>-1</stabilityOffset>
+        <exclusionTags>
+            <li>BEWH_ChapterTrait_Constitution</li>
+        </exclusionTags>
+        <statOffsets>
+            <ToxicResistance>0.25</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+            <ImmunityGainSpeed>1.15</ImmunityGainSpeed>
+        </statFactors>
+    </Genes40k.ChapterTraitDef>
+
+</Defs>

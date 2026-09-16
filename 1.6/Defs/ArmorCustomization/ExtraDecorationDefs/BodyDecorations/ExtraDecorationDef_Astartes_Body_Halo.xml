@@ -54,6 +54,16 @@
         <incompatibleDecorations>
             <li>BEWH_IronHalo_2</li>
         </incompatibleDecorations>
+        <statOffsets>
+            <EnergyShieldEnergyMax>0.6</EnergyShieldEnergyMax>
+            <EnergyShieldRechargeRate>0.11</EnergyShieldRechargeRate>
+        </statOffsets>
+        <cost>
+            <Plasteel>30</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Uranium>10</Uranium>
+        </cost>
+        <workAmount>1500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -105,6 +115,16 @@
         <flipable>false</flipable>
         <drawInHeadSpace>true</drawInHeadSpace>
         <decorationType>BEWH_DecoCategory_Halo</decorationType>
+        <statOffsets>
+            <EnergyShieldEnergyMax>0.6</EnergyShieldEnergyMax>
+            <EnergyShieldRechargeRate>0.11</EnergyShieldRechargeRate>
+        </statOffsets>
+        <cost>
+            <Plasteel>30</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Uranium>10</Uranium>
+        </cost>
+        <workAmount>1500</workAmount>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

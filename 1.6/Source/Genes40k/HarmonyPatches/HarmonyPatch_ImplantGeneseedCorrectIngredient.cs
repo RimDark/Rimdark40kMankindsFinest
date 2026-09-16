@@ -15,6 +15,12 @@ public class ImplantGeneseedCorrectIngredient
             return;
         }
 
+        if (bill is Bill_GeneseedImplant kindBill)
+        {
+            __result = kindBill.Matches(geneseedVial);
+            return;
+        }
+
         var defMod = bill.recipe.GetModExtension<DefModExtension_GeneseedVialRecipe>();
 
         if (defMod == null)
@@ -22,6 +28,6 @@ public class ImplantGeneseedCorrectIngredient
             return;
         }
 
-        __result = geneseedVial.extraGeneFromMaterial == defMod.geneFromMaterial;
+        __result = defMod.MatchesVial(geneseedVial);
     }    
 }

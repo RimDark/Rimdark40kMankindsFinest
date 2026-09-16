@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- Phases advance on their own through HediffComp_PhaseDevelopment on the phase hediffs. These recipes keep no
+         recipeUsers so bills queued in ongoing saves still resolve, but they are no longer offered. -->
+
     <!-- Phase base -->
     <RecipeDef ParentName="SurgeryFlesh" Name="BEWH_PhaseRecipeBase" Abstract="True">
         <description>Further develops the implanted gene-seed.</description>
@@ -16,10 +19,6 @@
                 <li>MedicineUltratech</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <recipeUsers>
-            <li>Human</li>
-            <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
-        </recipeUsers>
     </RecipeDef>
 
     <!-- Firstborn phase base -->

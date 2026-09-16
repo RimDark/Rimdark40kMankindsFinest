@@ -48,6 +48,16 @@
             <li>BEWH_DecoPaletteSaintVengeance</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Halo</decorationType>
+        <statOffsets>
+            <EnergyShieldEnergyMax>1.2</EnergyShieldEnergyMax>
+            <EnergyShieldRechargeRate>0.18</EnergyShieldRechargeRate>
+        </statOffsets>
+        <cost>
+            <Plasteel>30</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Uranium>10</Uranium>
+        </cost>
+        <workAmount>1500</workAmount>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -96,5 +106,15 @@
         <incompatibleDecorations>
             <li>BEWH_LivingSaintHalo_1</li>
         </incompatibleDecorations>
+        <statOffsets>
+            <EnergyShieldEnergyMax>1.2</EnergyShieldEnergyMax>
+            <EnergyShieldRechargeRate>0.18</EnergyShieldRechargeRate>
+        </statOffsets>
+        <cost>
+            <Plasteel>30</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <Uranium>10</Uranium>
+        </cost>
+        <workAmount>1500</workAmount>
     </Core40k.ExtraDecorationDef>
 </Defs>

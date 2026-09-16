@@ -19,4 +19,8 @@ public class DefModExtension_GeneseedVial : DefModExtension
     public int baseFailureChance = 0;
     public int failureChancePerAgePast = 0;
     public int failChanceCap = 0;
+
+    public bool usesImplantPicker = false;
+    public int implantWorkAmount = 0;
+    public int implantMedicineSkill = 0;
 }
