@@ -16,6 +16,8 @@ public class ProgenoidGlandProgress
             return;
         }
 
-        __result = (__result + "\n\n" + line).TrimEndNewlines();
+        __result = __result.NullOrEmpty()
+            ? line
+            : __result.TrimEndNewlines() + "\n" + line;
     }
 }

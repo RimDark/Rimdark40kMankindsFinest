@@ -209,23 +209,23 @@ public class Building_GeneGestator : Building
     {
         var stringBuilder = new StringBuilder();
         stringBuilder.Append(base.GetInspectString());
-        stringBuilder.Append("\n");
+        stringBuilder.AppendLineIfNotEmpty();
 
         stringBuilder.Append(containedMatrix == null ? "BEWH.MankindsFinest.GeneGestator.ContainsNoGeneMatrix".Translate() : "BEWH.MankindsFinest.GeneGestator.ContainsGeneMatrix".Translate(containedMatrix.Label));
 
         if (selectedMaterial != null)
         {
-            stringBuilder.Append("\n");
+            stringBuilder.AppendLineIfNotEmpty();
             stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.ContainsExtraMaterial".Translate(selectedMaterial.label));
         }
         else if (SelectedCustomChapter != null)
         {
-            stringBuilder.Append("\n");
+            stringBuilder.AppendLineIfNotEmpty();
             stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.ContainsExtraMaterial".Translate(SelectedCustomChapter.name));
         }
         else if (HasDisciplinePattern)
         {
-            stringBuilder.Append("\n");
+            stringBuilder.AppendLineIfNotEmpty();
             stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.ContainsPattern".Translate(CustomChapterGeneUtility.PatternCode(selectedDisciplines)));
         }
 
@@ -234,7 +234,7 @@ public class Building_GeneGestator : Building
             return stringBuilder.ToString();
         }
             
-        stringBuilder.Append("\n");
+        stringBuilder.AppendLineIfNotEmpty();
         if (Finished)
         {
             stringBuilder.Append("BEWH.MankindsFinest.GeneGestator.GeneVialFinished".Translate());

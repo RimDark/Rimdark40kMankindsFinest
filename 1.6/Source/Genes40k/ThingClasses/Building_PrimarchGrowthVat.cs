@@ -879,7 +879,7 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
         {
             if (containedEmbryo != null)
             {
-                stringBuilder.Append("\n");
+                stringBuilder.AppendLineIfNotEmpty();
                 if (EmbryoGestationTicksRemaining > 60000)
                 {
                     stringBuilder.AppendTagged("EmbryoTimeUntilBirth".Translate() + ": " + EmbryoGestationTicksRemaining.ToStringTicksToDays().Colorize(ColoredText.DateTimeColor));
@@ -893,16 +893,13 @@ public class Building_PrimarchGrowthVat : Building, IStoreSettingsParent, IThing
             if (BiostarvationSeverityPercent > 0f)
             {
                 var text = BiostarvationDailyOffset >= 0f ? "+" : string.Empty;
-                stringBuilder.Append("\n");
+                stringBuilder.AppendLineIfNotEmpty();
                 stringBuilder.Append($"{"Biostarvation".Translate()}: {BiostarvationSeverityPercent.ToStringPercent()} ({"PerDay".Translate(text + BiostarvationDailyOffset.ToStringPercent())})");
             }
         }
 
 
-        if (!PowerTraderComp.Off)
-        {
-            stringBuilder.Append("\n");
-        }
+        stringBuilder.AppendLineIfNotEmpty();
         stringBuilder.Append("Nutrition".Translate()).Append(": ").Append(NutritionStored.ToStringByStyle(ToStringStyle.FloatMaxOne));
         if (Working)
         {
