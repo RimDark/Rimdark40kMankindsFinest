@@ -31,17 +31,14 @@
         <requiredAnyMaterial>
             <li>BEWH_ChapterMaterialIV</li>
         </requiredAnyMaterial>
-        <socialFightChanceFactor>1.5</socialFightChanceFactor>
+        <socialFightChanceFactor>1.75</socialFightChanceFactor>
         <customEffectDescriptions>
-            <li>Chance to have either Psychopath or Transhumanist trait.</li>
+            <li>Chance to have Psychopathtrait.</li>
         </customEffectDescriptions>
         <traitGrant>
             <possibleTraitsToGive>
                 <li>
                     <traitDef>Psychopath</traitDef>
-                </li>
-                <li>
-                    <traitDef>Transhumanist</traitDef>
                 </li>
             </possibleTraitsToGive>
             <chanceToGrantTrait>50</chanceToGrantTrait>
