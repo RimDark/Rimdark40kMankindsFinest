@@ -30,7 +30,7 @@
 		<defName>BEWH_Ability_ThrowKrakGrenade</defName>
 		<label>throw krak grenade</label>
 		<description>A shaped charge meant for armour and bunkers rather than men. A tight blast that goes through what it touches.</description>
-		<iconPath>UI/Abilities/BEWH_Ability_Grenade</iconPath>
+		<iconPath>UI/Abilities/BEWH_Ability_KrakGrenade</iconPath>
 		<cooldownTime>20000</cooldownTime>
 		<modExtensions>
 			<li Class="VEF.Abilities.AbilityExtension_Projectile">
@@ -61,7 +61,7 @@
 		<defName>BEWH_Ability_ThrowKrakGrenadePair</defName>
 		<label>throw krak grenade</label>
 		<description>A shaped charge meant for armour and bunkers rather than men. A tight blast that goes through what it touches. The suit carries a pair of charges.</description>
-		<iconPath>UI/Abilities/BEWH_Ability_Grenade</iconPath>
+		<iconPath>UI/Abilities/BEWH_Ability_KrakGrenade</iconPath>
 		<abilityClass>Core40k.Ability_ShootProjectileWithCharges</abilityClass>
 		<gizmoClass>Core40k.Command_AbilityWithCharges</gizmoClass>
 		<cooldownTime>20000</cooldownTime>
