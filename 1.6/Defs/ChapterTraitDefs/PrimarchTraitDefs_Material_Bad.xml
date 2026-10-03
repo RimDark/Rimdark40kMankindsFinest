@@ -7,7 +7,7 @@
         <defName>BEWH_PrimarchTrait_Insatiable</defName>
         <label>Insatiable</label>
         <description>Perfection is never enough for this lineage, and neither is anything else.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Fulgrim</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IIIEmperorsChildren_Bad</iconPath>
         <displayOrder>1403</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>2</stabilityOffset>
@@ -28,7 +28,7 @@
         <defName>BEWH_PrimarchTrait_GrudgeOfOlympia</defName>
         <label>Grudge of Olympia</label>
         <description>Every slight is remembered and most are answered.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Perturabo</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IVIronWarriors_Bad</iconPath>
         <displayOrder>1404</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>2</stabilityOffset>
@@ -47,7 +47,7 @@
         <defName>BEWH_PrimarchTrait_WulfenBlood</defName>
         <label>Wulfen Blood</label>
         <description>The Canis Helix, imperfectly tamed. Elongated canines and a temper that turns every breakdown into violence.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Russ</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VISpaceWolves_Bad</iconPath>
         <displayOrder>1406</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>2</stabilityOffset>
@@ -73,7 +73,7 @@
         <defName>BEWH_PrimarchTrait_NightHauntersVisions</defName>
         <label>Night Haunter's Visions</label>
         <description>The visions come unbidden and leave a face nobody wants to look at.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Curze</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VIIINightLords_Bad</iconPath>
         <displayOrder>1408</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>2</stabilityOffset>
@@ -90,7 +90,7 @@
         <defName>BEWH_PrimarchTrait_ButchersNails</defName>
         <label>Butcher's Nails</label>
         <description>Something in this lineage hungers for the fight and cannot be reasoned out of it.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIIWorldEaters_Bad</iconPath>
         <displayOrder>1412</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>3</stabilityOffset>
@@ -115,7 +115,7 @@
         <defName>BEWH_PrimarchTrait_DeathlyPallor</defName>
         <label>Deathly Pallor</label>
         <description>Grey skin, sunken eyes and a smell of rot that no bath removes.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Morty</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIVDeathGuard_Bad</iconPath>
         <displayOrder>1414</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>1</stabilityOffset>
@@ -134,7 +134,7 @@
         <defName>BEWH_PrimarchTrait_FleshChangeTaint</defName>
         <label>Flesh-Change Taint</label>
         <description>The Crimson King's curse rides along with his gift. The more this lineage reaches into the warp, the more the flesh answers.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Mangus</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVThousandSons_Bad</iconPath>
         <displayOrder>1415</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>2</stabilityOffset>
@@ -157,7 +157,7 @@
         <defName>BEWH_PrimarchTrait_ZealotsDoubt</defName>
         <label>Zealot's Doubt</label>
         <description>A preacher first and a warrior a distant second. The blade and the bolter both feel wrong in these hands.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lorgar</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVIIWordBearers_Bad</iconPath>
         <displayOrder>1417</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>2</stabilityOffset>
@@ -176,7 +176,7 @@
         <defName>BEWH_PrimarchTrait_NoFixedIdentity</defName>
         <label>No Fixed Identity</label>
         <description>Too many masks for too long. Something underneath has gone quiet or gone sideways.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_AlphaOmega</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XXAlphaLegion_Bad</iconPath>
         <displayOrder>1420</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>2</stabilityOffset>

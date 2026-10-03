@@ -5,7 +5,7 @@
         <defName>BEWH_ChapterTrait_PursuitOfPerfection</defName>
         <label>Pursuit of Perfection</label>
         <description>The Third Legion's appetite for excellence, and its intolerance of anyone else's. The chapter's marines are connoisseurs and rivals in equal measure.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIIIEmperorsChildren</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IIIEmperorsChildren_Bad</iconPath>
         <displayOrder>403</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -25,7 +25,7 @@
         <defName>BEWH_ChapterTrait_Grudgebearer</defName>
         <label>Grudgebearer</label>
         <description>The Fourth's bitterness carries in the gene-seed. These marines remember every slight and forgive none of them.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IVIronWarriors_Bad</iconPath>
         <displayOrder>404</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -33,7 +33,7 @@
         </requiredAnyMaterial>
         <socialFightChanceFactor>1.75</socialFightChanceFactor>
         <customEffectDescriptions>
-            <li>Chance to have Psychopathtrait.</li>
+            <li>Chance to have Psychopath trait.</li>
         </customEffectDescriptions>
         <traitGrant>
             <possibleTraitsToGive>
@@ -88,7 +88,7 @@
         <defName>BEWH_ChapterTrait_StuntedImplantation</defName>
         <label>Stunted Implantation</label>
         <description>The same defect the Seventh carries: two of the nineteen organs never take. The marine is whole enough to fight, and the apothecaries have long since stopped trying to fix it.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIImperialFists</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VIIImperialFists_Bad</iconPath>
         <displayOrder>407</displayOrder>
         <stabilityOffset>2</stabilityOffset>
         <requiredAnyMaterial>
@@ -108,7 +108,7 @@
         <defName>BEWH_ChapterTrait_MurderBorn</defName>
         <label>Murder-Born</label>
         <description>Nostramo's inheritance is not the terror but what is needed to wield it. The chapter's marines feel nothing at all about the work.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VIIINightLords_Bad</iconPath>
         <displayOrder>408</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -186,7 +186,7 @@
         <defName>BEWH_ChapterTrait_FleshIsWeak</defName>
         <label>The Flesh Is Weak</label>
         <description>Medusa's contempt for meat, inherited wholesale. The chapter's marines would rather be iron, and say so to anyone who is not.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIronHands_Bad</iconPath>
         <displayOrder>410</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -209,7 +209,7 @@
         <defName>BEWH_ChapterTrait_ButchersNails</defName>
         <label>Butcher's Temper</label>
         <description>Whatever the Twelfth did to itself on Nuceria left a mark in the gene-seed. The chapter's marines are never far from a fight, and want it that way.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIWorldEaters</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIIWorldEaters_Bad</iconPath>
         <displayOrder>412</displayOrder>
         <stabilityOffset>2</stabilityOffset>
         <requiredAnyMaterial>
@@ -231,7 +231,7 @@
         <defName>BEWH_ChapterTrait_PaleConstitution</defName>
         <label>Pale Constitution</label>
         <description>The Nineteenth's flaw, carried over with its stealth: two organs that refuse to take, and skin that never sees enough light to matter.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIXRavenGuard</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIXRavenGuard_Bad</iconPath>
         <displayOrder>419</displayOrder>
         <stabilityOffset>2</stabilityOffset>
         <requiredAnyMaterial>
@@ -253,7 +253,7 @@
         <defName>BEWH_ChapterTrait_TheHunt</defName>
         <label>The Hunt</label>
         <description>Something in the First Legion's inheritance keeps its own counsel. The chapter's marines carry a private burden they will not name, and trust outsiders with nothing.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIDarkAngels</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IDarkAngels_Bad</iconPath>
         <displayOrder>401</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -272,7 +272,7 @@
         <defName>BEWH_ChapterTrait_RestlessBlood</defName>
         <label>Restless Blood</label>
         <description>The Khan's sons were never meant to stand still. Walls and watch rosters wear on these marines in a way no drill can fix.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVWhiteScars</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VWhiteScars_Bad</iconPath>
         <displayOrder>405</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -294,7 +294,7 @@
         <defName>BEWH_ChapterTrait_CodexRigidity</defName>
         <label>Codex Rigidity</label>
         <description>Ultramar's discipline taken past its use. The chapter's marines execute the Codex flawlessly and learn anything outside it slowly, if at all.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIIUltramarines</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIIIUltramarines_Bad</iconPath>
         <displayOrder>413</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -315,7 +315,7 @@
         <defName>BEWH_ChapterTrait_BarbaranPallor</defName>
         <label>Barbaran Pallor</label>
         <description>Barbarus left its mark on the Fourteenth's gene-seed: grey, waxy skin over flesh that closes wounds grudgingly. The marines endure it, as they endure everything.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIVDeathGuard</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIVDeathGuard_Bad</iconPath>
         <displayOrder>414</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -337,7 +337,7 @@
         <defName>BEWH_ChapterTrait_FleshChange</defName>
         <label>The Flesh Change</label>
         <description>The Fifteenth's oldest curse. The gene-seed will not hold its shape, and the marine's body drifts away from the template it was grown against.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVThousandSons</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVThousandSons_Bad</iconPath>
         <displayOrder>415</displayOrder>
         <stabilityOffset>2</stabilityOffset>
         <requiredAnyMaterial>
@@ -360,7 +360,7 @@
         <defName>BEWH_ChapterTrait_WarmastersPride</defName>
         <label>Warmaster's Pride</label>
         <description>The Sixteenth's certainty that it deserves the best of everything, inherited whole. Honours, wargear, glory — these marines expect their share and resent anyone who takes it.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVISonsOfHorus</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVISonsOfHorus_Bad</iconPath>
         <displayOrder>416</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -378,7 +378,7 @@
         <defName>BEWH_ChapterTrait_FanaticDevotion</defName>
         <label>Fanatic Devotion</label>
         <description>Faith welded to the marrow. Nothing shakes these marines from what they believe, and they have no patience left for anyone who does not share it.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVIIWordBearers_Bad</iconPath>
         <displayOrder>417</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -400,7 +400,7 @@
         <defName>BEWH_ChapterTrait_NocturneanMutation</defName>
         <label>Nocturnean Mutation</label>
         <description>Nocturne's radiation is written into the Eighteenth's gene-seed: coal-black skin, a furnace-worlder's tolerance for heat, and progenoids that yield far fewer sons than they should.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIISalamanders</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVIIISalamanders_Bad</iconPath>
         <displayOrder>418</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>
@@ -422,7 +422,7 @@
         <defName>BEWH_ChapterTrait_EveryoneIsAlpharius</defName>
         <label>Everyone Is Alpharius</label>
         <description>The Twentieth taught its gene-seed to lie. Which of these marines is which, and what any of them actually intends, is never quite settled.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXXAlphaLegion</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XXAlphaLegion_Bad</iconPath>
         <displayOrder>420</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <requiredAnyMaterial>

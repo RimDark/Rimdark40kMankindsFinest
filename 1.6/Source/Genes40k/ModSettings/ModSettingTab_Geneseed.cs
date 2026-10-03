@@ -53,9 +53,42 @@ public class ModSettingTab_Geneseed : ModSettingTab
         genes40KModSettings.matrixGestationTimeFactor = (int)listingStandard.SliderLabeled("BEWH.MankindsFinest.ModSettings.MatrixGestationFactor".Translate(genes40KModSettings.matrixGestationTimeFactor), genes40KModSettings.matrixGestationTimeFactor, 1, 200, tooltip: "BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc".Translate());
         scrollViewHeight += ListingHeightIncrease;
         
+        //Custom chapter design limits
+        listingStandard.GapLine(36);
+        scrollViewHeight += ListingHeightIncreaseGap;
+        listingStandard.Label("BEWH.MankindsFinest.ModSettings.CustomDesignDesc".Translate());
+        scrollViewHeight += ListingHeightIncrease;
+        DrawDesignLimits(listingStandard, ref genes40KModSettings.chapterStabilityRange, ref genes40KModSettings.chapterBaseTraitPicks, "BEWH.MankindsFinest.ModSettings.ChapterStabilityRange", "BEWH.MankindsFinest.ModSettings.ChapterBaseTraitPicks", 1001);
+        DrawDesignLimits(listingStandard, ref genes40KModSettings.primarchComplexityRange, ref genes40KModSettings.primarchBaseTraitPicks, "BEWH.MankindsFinest.ModSettings.PrimarchComplexityRange", "BEWH.MankindsFinest.ModSettings.PrimarchBaseTraitPicks", 1002);
+        listingStandard.Gap(6);
+        if (listingStandard.ButtonText("BEWH.MankindsFinest.ModSettings.ResetDesignLimits".Translate(), widthPct: 0.3f))
+        {
+            genes40KModSettings.chapterStabilityRange = Genes40kModSettings.DefaultChapterStabilityRange;
+            genes40KModSettings.chapterBaseTraitPicks = Genes40kModSettings.DefaultChapterBaseTraitPicks;
+            genes40KModSettings.primarchComplexityRange = Genes40kModSettings.DefaultPrimarchComplexityRange;
+            genes40KModSettings.primarchBaseTraitPicks = Genes40kModSettings.DefaultPrimarchBaseTraitPicks;
+        }
+        scrollViewHeight += ListingHeightIncreaseGap;
+        
         scrollViewHeight += ListingHeightIncrease;
         
         listingStandard.End();
         Widgets.EndScrollView();
     }
+
+    private void DrawDesignLimits(Listing_Standard listingStandard, ref IntRange range, ref int basePicks, string rangeKey, string picksKey, int id)
+    {
+        listingStandard.Gap(6);
+        scrollViewHeight += 6f;
+        listingStandard.Label(rangeKey.Translate(range.min.ToStringWithSign(), range.max.ToStringWithSign()), tooltip: (rangeKey + "Desc").Translate());
+        scrollViewHeight += ListingHeightIncrease;
+        Widgets.IntRange(listingStandard.GetRect(32f), id, ref range, MinStabilityBound, MaxStabilityBound);
+        scrollViewHeight += 32f;
+        basePicks = (int)listingStandard.SliderLabeled(picksKey.Translate(basePicks), basePicks, 1, MaxBaseTraitPicks, tooltip: (picksKey + "Desc").Translate());
+        scrollViewHeight += ListingHeightIncrease;
+    }
+
+    private const int MinStabilityBound = -20;
+    private const int MaxStabilityBound = 20;
+    private const int MaxBaseTraitPicks = 12;
 }

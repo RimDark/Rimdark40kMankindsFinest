@@ -5,7 +5,7 @@
         <defName>BEWH_ChapterTrait_Unforgiving</defName>
         <label>Unforgiving</label>
         <description>A quiet, patient strain taken from the First Legion. The chapter's marines work without complaint and let nothing go unfinished.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIDarkAngels</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IDarkAngels_Good</iconPath>
         <displayOrder>301</displayOrder>
         <stabilityOffset>-2</stabilityOffset>
         <requiredAnyMaterial>
@@ -23,7 +23,7 @@
         <defName>BEWH_ChapterTrait_PerfectForm</defName>
         <label>Perfect Form</label>
         <description>A measured dose of the Phoenician's gene-craft. Every motion is economical, every strike placed exactly where it was meant to go.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIIIEmperorsChildren</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IIIEmperorsChildren_Good</iconPath>
         <displayOrder>303</displayOrder>
         <stabilityOffset>-2</stabilityOffset>
         <requiredAnyMaterial>
@@ -42,7 +42,7 @@
         <defName>BEWH_ChapterTrait_Siegecraft</defName>
         <label>Siegecraft</label>
         <description>An instinct for revetments and firing angles, inherited from the Lord of Iron's sons. The chapter builds as readily as it breaks.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIVIronWarriors</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IVIronWarriors_Good</iconPath>
         <displayOrder>304</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -61,7 +61,7 @@
         <defName>BEWH_ChapterTrait_Stormrider</defName>
         <label>Stormrider</label>
         <description>The Khan's restlessness, thinned but unmistakable. These marines are never where the enemy last aimed.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVWhiteScars</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VWhiteScars_Good</iconPath>
         <displayOrder>305</displayOrder>
         <stabilityOffset>-2</stabilityOffset>
         <requiredAnyMaterial>
@@ -83,7 +83,7 @@
         <defName>BEWH_ChapterTrait_FeralSenses</defName>
         <label>Feral Senses</label>
         <description>A diluted echo of the Canis Helix. The chapter's marines read a battlefield by scent and sound, and are hard to pin down.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVISpaceWolves</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VISpaceWolves_Good</iconPath>
         <displayOrder>306</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -102,7 +102,7 @@
         <defName>BEWH_ChapterTrait_Unyielding</defName>
         <label>Unyielding</label>
         <description>Pain is a fact, not an argument. A stubbornness borrowed from the Praetorian's sons.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIImperialFists</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VIIImperialFists_Good</iconPath>
         <displayOrder>307</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -118,7 +118,7 @@
         <defName>BEWH_ChapterTrait_MidnightTerror</defName>
         <label>Midnight Terror</label>
         <description>The Night Haunter's craft, practised at a lesser scale. The chapter's marines carry a presence that breaks enemies before the shooting starts.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VIIINightLords_Good</iconPath>
         <displayOrder>308</displayOrder>
         <stabilityOffset>-3</stabilityOffset>
         <requiredAnyMaterial>
@@ -152,7 +152,7 @@
         <defName>BEWH_ChapterTrait_SanguineFury</defName>
         <label>Sanguine Fury</label>
         <description>A measured dose of the Angel's wrath. The chapter's marines fight with a grace that borders on frenzy.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterIXBloodAngels</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IXBloodAngels_Good</iconPath>
         <displayOrder>309</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -171,7 +171,7 @@
         <defName>BEWH_ChapterTrait_MachineAffinity</defName>
         <label>Machine Affinity</label>
         <description>Nerve sheaths that accept bionic interface with unusual grace, after the fashion of the Gorgon's sons.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIronHands</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIronHands_Good</iconPath>
         <displayOrder>310</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -186,7 +186,7 @@
         <defName>BEWH_ChapterTrait_ButchersVigour</defName>
         <label>Butcher's Vigour</label>
         <description>The War Hound strain, stripped of its worst appetites. What remains is an unnerving talent for putting a blade where it kills.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIWorldEaters</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIIWorldEaters_Good</iconPath>
         <displayOrder>312</displayOrder>
         <stabilityOffset>-2</stabilityOffset>
         <requiredAnyMaterial>
@@ -204,7 +204,7 @@
         <defName>BEWH_ChapterTrait_CodexDiscipline</defName>
         <label>Codex Discipline</label>
         <description>Ultramar's gene-seed is orderly to a fault, and so are the marines grown from it. Nothing is wasted, least of all time.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIIUltramarines</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIIIUltramarines_Good</iconPath>
         <displayOrder>313</displayOrder>
         <stabilityOffset>-2</stabilityOffset>
         <requiredAnyMaterial>
@@ -222,7 +222,7 @@
         <defName>BEWH_ChapterTrait_ResilientConstitution</defName>
         <label>Resilient Constitution</label>
         <description>Blood that fights off poison and plague, distilled from the Death Lord's grim inheritance.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIVDeathGuard</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIVDeathGuard_Good</iconPath>
         <displayOrder>314</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -243,7 +243,7 @@
         <defName>BEWH_ChapterTrait_PsychicInheritance</defName>
         <label>Psychic Inheritance</label>
         <description>A splice from the Crimson King's lineage. Some of the chapter's marines awaken to the warp, though rarely with the Thousand Sons' full potency.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVThousandSons</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVThousandSons_Good</iconPath>
         <displayOrder>315</displayOrder>
         <stabilityOffset>-3</stabilityOffset>
         <requiredAnyMaterial>
@@ -276,7 +276,7 @@
         <defName>BEWH_ChapterTrait_CloseQuarters</defName>
         <label>Warmaster's Doctrine</label>
         <description>The Sixteenth fought at arm's length and taught its gene-seed to do the same. Bolters are fired inside the reach of a blade.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVISonsOfHorus</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVISonsOfHorus_Good</iconPath>
         <displayOrder>316</displayOrder>
         <stabilityOffset>-2</stabilityOffset>
         <requiredAnyMaterial>
@@ -295,7 +295,7 @@
         <defName>BEWH_ChapterTrait_ZealotsCadence</defName>
         <label>Zealot's Cadence</label>
         <description>The Urizen's gift: a voice built for sermons. The chapter's marines preach as naturally as they fight.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVIIWordBearers_Good</iconPath>
         <displayOrder>317</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -317,7 +317,7 @@
         <defName>BEWH_ChapterTrait_HeatTempered</defName>
         <label>Heat Tempered</label>
         <description>Skin that shrugs off heat and flame, borrowed from the forge-born lineage of Vulkan.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIISalamanders</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVIIISalamanders_Good</iconPath>
         <displayOrder>318</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -338,7 +338,7 @@
         <defName>BEWH_ChapterTrait_ShadowGait</defName>
         <label>Shadow Gait</label>
         <description>A quiet tread and a knack for staying unseen, learned from the Ravenlord's gene-line.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIXRavenGuard</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIXRavenGuard_Good</iconPath>
         <displayOrder>319</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>
@@ -357,7 +357,7 @@
         <defName>BEWH_ChapterTrait_HydrasFaces</defName>
         <label>Hydra's Many Faces</label>
         <description>The Twentieth's talent for being whoever the moment requires. Prisoners talk, and so do the marines' targets, right up until they stop.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXXAlphaLegion</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XXAlphaLegion_Good</iconPath>
         <displayOrder>320</displayOrder>
         <stabilityOffset>-2</stabilityOffset>
         <requiredAnyMaterial>
@@ -384,7 +384,7 @@
         <defName>BEWH_ChapterTrait_PureStrain</defName>
         <label>Pure Strain</label>
         <description>Grafted from one of the purest gene-seed lines in the Imperium. It does nothing for the marine, but it does wonders for the implantation.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXIIIUltramarines</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIIIUltramarines_Good</iconPath>
         <displayOrder>330</displayOrder>
         <stabilityOffset>2</stabilityOffset>
         <requiredAnyMaterial>
@@ -397,7 +397,7 @@
         <defName>BEWH_ChapterTrait_Silvertongued</defName>
         <label>Silver-tongued</label>
         <description>Words come easily to this lineage, whether preached from a pulpit or whispered in a hydra's many voices.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVIIWordBearers</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVIIWordBearers_Good</iconPath>
         <displayOrder>331</displayOrder>
         <stabilityOffset>-1</stabilityOffset>
         <requiredAnyMaterial>

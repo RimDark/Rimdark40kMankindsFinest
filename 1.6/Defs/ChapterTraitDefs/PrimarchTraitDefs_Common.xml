@@ -10,7 +10,7 @@
         <defName>BEWH_PrimarchTrait_Towering</defName>
         <label>Towering Frame</label>
         <description>The lineage runs to a frame even other primarchs look up at. More muscle, more reach, more to carry.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_StalwartIcon</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>1101</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -24,7 +24,7 @@
         <defName>BEWH_PrimarchTrait_Tireless</defName>
         <label>Tireless</label>
         <description>Sleep is a courtesy this lineage extends to itself rarely, and works through the difference.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Tireless</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>1102</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-1</stabilityOffset>
@@ -41,7 +41,7 @@
         <defName>BEWH_PrimarchTrait_Commanding</defName>
         <label>Commanding Presence</label>
         <description>Rooms quieten when this lineage enters them. Bargains go its way more often than not.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Loremasters</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>1103</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-1</stabilityOffset>
@@ -60,7 +60,7 @@
         <defName>BEWH_PrimarchTrait_Quickened</defName>
         <label>Quickened</label>
         <description>Long legs and a short fuse between thought and motion.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Swift</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>1104</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-1</stabilityOffset>
@@ -76,7 +76,7 @@
         <defName>BEWH_PrimarchTrait_Sharpened</defName>
         <label>Sharpened Instincts</label>
         <description>A predator's read of an opponent, inherited rather than learned.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_LightningReflexes</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>1105</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -95,7 +95,7 @@
         <defName>BEWH_PrimarchTrait_Plain</defName>
         <label>Unremarkable Lineage</label>
         <description>A plain, well-behaved template with no quirks to speak of. The vat appreciates it more than the primarch will.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Unremarkable</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>1201</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>1</stabilityOffset>
@@ -105,7 +105,7 @@
         <defName>BEWH_PrimarchTrait_Slothful</defName>
         <label>Slow to Wake</label>
         <description>Genius arrives in this lineage, but late, and only after it has had breakfast.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_DimLineage</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>1202</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>1</stabilityOffset>
@@ -122,7 +122,7 @@
         <defName>BEWH_PrimarchTrait_Aloof</defName>
         <label>Aloof</label>
         <description>This lineage does not suffer mortals gladly, and lets them know it.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_ColdForged</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>1203</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>1</stabilityOffset>
@@ -143,7 +143,7 @@
         <defName>BEWH_PrimarchTrait_Brittle</defName>
         <label>Brittle Frame</label>
         <description>The bones set fast and set badly. Blows land harder than a primarch's should.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_BrittleBones</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>1204</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>2</stabilityOffset>

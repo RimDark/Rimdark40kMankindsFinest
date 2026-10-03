@@ -7,7 +7,7 @@
         <defName>BEWH_PrimarchTrait_HuntersPatience</defName>
         <label>Hunter's Patience</label>
         <description>The First's stillness before the strike, thinned but intact. Blows aimed at this lineage find nothing there.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lion</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IDarkAngels_Good</iconPath>
         <displayOrder>1301</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -26,7 +26,7 @@
         <defName>BEWH_PrimarchTrait_PhoenicianPoise</defName>
         <label>Phoenician Poise</label>
         <description>A measured dose of the Phoenician's grace. Beautiful, persuasive, and aware of both.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Fulgrim</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IIIEmperorsChildren_Good</iconPath>
         <displayOrder>1303</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -48,7 +48,7 @@
         <defName>BEWH_PrimarchTrait_LogiciansEye</defName>
         <label>Logician's Eye</label>
         <description>The Lord of Iron's cold arithmetic: angles, loads, tolerances, all seen at a glance.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Perturabo</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IVIronWarriors_Good</iconPath>
         <displayOrder>1304</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -70,7 +70,7 @@
         <defName>BEWH_PrimarchTrait_Stormborn</defName>
         <label>Stormborn</label>
         <description>The Khan's restlessness. This lineage is never where the enemy last aimed.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Khan</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VWhiteScars_Good</iconPath>
         <displayOrder>1305</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -90,7 +90,7 @@
         <defName>BEWH_PrimarchTrait_Winterhardened</defName>
         <label>Winterhardened</label>
         <description>Fenris in the blood. Cold is a comfort and a raised voice is an invitation.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Russ</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VISpaceWolves_Good</iconPath>
         <displayOrder>1306</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-1</stabilityOffset>
@@ -107,7 +107,7 @@
         <defName>BEWH_PrimarchTrait_UnbreakableLine</defName>
         <label>Unbreakable Line</label>
         <description>Dorn's instinct for the wall. Whatever this lineage builds, it builds right the first time.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Dorn</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VIIImperialFists_Good</iconPath>
         <displayOrder>1307</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -127,7 +127,7 @@
         <defName>BEWH_PrimarchTrait_TerrorOfTheDark</defName>
         <label>Terror of the Dark</label>
         <description>Nostramo's gift. In darkness this lineage is faster and far more precise.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Curze</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VIIINightLords_Good</iconPath>
         <displayOrder>1308</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -151,7 +151,7 @@
         <defName>BEWH_PrimarchTrait_AngelsGrace</defName>
         <label>Angel's Grace</label>
         <description>No wings, but the Angel's balance and lightness of foot.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Sanguinius</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_IXBloodAngels_Good</iconPath>
         <displayOrder>1309</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -176,7 +176,7 @@
         <defName>BEWH_PrimarchTrait_GorgonsHands</defName>
         <label>Gorgon's Hands</label>
         <description>The Gorgon's craft without the Gorgon's silver. Everything this lineage makes is made well.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Manus</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIronHands_Good</iconPath>
         <displayOrder>1310</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -195,7 +195,7 @@
         <defName>BEWH_PrimarchTrait_ButchersThreshold</defName>
         <label>Butcher's Threshold</label>
         <description>Pain registers as information and nothing more.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Chillgron</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIIWorldEaters_Good</iconPath>
         <displayOrder>1312</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -209,7 +209,7 @@
         <defName>BEWH_PrimarchTrait_AdministratumMind</defName>
         <label>Administratum Mind</label>
         <description>Guilliman's genius for order. Work flows, ledgers balance, negotiations close.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Robot</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIIIUltramarines_Good</iconPath>
         <displayOrder>1313</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-3</stabilityOffset>
@@ -235,7 +235,7 @@
         <defName>BEWH_PrimarchTrait_ReapersConstitution</defName>
         <label>Reaper's Constitution</label>
         <description>Barbarus bred this lineage to breathe poison. Disease finds nothing to hold.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Morty</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIVDeathGuard_Good</iconPath>
         <displayOrder>1314</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -255,7 +255,7 @@
         <defName>BEWH_PrimarchTrait_CrimsonInheritance</defName>
         <label>Crimson Inheritance</label>
         <description>A fragment of the Crimson King's sight. The warp answers this lineage readily, and a psyker gene comes with it.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Mangus</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVThousandSons_Good</iconPath>
         <displayOrder>1315</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-3</stabilityOffset>
@@ -289,7 +289,7 @@
         <defName>BEWH_PrimarchTrait_WarmastersVoice</defName>
         <label>Warmaster's Voice</label>
         <description>The Warmaster's charisma, diluted. People still listen.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_TheBaldOne</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVISonsOfHorus_Good</iconPath>
         <displayOrder>1316</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -312,7 +312,7 @@
         <defName>BEWH_PrimarchTrait_FerventWord</defName>
         <label>Fervent Word</label>
         <description>The Urizen's conviction. This lineage preaches, and is believed.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Lorgar</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVIIWordBearers_Good</iconPath>
         <displayOrder>1317</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -335,7 +335,7 @@
         <defName>BEWH_PrimarchTrait_PrometheanHeart</defName>
         <label>Promethean Heart</label>
         <description>Nocturne's fire runs in this lineage. Heat is welcome, flame is harmless, and kindness comes easily.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Vulkan</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVIIISalamanders_Good</iconPath>
         <displayOrder>1318</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -359,7 +359,7 @@
         <defName>BEWH_PrimarchTrait_ShadowedStep</defName>
         <label>Shadowed Step</label>
         <description>Deliverance taught this lineage to move unseen. Darkness makes it faster and near invisible to prey.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Corvus</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XIXRavenGuard_Good</iconPath>
         <displayOrder>1319</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>
@@ -383,7 +383,7 @@
         <defName>BEWH_PrimarchTrait_ManyFaces</defName>
         <label>Many Faces</label>
         <description>Nobody is ever quite sure who they are dealing with, which turns out to be an advantage at the table.</description>
-        <iconPath>UI/Genes/PrimarchSpecific/BEWH_AlphaOmega</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XXAlphaLegion_Good</iconPath>
         <displayOrder>1320</displayOrder>
         <kind>Primarch</kind>
         <stabilityOffset>-2</stabilityOffset>

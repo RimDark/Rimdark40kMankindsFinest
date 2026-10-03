@@ -10,6 +10,9 @@ public static class CustomChapterGeneUtility
 {
     public static CustomChapterGeneTemplateDef Tuning => Genes40kDefOf.BEWH_CustomChapterGene;
 
+    private static Genes40kModSettings modSettings;
+    private static Genes40kModSettings ModSettings => modSettings ??= LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
+
     private static List<CustomChapterGeneTemplateDef> templatesInOrder;
     public static List<CustomChapterGeneTemplateDef> TemplatesInOrder => templatesInOrder ??= DefDatabase<CustomChapterGeneTemplateDef>.AllDefsListForReading
         .Where(template => template.kind != CustomGeneKind.Any)
@@ -66,10 +69,34 @@ public static class CustomChapterGeneUtility
         return traits.Sum(trait => trait?.stabilityOffset ?? 0);
     }
 
+    /// <summary>
+    /// The allowed budget range for a design line; chapters and primarchs read it from the mod settings.
+    /// </summary>
+    public static IntRange StabilityRange(CustomChapterGeneTemplateDef template = null)
+    {
+        template ??= Tuning;
+        return template.kind switch
+        {
+            CustomGeneKind.Chapter => ModSettings.chapterStabilityRange,
+            CustomGeneKind.Primarch => ModSettings.primarchComplexityRange,
+            _ => template.stabilityRange
+        };
+    }
+
+    private static int BaseTraitPicks(CustomChapterGeneTemplateDef template)
+    {
+        return template.kind switch
+        {
+            CustomGeneKind.Chapter => ModSettings.chapterBaseTraitPicks,
+            CustomGeneKind.Primarch => ModSettings.primarchBaseTraitPicks,
+            _ => template.maxTraits
+        };
+    }
+
     public static int MaxTraits(CustomChapterGeneTemplateDef template = null)
     {
         template ??= Tuning;
-        var max = template.maxTraits;
+        var max = BaseTraitPicks(template);
 
         if (template.extraTraitSlotResearches.NullOrEmpty())
         {

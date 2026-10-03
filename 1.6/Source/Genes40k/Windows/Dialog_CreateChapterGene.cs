@@ -379,7 +379,7 @@ public class Dialog_CreateChapterGene : Window
         rect = rect.ContractedBy(4f);
 
         var stability = Stability;
-        var range = Tuning.stabilityRange;
+        var range = CustomChapterGeneUtility.StabilityRange(Tuning);
         var iconRect = new Rect(rect.x, rect.y, 22f, 22f);
         GUI.DrawTexture(iconRect, GeneUtility.METTex.Texture);
 
@@ -524,9 +524,10 @@ public class Dialog_CreateChapterGene : Window
 
         var stability = Stability;
 
-        if (stability < Tuning.stabilityRange.min || stability > Tuning.stabilityRange.max)
+        var stabilityRange = CustomChapterGeneUtility.StabilityRange(Tuning);
+        if (stability < stabilityRange.min || stability > stabilityRange.max)
         {
-            Messages.Message((IsPrimarch ? "BEWH.MankindsFinest.CustomPrimarch.ComplexityOutOfRange" : "BEWH.MankindsFinest.CustomChapter.StabilityOutOfRange").Translate(stability.ToStringWithSign(), Tuning.stabilityRange.min, Tuning.stabilityRange.max), MessageTypeDefOf.RejectInput, false);
+            Messages.Message((IsPrimarch ? "BEWH.MankindsFinest.CustomPrimarch.ComplexityOutOfRange" : "BEWH.MankindsFinest.CustomChapter.StabilityOutOfRange").Translate(stability.ToStringWithSign(), stabilityRange.min, stabilityRange.max), MessageTypeDefOf.RejectInput, false);
             return false;
         }
 

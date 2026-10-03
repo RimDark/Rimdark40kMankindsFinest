@@ -52,6 +52,16 @@
   <BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc>Base implantation cap is increased or decreased by this value. Implantation cap is the maximum value of success an implantation can have.</BEWH.MankindsFinest.ModSettings.ImplantationCapOffsetDesc>
   <BEWH.MankindsFinest.ModSettings.MatrixGestationFactor>Matrix gestation time factor of default: {0}%</BEWH.MankindsFinest.ModSettings.MatrixGestationFactor>
   <BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc>Gestation time of all matrices are modified by this value.</BEWH.MankindsFinest.ModSettings.MatrixGestationFactorDesc>
+  <BEWH.MankindsFinest.ModSettings.CustomDesignDesc>Custom gene-seed and primarch design limits.</BEWH.MankindsFinest.ModSettings.CustomDesignDesc>
+  <BEWH.MankindsFinest.ModSettings.ChapterStabilityRange>Allowed chapter gene-seed stability: {0} to {1}</BEWH.MankindsFinest.ModSettings.ChapterStabilityRange>
+  <BEWH.MankindsFinest.ModSettings.ChapterStabilityRangeDesc>A custom chapter design can only be saved while its total stability is inside this range. Each point of stability still changes implantation failure chance, failure cap and rubicon chance, so a wider range also allows better or worse implantation odds.\n\nExisting chapters are not affected when this is changed.</BEWH.MankindsFinest.ModSettings.ChapterStabilityRangeDesc>
+  <BEWH.MankindsFinest.ModSettings.ChapterBaseTraitPicks>Chapter trait picks before research: {0}</BEWH.MankindsFinest.ModSettings.ChapterBaseTraitPicks>
+  <BEWH.MankindsFinest.ModSettings.ChapterBaseTraitPicksDesc>How many traits a custom chapter design can hold. Trait slot research adds slots on top of this.\n\nExisting chapters are not affected when this is changed.</BEWH.MankindsFinest.ModSettings.ChapterBaseTraitPicksDesc>
+  <BEWH.MankindsFinest.ModSettings.PrimarchComplexityRange>Allowed primarch genetic complexity: {0} to {1}</BEWH.MankindsFinest.ModSettings.PrimarchComplexityRange>
+  <BEWH.MankindsFinest.ModSettings.PrimarchComplexityRangeDesc>A custom primarch design can only be saved while its total genetic complexity is inside this range. Complexity still changes vat gestation time.\n\nExisting primarch designs are not affected when this is changed.</BEWH.MankindsFinest.ModSettings.PrimarchComplexityRangeDesc>
+  <BEWH.MankindsFinest.ModSettings.PrimarchBaseTraitPicks>Primarch trait picks before research: {0}</BEWH.MankindsFinest.ModSettings.PrimarchBaseTraitPicks>
+  <BEWH.MankindsFinest.ModSettings.PrimarchBaseTraitPicksDesc>How many traits a custom primarch design can hold. Trait slot research adds slots on top of this.\n\nExisting primarch designs are not affected when this is changed.</BEWH.MankindsFinest.ModSettings.PrimarchBaseTraitPicksDesc>
+  <BEWH.MankindsFinest.ModSettings.ResetDesignLimits>Reset design limits</BEWH.MankindsFinest.ModSettings.ResetDesignLimits>
 
   <BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>Allow vat-grown Primarchs to be female</BEWH.MankindsFinest.ModSettings.AllowFemalePrimarchs>
 

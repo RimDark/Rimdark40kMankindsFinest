@@ -9,7 +9,7 @@
         <defName>BEWH_CustodesDiscipline_Melee</defName>
         <label>melee prowess</label>
         <description>How far the ascension pushed the Custodian's close-combat conditioning: muscle recruitment, reach and the killing instinct that guides a guardian spear.</description>
-        <iconPath>UI/Genes/Custodes/BEWH_Custodes_AtlasMorphogen</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>1</displayOrder>
         <statFactorsPerLevel>
             <MeleeDamageFactor>0.06</MeleeDamageFactor>
@@ -23,7 +23,7 @@
         <defName>BEWH_CustodesDiscipline_Ranged</defName>
         <label>ranged prowess</label>
         <description>Optical refinement and a stilled hand. Every level brings the bolt caster's aim closer to certainty.</description>
-        <iconPath>UI/Genes/Custodes/BEWH_Custodes_FulguriteNervePlexus</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>2</displayOrder>
         <statOffsetsPerLevel>
             <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
@@ -38,7 +38,7 @@
         <defName>BEWH_CustodesDiscipline_Resilience</defName>
         <label>resilience</label>
         <description>Densified bone, layered dermis and a body that refuses to break. At its height, no wound leaves a mark.</description>
-        <iconPath>UI/Genes/Custodes/BEWH_Custodes_ImmunisLeucocyte</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>3</displayOrder>
         <statOffsetsPerLevel>
             <ArmorRating_Sharp>0.025</ArmorRating_Sharp>
@@ -62,7 +62,7 @@
         <defName>BEWH_CustodesDiscipline_Vitality</defName>
         <label>vitality</label>
         <description>Accelerated cellular repair and an immune system that outpaces anything the galaxy can throw at it.</description>
-        <iconPath>UI/Genes/Custodes/BEWH_Custodes_AthanaticVitae</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>4</displayOrder>
         <statFactorsPerLevel>
             <InjuryHealingFactor>0.25</InjuryHealingFactor>
@@ -85,7 +85,7 @@
         <defName>BEWH_CustodesDiscipline_Swiftness</defName>
         <label>swiftness</label>
         <description>Reflex arcs shortened and stride lengthened. The Custodian closes distances and slips blows that should have landed.</description>
-        <iconPath>UI/Genes/Custodes/BEWH_Custodes_FulgurVitaliumstrand</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>5</displayOrder>
         <statOffsetsPerLevel>
             <MoveSpeed>0.08</MoveSpeed>
@@ -97,7 +97,7 @@
         <defName>BEWH_CustodesDiscipline_Social</defName>
         <label>social aptitude</label>
         <description>The bearing of a warrior raised beside the Throne: measured speech, an unreadable face and a presence that settles rooms.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Loremasters</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>6</displayOrder>
         <statFactorsPerLevel>
             <SocialImpact>0.05</SocialImpact>
@@ -125,7 +125,7 @@
         <defName>BEWH_CustodesDiscipline_Erudition</defName>
         <label>erudition</label>
         <description>A mind built for the Tower of Hegemon's archives. Learns fast and reasons faster.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_KeenSenses</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>7</displayOrder>
         <statOffsetsPerLevel>
             <ResearchSpeed>0.08</ResearchSpeed>
@@ -153,7 +153,7 @@
         <defName>BEWH_CustodesDiscipline_Warden</defName>
         <label>psychic wardenship</label>
         <description>A mind hardened against the warp's whisper. High levels let the Custodian smother a witch's power outright.</description>
-        <iconPath>UI/Genes/Custodes/BEWH_Custodes_MnemosyneMindshield</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>8</displayOrder>
         <statFactorsPerLevel>
             <PsychicSensitivity>-0.05</PsychicSensitivity>

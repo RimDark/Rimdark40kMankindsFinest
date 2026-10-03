@@ -5,7 +5,7 @@
         <defName>BEWH_ChapterTrait_CrimsonLegacy</defName>
         <label>Crimson Legacy</label>
         <description>With substitution protocols refined, the Fifteenth's inheritance can be carried whole rather than in fragments. The warp answers these marines far more readily, and more often.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterXVThousandSons</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_XVThousandSons_Good</iconPath>
         <displayOrder>510</displayOrder>
         <stabilityOffset>-4</stabilityOffset>
         <requiredAnyMaterial>
@@ -41,7 +41,7 @@
         <defName>BEWH_ChapterTrait_AuramiteMarrow</defName>
         <label>Auramite Marrow</label>
         <description>A thin echo of the Ten Thousand's immunis leucocyte, cultured down to something a marine's body will tolerate. Disease finds no purchase and wounds knit clean.</description>
-        <iconPath>UI/Genes/Custodes/BEWH_Custodes_ImmunisLeucocyte</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>511</displayOrder>
         <stabilityOffset>-4</stabilityOffset>
         <requiredResearch>BEWH_CustodesCreation</requiredResearch>
@@ -65,7 +65,7 @@
         <defName>BEWH_ChapterTrait_ThalaxComposure</defName>
         <label>Thalax Composure</label>
         <description>Primarch-project work applied to a mortal-born mind: a cortex that learns at frightening speed and does not flinch.</description>
-        <iconPath>UI/Genes/Primarch/BEWH_PrimarchThalaxCortex</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>512</displayOrder>
         <stabilityOffset>-4</stabilityOffset>
         <requiredResearch>BEWH_PrimarchProject</requiredResearch>
@@ -88,7 +88,7 @@
         <defName>BEWH_ChapterTrait_NostramanNight</defName>
         <label>Nostraman Night</label>
         <description>Perfected gene-seed carries the Eighth's terror at full strength. Enemies break and run before the chapter's marines reach them, as the Night Haunter intended.</description>
-        <iconPath>UI/Genes/ChapterSpecific/BEWH_ChapterVIIINightLords</iconPath>
+        <iconPath>UI/GeneTraits/Chapter/BEWH_ChapterTrait_VIIINightLords_Good</iconPath>
         <displayOrder>513</displayOrder>
         <stabilityOffset>-4</stabilityOffset>
         <requiredAnyMaterial>
@@ -123,7 +123,7 @@
         <defName>BEWH_ChapterTrait_PurifiedLineage</defName>
         <label>Purified Lineage</label>
         <description>Generations of culling every flawed strand. The gene-seed gains nothing new, but it takes to a host as readily as a First Founding line.</description>
-        <iconPath>UI/Genes/Firstborn/BEWH_Firstborn_ProgenoidsIcon</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedGood</iconPath>
         <displayOrder>520</displayOrder>
         <stabilityOffset>3</stabilityOffset>
         <requiredResearch>BEWH_GeneseedPerfection</requiredResearch>

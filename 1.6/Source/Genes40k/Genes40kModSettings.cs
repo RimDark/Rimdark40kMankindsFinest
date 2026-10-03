@@ -26,6 +26,16 @@ public class Genes40kModSettings : ModSettings
     
     public int matrixGestationTimeFactor = 100;
 
+    public IntRange chapterStabilityRange = DefaultChapterStabilityRange;
+    public int chapterBaseTraitPicks = DefaultChapterBaseTraitPicks;
+    public IntRange primarchComplexityRange = DefaultPrimarchComplexityRange;
+    public int primarchBaseTraitPicks = DefaultPrimarchBaseTraitPicks;
+
+    public static readonly IntRange DefaultChapterStabilityRange = new(-5, 5);
+    public const int DefaultChapterBaseTraitPicks = 4;
+    public static readonly IntRange DefaultPrimarchComplexityRange = new(-5, 5);
+    public const int DefaultPrimarchBaseTraitPicks = 3;
+
     public bool psychicCrafting = true;
 
     public bool allowFemalePrimarchBirths = false;
@@ -82,6 +92,11 @@ public class Genes40kModSettings : ModSettings
         Scribe_Values.Look(ref implantationCapOffset, "implantationCapOffset", 0);
         
         Scribe_Values.Look(ref matrixGestationTimeFactor, "matrixGestationTimeFactor", 100);
+
+        Scribe_Values.Look(ref chapterStabilityRange, "chapterStabilityRange", DefaultChapterStabilityRange);
+        Scribe_Values.Look(ref chapterBaseTraitPicks, "chapterBaseTraitPicks", DefaultChapterBaseTraitPicks);
+        Scribe_Values.Look(ref primarchComplexityRange, "primarchComplexityRange", DefaultPrimarchComplexityRange);
+        Scribe_Values.Look(ref primarchBaseTraitPicks, "primarchBaseTraitPicks", DefaultPrimarchBaseTraitPicks);
         
         Scribe_Values.Look(ref allowFemalePrimarchBirths, "allowFemalePrimarchBirths", false);
         

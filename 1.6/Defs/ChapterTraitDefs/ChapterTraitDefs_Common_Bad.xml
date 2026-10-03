@@ -7,7 +7,7 @@
         <defName>BEWH_ChapterTrait_Unremarkable</defName>
         <label>Unremarkable Strain</label>
         <description>A plain, well-behaved strand of gene-seed with no quirks to speak of. Apothecaries appreciate it more than the marines do.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Unremarkable</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>201</displayOrder>
         <stabilityOffset>1</stabilityOffset>
     </Genes40k.ChapterTraitDef>
@@ -16,7 +16,7 @@
         <defName>BEWH_ChapterTrait_SlowHealer</defName>
         <label>Slow Healer</label>
         <description>The Larraman cells in this gene-seed are sluggish. Wounds close, but they take their time about it.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_SlowHealer</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>202</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -31,7 +31,7 @@
         <defName>BEWH_ChapterTrait_Sluggish</defName>
         <label>Sluggish</label>
         <description>Heavy bone and slow-firing nerves. The chapter's marines arrive late, though they arrive.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Sluggish</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>203</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -46,7 +46,7 @@
         <defName>BEWH_ChapterTrait_ShortFuse</defName>
         <label>Short Fuse</label>
         <description>Something in this gene-seed runs hot. Its marines are quick to anger and quicker to act on it.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_ShortFuse</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>204</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -60,7 +60,7 @@
         <defName>BEWH_ChapterTrait_DullSenses</defName>
         <label>Dull Senses</label>
         <description>The occulobe never quite matures in this lineage. The chapter's marines shoot no better than they did as mortals.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_DullSenses</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>205</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -75,7 +75,7 @@
         <defName>BEWH_ChapterTrait_BrittleBones</defName>
         <label>Brittle Bones</label>
         <description>The ossmodula lays down bone in a hurry and does it badly. What should be a black carapace's foundation cracks under punishment.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_BrittleBones</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>206</displayOrder>
         <stabilityOffset>2</stabilityOffset>
         <exclusionTags>
@@ -90,7 +90,7 @@
         <defName>BEWH_ChapterTrait_LeadenReflexes</defName>
         <label>Leaden Reflexes</label>
         <description>The chapter's gene-seed is slow to answer. Its marines swing a half-beat late, and in close combat a half-beat is everything.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_LeadenReflexes</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>207</displayOrder>
         <stabilityOffset>2</stabilityOffset>
         <exclusionTags>
@@ -108,7 +108,7 @@
         <defName>BEWH_ChapterTrait_GlassNerves</defName>
         <label>Glass Nerves</label>
         <description>Hypno-indoctrination never takes properly in this lineage. The chapter's marines carry their conditioning loosely.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_GlassNerves</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>208</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -123,7 +123,7 @@
         <defName>BEWH_ChapterTrait_WeakLungs</defName>
         <label>Shallow Lungs</label>
         <description>The multi-lung grafts poorly here, leaving the marine with the wind of a very large mortal and no more.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_WeakLungs</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>209</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -141,7 +141,7 @@
         <defName>BEWH_ChapterTrait_PoorImmunity</defName>
         <label>Weak Blood</label>
         <description>The oolitic kidney filters lazily. Poisons linger and infections settle in where they should have been burned out.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_PoorImmunity</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>210</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -159,7 +159,7 @@
         <defName>BEWH_ChapterTrait_Restless</defName>
         <label>Restless</label>
         <description>The catalepsean node fires out of rhythm, so the marine's half-sleep never truly rests him.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_Restless</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>211</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -174,7 +174,7 @@
         <defName>BEWH_ChapterTrait_DimLineage</defName>
         <label>Dim Lineage</label>
         <description>A gene-seed that builds soldiers and nothing else. Its marines learn drill readily and everything else poorly.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_DimLineage</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>212</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -192,7 +192,7 @@
         <defName>BEWH_ChapterTrait_BluntInstrument</defName>
         <label>Blunt Instrument</label>
         <description>The melanochrome leaves the face slack and the voice flat. These marines are listened to out of fear, not respect.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_BluntInstrument</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>213</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
@@ -208,7 +208,7 @@
         <defName>BEWH_ChapterTrait_HeatIntolerant</defName>
         <label>Heat Intolerant</label>
         <description>The mucranoid seals badly against heat. Furnace worlds and burning hive spires cost this chapter more than they should.</description>
-        <iconPath>UI/GeneTraits/Common/BEWH_ChapterTrait_HeatIntolerant</iconPath>
+        <iconPath>UI/GeneTraits/Common/BEWH_GeneseedBad</iconPath>
         <displayOrder>214</displayOrder>
         <stabilityOffset>1</stabilityOffset>
         <exclusionTags>
