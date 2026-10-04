@@ -184,19 +184,19 @@
             <li>BEWH_PrimarchMaterialXX</li>
         </requiredAnyMaterial>
         <customEffectDescriptions>
-            <li>Chance to have either Psychopath or Nimble trait.</li>
+            <li>Chance to have Psychopath trait.</li>
         </customEffectDescriptions>
         <traitGrant>
             <possibleTraitsToGive>
                 <li>
                     <traitDef>Psychopath</traitDef>
                 </li>
-                <li>
-                    <traitDef>Nimble</traitDef>
-                </li>
             </possibleTraitsToGive>
             <chanceToGrantTrait>50</chanceToGrantTrait>
         </traitGrant>
+        <statOffsets>
+            <MentalBreakThreshold>0.04</MentalBreakThreshold>
+        </statOffsets>
     </Genes40k.ChapterTraitDef>
 
 </Defs>
