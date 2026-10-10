@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ public class GameComponent_LivingSaint : GameComponent
         modSettings = LoadedModManager.GetMod<Genes40kMod>().GetSettings<Genes40kModSettings>();
     }
 
-    public void TrySpawnSaint(IncidentCategoryDef categoryDef)
+    public void TrySpawnSaint(IncidentCategoryDef categoryDef, IIncidentTarget target)
     {
         if (livingSaints.Count <= 0)
         {
@@ -51,37 +52,59 @@ public class GameComponent_LivingSaint : GameComponent
         }
         if (Rand.Chance(chance / 100f))
         {
-            SpawnSaint();
+            SpawnSaint(target as Map);
         }
     }
 
-    private void SpawnSaint()
+    private void SpawnSaint(Map map)
     {
-        var deadSaints = livingSaints.Where(saint => saint is { Dead: true }).ToList();
+        if (map == null)
+        {
+            return;
+        }
 
-        if (!deadSaints.Any())
+        livingSaints.RemoveAll(saint => saint == null || saint.Discarded);
+
+        var deadSaints = livingSaints.Where(saint => saint.Dead).ToList();
+
+        if (!deadSaints.Any() || !TryFindArrivalCell(map, out var cell))
         {
             return;
         }
 
         var toSpawn = deadSaints.RandomElement();
 
-        var map = Find.CurrentMap ?? Find.AnyPlayerHomeMap;
-
-        if (map == null)
+        if (!ResurrectionUtility.TryResurrect(toSpawn, new ResurrectionParams { dontSpawn = true, removeDiedThoughts = false }))
         {
             return;
         }
 
-        ResurrectionUtility.TryResurrect(toSpawn);
-
-        if (!GenPlace.TryPlaceThing(toSpawn, CellFinder.RandomEdgeCell(map), map, ThingPlaceMode.Near))
-        {
-            return;
-        }
+        GenSpawn.Spawn(toSpawn, cell, map);
 
         var letter = LetterMaker.MakeLetter("BEWH.MankindsFinest.LivingSaint.LivingSaintReturn".Translate(), "BEWH.MankindsFinest.LivingSaint.LivingSaintReturnMessage".Translate(toSpawn), Genes40kDefOf.BEWH_GoldenPositive, toSpawn);
         Find.LetterStack.ReceiveLetter(letter);
+    }
+
+    /// <summary>
+    /// Finds a free cell next to a random colonist on the threatened map, preferring colonists who are still standing.
+    /// </summary>
+    private static bool TryFindArrivalCell(Map map, out IntVec3 cell)
+    {
+        cell = IntVec3.Invalid;
+
+        var colonists = map.mapPawns.FreeColonistsSpawned;
+
+        if (colonists.NullOrEmpty())
+        {
+            return false;
+        }
+
+        if (!colonists.Where(colonist => !colonist.Downed).TryRandomElement(out var anchor))
+        {
+            anchor = colonists.RandomElement();
+        }
+
+        return CellFinder.TryFindRandomSpawnCellForPawnNear(anchor.Position, map, out cell);
     }
 
     public void AddSaintToSpawnable(Pawn pawn)
@@ -116,5 +139,33 @@ public class GameComponent_LivingSaint : GameComponent
 
         livingSaints ??= new List<Pawn>();
         livingSaints.RemoveAll(saint => saint == null);
+    }
+
+    public override void LoadedGame()
+    {
+        base.LoadedGame();
+        KeepDeadSaintsInWorld();
+    }
+
+    /// <summary>
+    /// Saints that died before dead saints were kept as world pawns could still be discarded by world pawn cleanup.
+    /// </summary>
+    private void KeepDeadSaintsInWorld()
+    {
+        foreach (var saint in livingSaints)
+        {
+            if (saint is not { Dead: true, Discarded: false } || saint.Spawned || saint.Corpse is { } corpse && (corpse.Spawned || corpse.ParentHolder != null))
+            {
+                continue;
+            }
+
+            if (Find.WorldPawns.Contains(saint))
+            {
+                Find.WorldPawns.ForcefullyKeptPawns.Add(saint);
+                continue;
+            }
+
+            Find.WorldPawns.PassToWorld(saint, PawnDiscardDecideMode.KeepForever);
+        }
     }
 }

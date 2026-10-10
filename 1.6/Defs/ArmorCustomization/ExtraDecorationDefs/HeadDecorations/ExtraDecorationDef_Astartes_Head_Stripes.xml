@@ -114,7 +114,6 @@
         <appliesTo>
             <li>BEWH_MkVIIPowerArmorHelmet</li>
         </appliesTo>
-        <colourable>false</colourable>
         <drawData>
             <dataNorth>
                 <layer>76</layer>
@@ -153,7 +152,6 @@
         <appliesTo>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </appliesTo>
-        <colourable>false</colourable>
         <drawData>
             <dataNorth>
                 <layer>71</layer>

@@ -8,7 +8,6 @@
         <description>Carriers of this gene have reduced psychic sensitivity. Additionally they slightly reduce the psychic sensitivity and consciousness of others nearby whilst also slightly increasing their pain.</description>
         <iconPath>UI/Genes/Pariah/BEWH_PariahSigma</iconPath>
         <displayOrderInCategory>700</displayOrderInCategory>
-        <selectionWeight>1</selectionWeight>
         <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
         <statFactors>
@@ -42,7 +41,6 @@
         <description>Carriers of this gene have greatly reduced psychic sensitivity. Additionally, they reduce the psychic sensitivity and consciousness of nearby pawns, while also increasing their pain.</description>
         <iconPath>UI/Genes/Pariah/BEWH_PariahUpsilon</iconPath>
         <displayOrderInCategory>701</displayOrderInCategory>
-        <selectionWeight>0.5</selectionWeight>
         <biostatCpx>3</biostatCpx>
         <biostatMet>-1</biostatMet>
         <statFactors>
@@ -76,7 +74,6 @@
         <description>Carriers of this gene have no psychic sensitivity. Additionally, they nullify the psychic sensitivity and reduce the consciousness of nearby pawns, while greatly increasing their pain.</description>
         <iconPath>UI/Genes/Pariah/BEWH_PariahOmega</iconPath>
         <displayOrderInCategory>702</displayOrderInCategory>
-        <selectionWeight>0.1</selectionWeight>
         <biostatCpx>5</biostatCpx>
         <biostatMet>-2</biostatMet>
         <statFactors>

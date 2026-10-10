@@ -7,25 +7,6 @@ namespace Genes40k;
 [Obsolete]
 public class Ability_UpdateGizmo : Ability
 {
-    public override string Tooltip
-    {
-        get
-        {
-            var text = base.Tooltip;
-
-            var warpShield = pawn?.genes?.GetFirstGeneOfType<Gene_WarpShield>();
-
-            if (warpShield == null)
-            {
-                return text;
-            }
-                
-            var textBit = warpShield.IsShielded ? "BEWH.MankindsFinest.CommonKeywords.On".Translate() : "BEWH.MankindsFinest.CommonKeywords.Off".Translate();
-                
-            return text + "\n\n" + "BEWH.MankindsFinest.WarpShield.Tooltip".Translate(textBit);
-        }
-    }
-
     public Ability_UpdateGizmo()
     {
     }
