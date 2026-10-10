@@ -112,7 +112,6 @@
         <defName>BEWH_IntroduceChapterMaterial</defName>
         <label>introduce chapter material</label>
         <description>Introduce a chapter's genetic material into a chapterless Space Marine. The chapter is chosen when the operation is ordered.</description>
-        <description>Implant legion material into a patient.</description>
         <jobString>Implanting legion material.</jobString>
         <researchPrerequisite>BEWH_GeneseedPurification</researchPrerequisite>
         <workAmount>3500</workAmount>
