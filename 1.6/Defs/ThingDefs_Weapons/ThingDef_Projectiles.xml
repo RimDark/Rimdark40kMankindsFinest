@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
     <!-- CRUDE BOLT -->
@@ -71,12 +71,6 @@
             <shrapnelRange>14</shrapnelRange>
             <angleVariance>15</angleVariance>
         </projectile>
-        <costList>
-            <ComponentIndustrial>1</ComponentIndustrial>
-        </costList>
-        <recipeMaker>
-            <researchPrerequisite>BEWH_ExpandedBolterRound</researchPrerequisite>
-        </recipeMaker>
         <modExtensions>
             <li Class="Core40k.DefModExtension_AmmoChanger">
                 <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
@@ -104,12 +98,6 @@
             <screenShakeFactor>0.1</screenShakeFactor>
             <speed>75</speed>
         </projectile>
-        <costList>
-            <ComponentIndustrial>1</ComponentIndustrial>
-        </costList>
-        <recipeMaker>
-            <researchPrerequisite>BEWH_ExpandedBolterRound</researchPrerequisite>
-        </recipeMaker>
         <modExtensions>
             <li Class="Core40k.DefModExtension_AmmoChanger">
                 <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
@@ -138,12 +126,6 @@
             <screenShakeFactor>0.2</screenShakeFactor>
             <speed>75</speed>
         </projectile>
-        <costList>
-            <ComponentIndustrial>1</ComponentIndustrial>
-        </costList>
-        <recipeMaker>
-            <researchPrerequisite>BEWH_ExpandedBolterRound</researchPrerequisite>
-        </recipeMaker>
         <modExtensions>
             <li Class="Core40k.DefModExtension_AmmoChanger">
                 <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
@@ -172,12 +154,6 @@
             <screenShakeFactor>0.2</screenShakeFactor>
             <speed>90</speed>
         </projectile>
-        <costList>
-            <ComponentIndustrial>1</ComponentIndustrial>
-        </costList>
-        <recipeMaker>
-            <researchPrerequisite>BEWH_ExpandedBolterRound</researchPrerequisite>
-        </recipeMaker>
         <modExtensions>
             <li Class="Core40k.DefModExtension_AmmoChanger">
                 <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
@@ -208,12 +184,6 @@
             <screenShakeFactor>0.2</screenShakeFactor>
             <speed>90</speed>
         </projectile>
-        <costList>
-            <ComponentIndustrial>1</ComponentIndustrial>
-        </costList>
-        <recipeMaker>
-            <researchPrerequisite>BEWH_ExpandedBolterRound</researchPrerequisite>
-        </recipeMaker>
         <modExtensions>
             <li Class="Core40k.DefModExtension_AmmoChanger">
                 <unlockedBy>BEWH_ExpandedBolterRound</unlockedBy>
