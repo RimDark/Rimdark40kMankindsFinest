@@ -1,0 +1,32 @@
+# Hands this mod's releases to the RimDark publisher, which holds the Steam and Discord secrets:
+#  - pushing a v* tag: Claude writes release notes into a draft release here, for review;
+#  - publishing a release: the mod is uploaded to the Steam Workshop and announced on Discord.
+# The token below can only start the publisher's workflows, not change them or read their secrets.
+name: Publisher
+
+on:
+  push:
+    tags: ['v*']
+  release:
+    types: [published]
+
+permissions: {}
+
+jobs:
+  notify:
+    # Pre-releases stay on GitHub only.
+    if: ${{ !github.event.release.prerelease }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start the publisher
+        env:
+          GH_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
+          PUBLISHER: Phonicmas/RimDarkPublisher
+          WORKFLOW: ${{ github.event_name == 'release' && 'publish.yml' || 'draft-notes.yml' }}
+          TAG: ${{ github.event.release.tag_name || github.ref_name }}
+        run: |
+          # Calls the dispatch API directly: `gh workflow run` also looks up the default branch,
+          # which this token isn't allowed to read.
+          gh api --method POST "repos/$PUBLISHER/actions/workflows/$WORKFLOW/dispatches" \
+            -f ref=main -f "inputs[repository]=$GITHUB_REPOSITORY" -f "inputs[tag]=$TAG"
+          echo "Started $WORKFLOW for $TAG: https://github.com/$PUBLISHER/actions" >> "$GITHUB_STEP_SUMMARY"
