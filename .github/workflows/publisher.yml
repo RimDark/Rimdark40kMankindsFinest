@@ -1,12 +1,12 @@
 # Hands this mod's releases to the RimDark publisher, which holds the Steam and Discord secrets:
-#  - pushing a v* tag: Claude writes release notes into a draft release here, for review;
+#  - pushing a version tag (v1.2.3 or 1.2.3): Claude writes release notes into a draft release here, for review;
 #  - publishing a release: the mod is uploaded to the Steam Workshop and announced on Discord.
 # The token below can only start the publisher's workflows, not change them or read their secrets.
 name: Publisher
 
 on:
   push:
-    tags: ['v*']
+    tags: ['v*', '[0-9]*']
   release:
     types: [published]
 
