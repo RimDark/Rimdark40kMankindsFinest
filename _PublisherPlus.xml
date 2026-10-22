@@ -6,5 +6,7 @@
     <exclude>1.6\Source</exclude>
     <exclude>1.7\Source</exclude>
     <exclude>README.md</exclude>
+    <exclude>CLAUDE.md</exclude>
+    <exclude>.claude</exclude>
   </Excluded>
 </Configuration>
