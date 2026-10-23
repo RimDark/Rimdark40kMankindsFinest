@@ -167,9 +167,13 @@ public class Dialog_SelectChapter : Window
         }
     }
 
+    /// <summary>
+    /// The chapter gene's name, description and everything it grants (stats, traits, abilities, custom effects).
+    /// </summary>
     private string RowTooltip(ChapterChoice choice)
     {
-        var text = choice.chapterGene?.description ?? string.Empty;
+        var gene = choice.chapterGene;
+        var text = gene == null ? string.Empty : gene.LabelCap.Colorize(ColoredText.TipSectionTitleColor) + "\n\n" + gene.DescriptionFull.TrimEndNewlines();
 
         if (!choice.Available && choice.chapterMaterial != null)
         {

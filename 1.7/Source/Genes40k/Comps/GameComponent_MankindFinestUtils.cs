@@ -23,7 +23,7 @@ public class GameComponent_MankindFinestUtils : GameComponent
     {
         get
         {
-            if (useNewRandomChapter)
+            if (useNewRandomChapter || currentChapterColour == null || !Genes40kUtils.NpcChapterColourDefs.Contains(currentChapterColour))
             {
                 useNewRandomChapter = false;
                 currentChapterColour = GetRandomChapterForRaid();
@@ -130,7 +130,7 @@ public class GameComponent_MankindFinestUtils : GameComponent
     
     private ChapterColourDef GetRandomChapterForRaid()
     {   
-        var chapterColours = DefDatabase<ChapterColourDef>.AllDefsListForReading.ToList();
+        var chapterColours = Genes40kUtils.NpcChapterColourDefs.ToList();
 
         if (ModSettings.CurrentlySelectedPreset != null && ModSettings.CurrentlySelectedPreset != ModSettings.CustomPreset)
         {
@@ -142,7 +142,12 @@ public class GameComponent_MankindFinestUtils : GameComponent
             chapterColours.Remove(currentChapterColour);
         }
 
-        return chapterColours.TryRandomElement(out var chapterColour) ? chapterColour : currentChapterColour;
+        if (chapterColours.TryRandomElement(out var chapterColour))
+        {
+            return chapterColour;
+        }
+
+        return Genes40kUtils.NpcChapterColourDefs.Contains(currentChapterColour) ? currentChapterColour : Genes40kUtils.NpcChapterColourDefs.FirstOrDefault();
     }
 
     public override void ExposeData()

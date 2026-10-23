@@ -13,6 +13,13 @@ public static class Genes40kUtils
     private static List<ChapterColourDef> chapterColourDefs = null;
 
     public static List<ChapterColourDef> ChapterColourDefs => chapterColourDefs ??= DefDatabase<ChapterColourDef>.AllDefsListForReading.ToList();
+
+    private static List<ChapterColourDef> npcChapterColourDefs = null;
+
+    /// <summary>
+    /// The presets NPC marines can be given: the main preset of each chapter gene. Colour-only presets (weapons, Living Saint, Deathwatch and so on) are left out.
+    /// </summary>
+    public static List<ChapterColourDef> NpcChapterColourDefs => npcChapterColourDefs ??= ChapterColourDefs.Where(chapter => ChapterGeneOf(chapter) is { } gene && ChapterColourFor(gene) == chapter).ToList();
     
     
     private static Genes40kModSettings modSettings = null;
@@ -448,13 +455,13 @@ public static class Genes40kUtils
         
             if (defMod != null)
             {
-                if (defMod.specificChapters != null)
+                if (!defMod.specificChapters.NullOrEmpty())
                 {
                     chapter = defMod.specificChapters.RandomElement();
                 }
                 else
                 {
-                    var chapList = ChapterColourDefs.Where(chapterCol => chapterCol.loyalist == defMod.loyalist).ToList();
+                    var chapList = NpcChapterColourDefs.Where(chapterCol => chapterCol.loyalist == defMod.loyalist).ToList();
                     if (!chapList.NullOrEmpty())
                     {
                         chapter = chapList.RandomElement();
@@ -480,17 +487,7 @@ public static class Genes40kUtils
             return null;
         }
         
-        var shoulderIconDef = chapter.relatedChapterIcon;
-        GeneDef chapterGene = null;
-
-        if (chapter.relatedChapterGene != null)
-        {
-            chapterGene = chapter.relatedChapterGene;
-        }
-        else if (shoulderIconDef != null)
-        {
-            chapterGene = shoulderIconDef.relatedChapterGene;
-        }
+        var chapterGene = ChapterGeneOf(chapter);
         if (chapterGene != null)
         {
             if (chapterGene.HasModExtension<DefModExtension_ChapterGene>())
@@ -508,15 +505,36 @@ public static class Genes40kUtils
             }
         }
 
+        ApplyChapterColours(pawn, chapter);
+        return chapter;
+    }
+
+    /// <summary>
+    /// The chapter gene a preset stands for, set directly or through its shoulder icon.
+    /// </summary>
+    public static GeneDef ChapterGeneOf(ChapterColourDef chapter)
+    {
+        return chapter?.relatedChapterGene ?? chapter?.relatedChapterIcon?.relatedChapterGene;
+    }
+
+    /// <summary>
+    /// Paints the pawn's chapter-coloured apparel and primary weapon in the chapter's colours.
+    /// </summary>
+    public static void ApplyChapterColours(Pawn pawn, ChapterColourDef chapter)
+    {
+        if (chapter == null)
+        {
+            return;
+        }
+
         ApplyChapterColoursToApparel(pawn, chapter);
-        
+
         var equipment = pawn.equipment?.PrimaryEq?.parent;
         if (equipment != null && equipment.HasComp<CompMultiColor>())
         {
             equipment.GetComp<CompMultiColor>().SetColors(chapter);
             equipment.GetComp<CompMultiColor>().SetOriginals();
         }
-        return chapter;
     }
 
     /// <summary>

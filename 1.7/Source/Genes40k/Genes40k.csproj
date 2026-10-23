@@ -161,6 +161,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfHereditaryBirth.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfSavedByRescue.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfSavedByTend.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterRedress.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterSpawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalBreak.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalState.cs" />
