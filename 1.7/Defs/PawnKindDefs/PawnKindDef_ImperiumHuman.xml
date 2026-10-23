@@ -93,6 +93,16 @@
         <requiredWorkTags>
             <li>Violent</li>
         </requiredWorkTags>
+        <backstoryFiltersOverride Inherit="False">
+            <li>
+				<categoriesChildhood>
+                    <li>BEWH_ImperiumBackstories</li>
+				</categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>BEWH_MilitarumBackstories</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
         <weaponTags>
             <li>IndustrialGunAdvanced</li>
         </weaponTags>

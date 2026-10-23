@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Astartes Backstories --> 
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>exceptional chapter serf</title>
+    <defName>BEWH_ExceptionalChapterSerfChild</defName>
+    <titleShort>serf</titleShort>
+    <baseDesc>[PAWN_nameDef] was a child of two serfs belonging to a space marine chapter, and was born into a life of service and toil for [PAWN_possessive] transhuman masters. The chapter's apothecaries noticed [PAWN_possessive] potential, however, and [PAWN_pronoun] was picked to undergo the process of induction as an aspirant.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>2</Shooting>
+      <Melee>2</Melee>
+	  <Construction>1</Construction>
+	  <Mining>1</Mining>
+	  <Cooking>2</Cooking>
+	  <Plants>2</Plants>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+	  <BEWH_Serf />
+    </disallowedTraits>
+  </BackstoryDef> 
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>space marine</title>
+    <defName>BEWH_SpaceMarine</defName>
+    <titleShort>marine</titleShort>
+    <baseDesc>[PAWN_nameDef] underwent extensive training as a Neophyte in a Space Marine Chapter, and subsequently went through the lengthy process of surgery, genetic modification, and indoctrination to become a full-fledged Astartes. [PAWN_pronoun] is now a genetically enhanced superhuman, one of the Emperor’s Angels of Death, made entirely for war.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>7</Shooting>
+      <Melee>7</Melee>
+	  <Construction>2</Construction>
+	  <Mining>2</Mining>
+	  <Cooking>-1</Cooking>
+	  <Plants>-2</Plants>
+	  <Social>2</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+	  <BEWH_Serf />
+    </disallowedTraits>
+  </BackstoryDef> 
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>space marine</title>
+    <defName>BEWH_SpaceMarineVariant</defName>
+    <titleShort>marine</titleShort>
+    <baseDesc>[PAWN_nameDef] underwent extensive training as a Neophyte in a Space Marine Chapter, and subsequently went through the lengthy process of surgery, genetic modification, and indoctrination to become a full-fledged Astartes. [PAWN_pronoun] is now a genetically enhanced superhuman, one of the Emperor’s Angels of Death, made entirely for war.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>7</Shooting>
+      <Melee>6</Melee>
+	  <Construction>2</Construction>
+	  <Mining>2</Mining>
+	  <Cooking>-1</Cooking>
+	  <Social>2</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+	  <BEWH_Serf />
+    </disallowedTraits>
+  </BackstoryDef> 
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>techmarine</title>
+    <defName>BEWH_Techmarine</defName>
+    <titleShort>techmarine</titleShort>
+    <baseDesc>[PAWN_nameDef] was inducted as a full battle brother of a Space Marine chapter and demonstrated a surprising affinity for machines. [PAWN_pronoun] was sent to a forge world of the Adeptus Mechanicus for additional doctrinal and practical training, and now serves as a link between the Cult of Mars and the Angels of Death.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_TechmarineBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Crafting</li>
+	  <li>Constructing</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Melee>5</Melee>
+	  <Construction>4</Construction>
+	  <Crafting>5</Crafting>
+	  <Mining>2</Mining>
+	  <Cooking>-1</Cooking>
+	  <Plants>-2</Plants>
+	  <Social>1</Social>
+	  <Intellectual>3</Intellectual>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+	  <BEWH_Serf />
+    </disallowedTraits>
+  </BackstoryDef> 
+ 
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>apothecary</title>
+    <defName>BEWH_Apothecary</defName>
+    <titleShort>apothecary</titleShort>
+    <baseDesc>[PAWN_nameDef] was inducted as a full battle-brother of a Space Marine Chapter and subsequently trained in the rituals and duties of an Apothecary. [PAWN_pronoun] learned to provide battlefield medical care, oversee the recovery of wounded Astartes between battles, and extract and preserve the geneseed of fallen brothers.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ApothecaryBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Caring</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>6</Melee>
+	  <Mining>2</Mining>
+	  <Plants>-2</Plants>
+	  <Social>1</Social>
+	  <Medicine>5</Medicine>
+	  <Intellectual>2</Intellectual>
+    </skillGains>
+	<forcedTraits>
+	  <BEWH_Surgeon />
+	</forcedTraits>
+    <disallowedTraits>
+	  <Wimp />
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+	  <BEWH_Serf />
+    </disallowedTraits>
+  </BackstoryDef> 
+  
+<!-- Custodes Backstories --> 
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>unknown</title>
+    <defName>BEWH_CustodesChild</defName>
+    <titleShort>unknown</titleShort>
+    <baseDesc>Whatever [PAWN_pronoun] was before [PAWN_possessive] transformation matters not. [PAWN_nameDef] is a Custodian now.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_CustodesBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+	  <BEWH_Serf MayRequire="phonicmas.rimdark.mankindsfinest"/>
+    </disallowedTraits>	
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>unknown</title>
+    <defName>BEWH_CustodesChild2</defName>
+    <titleShort>unknown</titleShort>
+    <baseDesc>Whatever [PAWN_pronoun] was before [PAWN_possessive] transformation matters not. [PAWN_nameDef] is a Custodian now.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_CustodesBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+	  <BEWH_Serf />
+    </disallowedTraits>	
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Custodian</title>
+    <defName>BEWH_Custodian</defName>
+    <titleShort>Custodian</titleShort>
+    <baseDesc>[PAWN_nameDef] was transformed into one of the Custodes, the legendary Ten Thousand, through an extensive process of genetic modification, indoctrination, and training. [PAWN_pronoun] became the pinnacle of human achievement, a warrior with superhuman senses and a terrifying adversary to [PAWN_possessive] foes. [PAWN_nameDef] shows a particular inclination toward martial pursuits.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_CustodesBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>9</Shooting>
+      <Melee>9</Melee>
+	  <Construction>4</Construction>
+	  <Artistic>6</Artistic>
+	  <Intellectual>7</Intellectual>
+	  <Social>7</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+	  <BEWH_Serf />
+    </disallowedTraits>
+	<forcedTraits>
+	  <Asexual />
+	  <Nerves>2</Nerves>
+	</forcedTraits>
+  </BackstoryDef> 
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Custodian</title>
+    <defName>BEWH_CustodianArtist</defName>
+    <titleShort>Custodian</titleShort>
+    <baseDesc>[PAWN_nameDef] was transformed into one of the Custodes, the legendary Ten Thousand, through an extensive process of genetic modification, indoctrination, and training. [PAWN_pronoun] became the pinnacle of human achievement, a warrior with superhuman senses and a terrifying adversary to [PAWN_possessive] foes. [PAWN_nameDef] shows a particular inclination toward peaceful pursuits but is a peerless warrior when [PAWN_pronoun] needs to be.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_CustodesBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>7</Shooting>
+      <Melee>7</Melee>
+	  <Construction>2</Construction>
+	  <Artistic>9</Artistic>
+	  <Intellectual>8</Intellectual>
+	  <Social>9</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+	  <BEWH_Serf />
+    </disallowedTraits>
+	<forcedTraits>
+	  <Asexual />
+	  <Nerves>2</Nerves>
+	</forcedTraits>
+  </BackstoryDef> 
+
+</Defs>

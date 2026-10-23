@@ -13,12 +13,15 @@
         </requiredWorkTags>
         <backstoryFiltersOverride>
             <li>
-                <categories>
-                    <li>ImperialFighter</li>
-                    <li>Offworld</li>
-                </categories>
+				<categoriesChildhood>
+                    <li>BEWH_AstartesBackstories</li>
+				</categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>BEWH_AstartesBackstories</li>
+                </categoriesAdulthood>
             </li>
         </backstoryFiltersOverride>
+		<nameMaker>BEWH_NamerPersonAstartes</nameMaker>
         <weaponMoney>10000~10000</weaponMoney>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
         <weaponTags>
@@ -113,6 +116,17 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorHelmet</li>
         </apparelRequired>
+        <backstoryFiltersOverride Inherit="False">
+            <li>
+				<categoriesChildhood>
+                    <li>BEWH_CustodesBackstories</li>
+				</categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>BEWH_CustodesBackstories</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
+		<nameMaker>BEWH_NamerPersonCustodes</nameMaker>
         <skills>
             <li>
                 <skill>Shooting</skill>
