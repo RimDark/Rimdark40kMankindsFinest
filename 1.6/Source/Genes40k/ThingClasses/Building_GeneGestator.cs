@@ -553,7 +553,7 @@ public class Building_GeneGestator : Building
                 activateSound = SoundDefOf.Designate_Cancel,
                 action = delegate
                 {
-                    progressInt = totalTime - 250;
+                    progressInt = TotalTimeAdjusted - 250;
                 }
             };
             yield return command_Action1;
