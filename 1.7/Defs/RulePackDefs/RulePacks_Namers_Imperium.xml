@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Basic Imperium Namers-->
+
+  <RulePackDef>
+    <defName>BEWH_ImperiumNameUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>ImperiumFirstMale->Rimdark/Names/ImperiumFirst_Male</li>
+	    <li>ImperiumFirstFemale->Rimdark/Names/ImperiumFirst_Female</li>
+        <li>ImperiumLast->Rimdark/Names/ImperiumLast</li>
+      </rulesFiles>
+	  <rulesStrings>
+        <li>ImperiumFirstMale->[ImperiumFirst_Male]</li>
+        <li>ImperiumFirstFemale->[ImperiumFirst_Female]</li>
+        <li>ImperiumLast->[ImperiumLast]</li>
+      </rulesStrings>
+	  </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>BEWH_NamerPersonImperiumMale</defName>
+	<include>
+		<li>BEWH_ImperiumNameUtility</li>
+	</include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[ImperiumFirstMale] [ImperiumLast]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>BEWH_NamerPersonImperiumFemale</defName>
+	<include>
+		<li>BEWH_ImperiumNameUtility</li>
+	</include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[ImperiumFirstFemale] [ImperiumLast]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+<!--Astartes Namers-->
+
+  <RulePackDef>
+    <defName>BEWH_NamerFactionAstartes</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[AstartesNumber] [AstartesType] Squad [AstartesNumber] Company</li>
+      </rulesStrings>
+      <rulesFiles>
+		<li>AstartesNumber->Rimdark/Names/AstartesNumber</li>
+		<li>AstartesType->Rimdark/Names/AstartesType</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>BEWH_NamerPersonAstartes</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>AstartesFirstName->Rimdark/Names/AstartesFirst</li>
+        <li>AstartesLastName->Rimdark/Names/AstartesLast</li>
+      </rulesFiles>
+	  <rulesStrings>
+		<li>r_name->[AstartesFirstName] [AstartesLastName]</li>
+      </rulesStrings>
+	  </rulePack>
+  </RulePackDef>   
+
+<!--Custodes namers-->
+
+  <RulePackDef>
+    <defName>BEWH_NamerPersonCustodes</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>CustodesName->Rimdark/Names/CustodesName</li>
+      </rulesFiles>
+	  <rulesStrings>
+		<li>r_name->[CustodesName] [CustodesName]</li>
+      </rulesStrings>
+	  </rulePack>
+  </RulePackDef> 
+  
+</Defs>

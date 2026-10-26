@@ -27,7 +27,7 @@
         <rescueesCanJoin>false</rescueesCanJoin>
 
         <factionNameMaker>BEWH_ImperiumFactionNameMaker</factionNameMaker>
-        <settlementNameMaker>BEWH_ImperiumSettlementNameMaker</settlementNameMaker>
+        <settlementNameMaker>BEWH_NamerSettlementImperium</settlementNameMaker>
         <factionIconPath>UI/Icons/Imperium/ImperiumIcon</factionIconPath>
         <settlementTexturePath>UI/Icons/Imperium/ImperiumIcon</settlementTexturePath>
 
@@ -41,9 +41,12 @@
         </xenotypeSet>
         <backstoryFilters>
             <li>
+				<categoriesChildhood>
+                    <li>BEWH_ImperiumBackstories</li>
+				</categoriesChildhood>
                 <categoriesAdulthood>
-                    <li>ImperialFighter</li>
-                    <li>Offworld</li>
+                    <li>BEWH_MilitarumBackstories</li>
+                    <li>BEWH_ImperiumBackstories</li>
                 </categoriesAdulthood>
             </li>
         </backstoryFilters>
@@ -203,19 +206,32 @@
     </RulePackDef>
 
     <!-- Name of Imperium settlements -->
-    <RulePackDef>
-        <defName>BEWH_ImperiumSettlementNameMaker</defName>
-        <rulePack>
-            <rulesStrings>
-                <li>r_name->Outpost [BEWH_ImperiumLetters]</li>
-            </rulesStrings>
-            <rulesRaw>
-                <li Class="Rule_File">
-                    <keyword>BEWH_ImperiumLetters</keyword>
-                    <path>NameBanks/BEWH_ImperiumSettlementNames</path>
-                </li>
-            </rulesRaw>
-        </rulePack>
-    </RulePackDef>
+  <RulePackDef>
+    <defName>BEWH_NamerSettlementImperium</defName>
+    <rulePack>
+      <rulesStrings>
+		<li>r_name(p=6)->Fort [imperiumtownperson]</li>
+		<li>r_name(p=6)->Outpost [imperiumtownperson]</li>
+		<li>r_name(p=4)->[imperiumtownplace] Outpost</li>
+		<li>r_name(p=4)->[imperiumtownplace] Bastion</li>
+		<li>r_name(p=4)->Fort [imperiumtownplace]</li>
+		<li>r_name(p=4)->[imperiumtownperson] Bastion</li>
+		<li>r_name(p=2)->[imperiumtownperson] Base</li>
+		<li>r_name(p=2)->[imperiumtownperson] Fortress</li>
+		<li>r_name(p=2)->[imperiumtownperson] Station</li>
+		<li>r_name(p=4)->Saint [imperiumtownsaint]'s [imperiumtownsaintnoun]</li>
+		<li>r_name(p=1)->Bastion [imperiumtowncode]</li>
+		<li>r_name(p=1)->Outpost [imperiumtowncode]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>imperiumtownname->Rimdark/Names/ImperiumSettlement</li>
+		<li>imperiumtownperson->Rimdark/Names/ImperiumSettlementName</li>
+        <li>imperiumtowntype->Rimdark/Names/ImperiumSettlementType</li>
+		<li>imperiumtownsaint->Rimdark/Names/ImperiumSettlementSaint</li>
+		<li>imperiumtownsaintnoun->Rimdark/Names/ImperiumSettlementSaintNoun</li>		
+		<li>imperiumtowncode->Rimdark/Names/ImperiumSettlementCode</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
 
 </Defs>

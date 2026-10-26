@@ -93,6 +93,16 @@
                 </li>
             </subOptionsTakeAll>
         </inventoryOptions>
+        <backstoryFiltersOverride Inherit="False">
+            <li>
+				<categoriesChildhood>
+                    <li>BEWH_AstartesBackstories</li>
+				</categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>BEWH_ApothecaryBackstories</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
         <modExtensions>
             <li Class="Core40k.DefModExtension_PawnKindRanks">
                 <ranks>
@@ -144,6 +154,16 @@
         <techHediffsRequired>
             <li>BionicArm</li>
         </techHediffsRequired>
+        <backstoryFiltersOverride Inherit="False">
+            <li>
+				<categoriesChildhood>
+                    <li>BEWH_AstartesBackstories</li>
+				</categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>BEWH_TechmarineBackstories</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
         <modExtensions>
             <li Class="Core40k.DefModExtension_PawnKindRanks">
                 <ranks>

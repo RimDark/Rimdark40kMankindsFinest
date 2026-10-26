@@ -1,0 +1,5 @@
+Outpost
+Fortress
+Bastion
+Base
+Redoubt

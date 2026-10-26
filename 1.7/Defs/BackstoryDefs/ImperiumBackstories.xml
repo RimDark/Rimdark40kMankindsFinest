@@ -1,0 +1,2673 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Childhood Traits -->
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>progena</title>
+    <defName>BEWH_Progena</defName>
+    <titleShort>progena</titleShort>
+    <baseDesc>After being orphaned, [PAWN_nameDef] was raised in the Schola Progenium and went through strict indoctrination, education, and training according to Imperial edict.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_CommissarBackstories</li>
+	  <li>BEWH_MilitarumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>3</Shooting>
+	  <Melee>2</Melee>
+      <Social>3</Social>
+	  <Intellectual>2</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+      <Nerves>-1</Nerves>
+	  <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>Militarum brat</title>
+    <defName>BEWH_MilitarumBrat</defName>
+    <titleShort>Militarum brat</titleShort>
+    <baseDesc>[PAWN_nameDef] was born and raised among the camp followers of a Militarum regiment. [PAWN_pronoun] spent [PAWN_possessive] childhood running errands for soldiers and support troops, while trying to find some semblance of a normal life alongside other children in the same situation.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>1</Shooting>
+	  <Melee>1</Melee>
+      <Social>2</Social>
+	  <Cooking>3</Cooking>
+	  <Crafting>1</Crafting>
+	  <Construction>1</Construction>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+	  <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>PDF cadet</title>
+    <defName>BEWH_PDFCadet</defName>
+    <titleShort>PDF cadet</titleShort>
+    <baseDesc>[PAWN_nameDef] was enrolled as a Planetary Defence Force cadet at a young age, training with dummy weapons and doing basic drill in addition to regular labour or education.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>2</Shooting>
+	  <Melee>1</Melee>
+      <Social>1</Social>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>Cadian Whiteshield</title>
+    <defName>BEWH_Whiteshield</defName>
+    <titleShort>Whiteshield</titleShort>
+    <baseDesc>[PAWN_nameDef] was made a Whiteshield, a cadet soldier in a Cadian regiment, at a young age, training with live rounds and doing intense drill in addition to regular labor or education.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>3</Shooting>
+	  <Melee>1</Melee>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+      <Nerves>-1</Nerves>
+    </disallowedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>voidborn child</title>
+    <defName>BEWH_VoidbornChild</defName>
+    <titleShort>voidborn</titleShort>
+    <baseDesc>[PAWN_nameDef] was born and raised on an asteroid processing void station, living off nutrient paste and breathing stale air.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>Offworld</li>
+	  <li>Pirate</li>
+	  <li>BEWH_AstartesBackstories</li>
+      <li>Outlander</li>
+    </spawnCategories>
+    <skillGains>
+	  <Mining>2</Mining>
+      <Social>1</Social>
+	  <Plants>-3</Plants>
+	  <Animals>-3</Animals>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+	<forcedTraits>
+      <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+    </forcedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>recolliger child</title>
+    <defName>BEWH_RecolligerChild</defName>
+    <titleShort>recolliger</titleShort>
+    <baseDesc>[PAWN_nameDef] was born and raised on a derelict voidship being salvaged by a recolliger clan, who were dropped off decades before and hoped to be picked up by another ship at some point in the future.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>Offworld</li>
+	  <li>Pirate</li>
+	  <li>BEWH_AstartesBackstories</li>
+      <li>Outlander</li>
+    </spawnCategories>
+    <skillGains>
+	  <Crafting>3</Crafting>
+	  <Mining>2</Mining>
+      <Social>1</Social>
+	  <Plants>-3</Plants>
+	  <Animals>-3</Animals>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+	<forcedTraits>
+      <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+    </forcedTraits>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>noble child</title>
+    <defName>BEWH_NobleChild</defName>
+    <titleShort>noble child</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in unimaginable privilege as the child of a noble family in an Imperial hive city. [PAWN_pronoun] had everything [PAWN_pronoun] could ever ask for, and a lot more besides, but was unused to menial tasks.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>1</Shooting>
+	  <Melee>3</Melee>
+      <Social>4</Social>
+	  <Intellectual>1</Intellectual>
+	  <Cooking>-2</Cooking>
+	  <Crafting>-4</Crafting>
+	  <Construction>-2</Construction>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <forcedTraits>
+      <Jealous />
+    </forcedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>hive juve</title>
+    <defName>BEWH_HiveJuve</defName>
+    <titleShort>hive juve</titleShort>
+    <baseDesc>Growing up among the labouring class of a crowded hive city, [PAWN_nameDef] is as close as can be to a typical Imperial citizen. [PAWN_pronoun] is used to crowds but unused to frontier living.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>
+	  <Intellectual>1</Intellectual>
+	  <Plants>-3</Plants>
+	  <Animals>-3</Animals>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+	  <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>underhive juve</title>
+    <defName>BEWH_UnderhiveJuve</defName>
+    <titleShort>underhive juve</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in the dank and deteriorating lower levels of a hive city. Day to day survival was [PAWN_possessive] only concern.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ChaosBackstories</li>
+      <li>BEWH_GangerBackstories</li>
+      <li>Pirate</li>
+      <li>Outlander</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+	</spawnCategories>
+    <skillGains>
+	  <Melee>4</Melee>
+	  <Social>2</Social>
+	  <Crafting>2</Crafting>
+	  <Medicine>3</Medicine>
+	  <Plants>-5</Plants>
+	  <Animals>-5</Animals>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+    <disallowedTraits>
+	  <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <forcedTraits>
+      <Undergrounder />
+	  <Nimble />
+    </forcedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>bonded scribe</title>
+    <defName>BEWH_BondedScribeChild</defName>
+    <titleShort>scribe</titleShort>
+    <baseDesc>[PAWN_nameDef] was promised to an Administratum scribe-clan at an early age. Separated from [PAWN_possessive] family, [PAWN_pronoun] learned to read and write and was put to work copying missives and memoranda as they passed through the scribe-clan's assigned bureaucratic level. Constant scribework has left [PAWN_objective] more frail than most.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>Offworld</li>
+	  <li>Outsider</li>
+      <li>Outlander</li>
+    </spawnCategories>
+    <skillGains>
+	  <Intellectual>5</Intellectual>
+    </skillGains>
+    <forcedTraits>
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+    </forcedTraits>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>cultist child</title>
+    <defName>BEWH_FormerCultistChild</defName>
+    <titleShort>cultist child</titleShort>
+    <baseDesc>[PAWN_nameDef] was raised among a cult worshipping the Ruinous Powers. The cultists were wiped out in an Ordo Hereticus raid, but an uncharacteristically merciful Inquisitorial interrogator judged [PAWN_nameDef] to be free from corruption, sparing [PAWN_pronoun] from execution or servitorization.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>Offworld</li>
+	  <li>Pirate</li>
+	  <li>Madman</li>
+	  <li>Outsider</li>
+      <li>Outlander</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+	  <Intellectual>3</Intellectual>
+	  <Medicine>4</Medicine>
+    </skillGains>
+	<forcedTraits>
+	  <Neurotic>1</Neurotic>
+	  <NaturalMood>-1</NaturalMood>
+	</forcedTraits>	
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>deathworlder</title>
+    <defName>BEWH_DeathworldChild</defName>
+    <titleShort>deathworlder</titleShort>
+    <baseDesc>[PAWN_nameDef] was born in the unforgiving hell of a death world, where the very flora and fauna are inimical to human survival. Only the toughest survive such a childhood.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>Pirate</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+      <li>Offworld</li>
+    </spawnCategories>
+    <skillGains>
+	  <Melee>4</Melee>
+	  <Shooting>2</Shooting>
+	  <Crafting>1</Crafting>
+	  <Medicine>2</Medicine>
+	  <Plants>2</Plants>
+	  <Animals>3</Animals>
+	  <Intellectual>-3</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+    <disallowedTraits>
+      <Delicate MayRequire="Ludeon.Rimworld.Biotech"/>
+    </disallowedTraits>
+    <forcedTraits>
+      <Tough />
+	  <Nimble />
+    </forcedTraits>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>agriworld child</title>
+    <defName>BEWH_AgriworldChild</defName>
+    <titleShort>agriworld child</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up on an agriworld, a planet-wide food production operation. [PAWN_pronoun] has been familiar with machines, livestock and harvesting from a young age.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+      <li>Offworld</li>
+    </spawnCategories>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Crafting>2</Crafting>
+	  <Plants>4</Plants>
+	  <Animals>2</Animals>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>manufactorum child</title>
+    <defName>BEWH_ManufactorumChild</defName>
+    <titleShort>manufactorum child</titleShort>
+    <baseDesc>[PAWN_nameDef] was pressed into service in a manufactorum as a child, due to a need for fine-detail work and a shortage of appropriate servitors. [PAWN_pronoun] has quite the manual dexterity to show for it, unlike the less fortunate workers who lost fingers or worse.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+      <li>Offworld</li>
+    </spawnCategories>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Crafting>3</Crafting>
+	  <Intellectual>-2</Intellectual>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+	<forcedTraits>
+	  <Nimble />
+	</forcedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>voidship child</title>
+    <defName>BEWH_VoidshipClanChild</defName>
+    <titleShort>lowerdecker</titleShort>
+    <baseDesc>[PAWN_nameDef] was a child of a voidship clan tasked with menial maintenance of a machine none of them understood but regarded as almost divine. [PAWN_pronoun] is unused to open skies but skilled with [PAWN_possessive] hands.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <skillGains>
+	  <Social>1</Social>
+	  <Crafting>2</Crafting>
+	  <Construction>2</Construction>
+    </skillGains>
+    <workDisables>
+      <li>PlantWork</li>
+	  <li>Animals</li>
+    </workDisables>
+    <forcedTraits>
+      <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+    </forcedTraits>
+    <disallowedTraits>
+      <Pyromaniac />
+    </disallowedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>Ministorum foundling</title>
+    <defName>BEWH_MinistorumFoundling</defName>
+    <titleShort>foundling</titleShort>
+    <baseDesc>[PAWN_nameDef] was orphaned at a young age and given to the Adeptus Ministorum for training and education. Although [PAWN_pronoun] spent much of his childhood confined to a bare cell in prayer, [PAWN_pronoun] learned to read and write and still knows numerous hymns and catechisms of the God Emperor by heart.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <skillGains>
+	  <Intellectual>5</Intellectual>
+	  <Social>2</Social>
+    </skillGains>
+	<forcedTraits>
+	  <Ascetic />
+	  <Nerves>1</Nerves>
+	</forcedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>xenos raid survivor</title>
+    <defName>BEWH_XenosRaidSurvivor</defName>
+    <titleShort>raid survivor</titleShort>
+    <baseDesc>When still a child, [PAWN_nameDef] was one of the only survivors of a deadly xenos raid which killed most of [PAWN_possessive] community. Although it spurred a fierce interest in the wider galaxy, [PAWN_possessive] struggles with the trauma of the massacre to this day.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+	  <li>Outsider</li>
+	  <li>Madman</li>
+	  <li>Outlander</li>
+    </spawnCategories>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>3</Intellectual>
+    </skillGains>
+	<forcedTraits>
+	  <Nerves>-1</Nerves>
+	</forcedTraits>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Childhood</slot>
+    <title>peasant child</title>
+    <defName>BEWH_FeudalWorldChild</defName>
+    <titleShort>peasant child</titleShort>
+    <baseDesc>[PAWN_nameDef] was born into a peasant family on a feudal world with a largely medieval level of technology. [PAWN_pronoun] had few prospects for life beyond subsistence farming or service in the levy.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+      <li>BEWH_ImperiumChildBackstories</li>
+	  <li>BEWH_AstartesBackstories</li>
+    </spawnCategories>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Melee>1</Melee>
+	  <Plants>2</Plants>
+	  <Animals>2</Animals>
+	  <Intellectual>-2</Intellectual>
+	  <Medicine>-2</Medicine>
+    </skillGains>
+  </BackstoryDef>  
+
+<!-- Adulthood Traits -->
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum trooper</title>
+    <defName>BEWH_MilitarumTrooper</defName>
+    <titleShort>trooper</titleShort>
+    <baseDesc>[PAWN_nameDef] was conscripted into the Astra Militarum and trained in the use of a lasgun and bayonet. [PAWN_pronoun] has seen combat in several large-scale battles and is somehow miraculously still alive.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>3</Melee>
+      <Artistic>-2</Artistic>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Wimp />
+	  <Gourmand />
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum deserter</title>
+    <defName>BEWH_MilitarumDeserter</defName>
+    <titleShort>deserter</titleShort>
+    <baseDesc>[PAWN_nameDef] was conscripted into the Astra Militarum and trained in the use of a lasgun and bayonet. [PAWN_pronoun] deserted and somehow evaded the commissars, but is often worried that [PAWN_possessive] actions will catch up with [PAWN_pronoun].</baseDesc>
+    <spawnCategories>
+	  <li>Pirate</li>
+	  <li>Ganger</li>
+	  <li>Outsider</li>
+	  <li>Madman</li>
+      <li>Outlander</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>2</Melee>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+    </disallowedTraits>
+	<forcedTraits>
+	  <Neurotic>1</Neurotic>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>penal legionary</title>
+    <defName>BEWH_PenalLegionary</defName>
+    <titleShort>penal legionary</titleShort>
+    <baseDesc>[PAWN_nameDef] was convicted of a capital crime on an Imperial world and pressed into a Penal Legion. [PAWN_pronoun] was sent into battle as las fodder but managed to run away and somehow remove the bomb collar around [PAWN_possessive] neck. So far [PAWN_pronoun] has avoided death or capture.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ChaosBackstories</li>
+	  <li>Pirate</li>
+	  <li>Ganger</li>
+	  <li>Outsider</li>
+	  <li>Offworld</li>
+	  <li>Madman</li>
+      <li>Outlander</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>2</Shooting>
+      <Melee>1</Melee>
+    </skillGains>
+	<forcedTraits>
+	  <NaturalMood>-1</NaturalMood>
+	</forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+ <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>redeemed penal legionary</title>
+    <defName>BEWH_RedeemedPenalLegionary</defName>
+    <titleShort>penal legionary</titleShort>
+    <baseDesc>[PAWN_nameDef] was convicted of a capital crime on an Imperial world and pressed into a Penal Legion as las fodder. [PAWN_pronoun] managed to survive, however, and on [PAWN_possessive] sixth deployment [PAWN_pronoun] saved the life of a Militarum staff officer in the face of overwhelming heretical numbers. As a reward for this act of exceptional valor, [PAWN_nameDef] was granted the Emperor's forgiveness and the high honor of joining a regiment as a regular Guardsman.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>6</Shooting>
+      <Melee>5</Melee>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+    </disallowedTraits>
+	<forcedTraits>
+	  <Nerves>2</Nerves>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>commissar</title>
+    <defName>BEWH_Commissar</defName>
+    <titleShort>commissar</titleShort>
+    <baseDesc>[PAWN_nameDef] was inducted into the Officio Prefectus, the Commissariat, a corps of ideological officers attached to the Militarum with responsibility for discipline and morale. As commissars go, [PAWN_pronoun] is seen as reasonable and fair.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+	  <li>BEWH_CommissarBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>3</Melee>
+	  <Social>5</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <BEWH_Serf />
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>commissar</title>
+    <defName>BEWH_CommissarCruel</defName>
+    <titleShort>commissar</titleShort>
+    <baseDesc>[PAWN_nameDef] was inducted into the Officio Prefectus, the Commissariat, a corps of ideological officers attached to the Militarum with responsibility for discipline and morale. [PAWN_pronoun] is a particularly cruel example of their number.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+	  <li>BEWH_CommissarBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>Caring</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Melee>5</Melee>
+	  <Social>3</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <BEWH_Serf />
+    </disallowedTraits>
+	<forcedTraits>
+	  <Psychopath />
+	  <Abrasive />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>cadet-commissar</title>
+    <defName>BEWH_CommissarCadet</defName>
+    <titleShort>cadet-commissar</titleShort>
+    <baseDesc>[PAWN_nameDef] was inducted into the Officio Prefectus, the Commissariat, a corps of ideological officers attached to the Militarum with responsibility for discipline and morale. For one reason or another, however, [PAWN_pronoun] has never made it past Cadet rank.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+	  <li>BEWH_CommissarBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>2</Shooting>
+      <Melee>2</Melee>
+	  <Social>2</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+	  <BEWH_Serf />
+    </disallowedTraits>
+	<forcedTraits>
+	  <Neurotic>1</Neurotic>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>PDF trooper</title>
+    <defName>BEWH_PDFTrooper</defName>
+    <titleShort>PDF trooper</titleShort>
+    <baseDesc>[PAWN_nameDef] was part of [PAWN_possessive] homeworld's Planetary Defense Forces and received basic training in the use of a lasgun and bayonet. Although [PAWN_pronoun] never saw combat, this familiarity is still useful.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>Offworld</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>3</Shooting>
+      <Melee>1</Melee>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>PDF veteran</title>
+    <defName>BEWH_PDFVeteran</defName>
+    <titleShort>PDF veteran</titleShort>
+    <baseDesc>[PAWN_nameDef] was part of [PAWN_possessive] homeworld's Planetary Defense Forces and received basic training in the use of a lasgun and bayonet. [PAWN_pronoun] participated in a bloody defense of [PAWN_possessive] world and miraculously survived.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>2</Melee>
+    </skillGains>
+    <disallowedTraits>
+	  <Wimp />
+    </disallowedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum medicae</title>
+    <defName>BEWH_MilitarumMedicae</defName>
+    <titleShort>medicae</titleShort>
+    <baseDesc>After conscription into the Astra Militarum, [PAWN_nameDef] was trained as a platoon-level medicae. [PAWN_pronoun] is used to being around wounds and has an aptitude for blades.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>3</Shooting>
+      <Melee>5</Melee>
+	  <Medicine>6</Medicine>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Wimp />
+	  <Gourmand />
+    </disallowedTraits>
+	<forcedTraits>
+	  <BEWH_FieldMedic />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum senior medicae</title>
+    <defName>BEWH_MilitarumSeniorMedicae</defName>
+    <titleShort>medicae</titleShort>
+    <baseDesc>After conscription into the Astra Militarum, [PAWN_nameDef] was trained as a regimental medicae. [PAWN_pronoun] is a skilled surgeon with an aptitude for blades.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>2</Shooting>
+      <Melee>4</Melee>
+	  <Medicine>8</Medicine>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Wimp />
+	  <Gourmand />
+    </disallowedTraits>
+	<forcedTraits>
+	  <BEWH_Surgeon />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum flamer trooper</title>
+    <defName>BEWH_MilitarumFlamer</defName>
+    <titleShort>flamer trooper</titleShort>
+    <baseDesc>After conscription into the Astra Militarum, [PAWN_nameDef] was trained to use a flamer in combat. [PAWN_pronoun] has grown to love the smell of promethium jelly and the way the fire dances; coincidentally, [PAWN_pronoun] has also learned how to treat burns.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>3</Shooting>
+	  <Medicine>2</Medicine>
+    </skillGains>
+	<forcedTraits>
+	  <Pyromaniac />
+	</forcedTraits>
+    <disallowedTraits>
+      <Greedy />
+	  <Wimp />
+	  <Gourmand />
+    </disallowedTraits>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum tank crew</title>
+    <defName>BEWH_TankCrew</defName>
+    <titleShort>tanker</titleShort>
+    <baseDesc>[PAWN_nameDef] was conscripted into the Astra Militarum and trained to operate armored vehicles. [PAWN_pronoun] also learned the basics of vehicle maintenance when the regimental Enginseers and tech-adepts weren't looking.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>3</Shooting>
+	  <Crafting>4</Crafting>
+	  <Construction>2</Construction>
+      <Artistic>-2</Artistic>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Gourmand />
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum cargo driver</title>
+    <defName>BEWH_CargoCrew</defName>
+    <titleShort>driver</titleShort>
+    <baseDesc>[PAWN_nameDef] was conscripted into the Astra Militarum and trained to operate logistics vehicles such as the omnipresent cargo-8 trucks. [PAWN_pronoun] also learned the basics of vehicle maintenance when the regimental Enginseers and tech-adepts weren't looking.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>1</Shooting>
+	  <Crafting>3</Crafting>
+	  <Construction>2</Construction>
+      <Artistic>-2</Artistic>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Gourmand />
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Valkyrie pilot</title>
+    <defName>BEWH_ValkyriePilot</defName>
+    <titleShort>pilot</titleShort>
+    <baseDesc>[PAWN_nameDef] was part of the Imperial Navy and trained to fly Valkyrie dropships in support of Militarum operations. [PAWN_pronoun] learned the basics of aircraft maintenance and is a proficient navigator and pilot.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>BEWH_ImperialNavyBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Intellectual</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>2</Shooting>
+	  <Crafting>4</Crafting>
+	  <Construction>2</Construction>
+	  <Intellectual>5</Intellectual>
+      <Artistic>-2</Artistic>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Gourmand />
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>lighter pilot</title>
+    <defName>BEWH_LighterPilot</defName>
+    <titleShort>pilot</titleShort>
+    <baseDesc>Part of a voidship crew, [PAWN_nameDef] was trained to fly lighters - small shuttles intended for cargo and personnel transfer to other ships, stations, or planetary surfaces. [PAWN_pronoun] is a reasonably skilled pilot and is well-used to helping haul cargo on and off [PAWN_possessive] craft.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>BEWH_ImperialNavyBackstories</li>
+	  <li>Offworld</li>
+	  <li>BEWH_ChaosBackstories</li>
+      <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+	  <li>Intellectual</li>
+	  <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Crafting>2</Crafting>
+	  <Construction>2</Construction>
+	  <Intellectual>4</Intellectual>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Gourmand />
+    </disallowedTraits>
+	<forcedTraits>
+	  <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>voidship chirurgeon</title>
+    <defName>BEWH_VoidshipChirurgeon</defName>
+    <titleShort>chirurgeon</titleShort>
+    <baseDesc>[PAWN_nameDef] was a chirurgeon aboard a voidship, providing medical care for the crew when needed. [PAWN_pronoun] became proficient with suturing wounds, treating diseases, and fitting augmetic limbs to unlucky ratings who got their extremities caught in the ship's machinery.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_ImperialNavyBackstories</li>
+	  <li>Offworld</li>
+	  <li>BEWH_ChaosBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Melee>2</Melee>
+	  <Medicine>7</Medicine>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Wimp />
+    </disallowedTraits>
+	<forcedTraits>
+	  <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+	  <BEWH_Surgeon />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum engineer</title>
+    <defName>BEWH_MilitarumEngineer</defName>
+    <titleShort>engineer</titleShort>
+    <baseDesc>[PAWN_nameDef] was conscripted into the Astra Militarum and trained as a field engineer. Over several campaigns [PAWN_pronoun] has become familiar with constructing field defenses and doing basic maintenance on equipment when the Enginseers aren't watching.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>3</Shooting>
+      <Melee>2</Melee>
+	  <Construction>4</Construction>
+	  <Mining>3</Mining>
+	  <Crafting>2</Crafting>
+    </skillGains>
+    <disallowedTraits>
+      <Greedy />
+	  <Gourmand />
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>  
+  
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum officer</title>
+    <defName>BEWH_MilitarumOfficer</defName>
+    <titleShort>officer</titleShort>
+    <baseDesc>[PAWN_nameDef] was commissioned as an officer in a regiment of the Astra Militarum. [PAWN_pronoun] has commanded troops in several campaigns and is miraculously still alive, having escaped enemy fire and that of [PAWN_possessive] own men.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Social</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>2</Shooting>
+	  <Melee>4</Melee>
+	  <Social>5</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <BEWH_Serf />
+    </disallowedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum staff officer</title>
+    <defName>BEWH_MilitarumStaffOfficer</defName>
+    <titleShort>staff officer</titleShort>
+    <baseDesc>[PAWN_nameDef] was commissioned as an officer of the Astra Militarum, and was assigned to a position on the staff of a senior officer on the basis of meritorious service. [PAWN_pronoun] has some command experience and is used to smoothing the ruffled feathers of aggrieved commanders and generals, but has grown accustomed to some of the privileges of rank and the general's table.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Social</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>1</Shooting>
+	  <Melee>2</Melee>
+	  <Social>5</Social>
+	  <Intellectual>3</Intellectual>
+    </skillGains>
+	<forcedTraits>
+	  <Greedy />
+	  <Gourmand />
+	</forcedTraits>
+    <disallowedTraits>
+	  <BEWH_Serf />
+    </disallowedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Militarum staff officer</title>
+    <defName>BEWH_MilitarumStaffOfficerVariant</defName>
+    <titleShort>staff officer</titleShort>
+    <baseDesc>[PAWN_nameDef] was commissioned as an officer of the Astra Militarum, and was quickly assigned to a position on the staff of a senior officer due to [PAWN_possessive] connections. In spite of being promoted above [PAWN_possessive] capabilities through nepotism, [PAWN_pronoun] has some experience managing aggrieved commanders and generals, though [PAWN_pronoun] is mostly fond of the privileges of rank afforded to [PAWN_objective].</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Social</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <skillGains>
+	  <Social>3</Social>
+    </skillGains>
+	<forcedTraits>
+	  <Greedy />
+	  <SlowLearner />
+	  <Gourmand />
+	  <Industriousness>-2</Industriousness>
+	</forcedTraits>
+    <disallowedTraits>
+	  <BEWH_Serf />
+    </disallowedTraits>	
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Munitorum adept</title>
+    <defName>BEWH_MunitorumAdept</defName>
+    <titleShort>adept</titleShort>
+    <baseDesc>[PAWN_nameDef] was sent to serve in the Departmento Munitorum, responsible for the logistics of the Astra Militarum. [PAWN_possessive] life was dominated by lists, numbers, and endless amounts of paper and cogitator read-outs, and [PAWN_pronoun] became used to running off very little sleep to catch up with the endless demands of the Imperium's war machine.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+	  <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Social>3</Social>
+	  <Intellectual>4</Intellectual>
+	  <Cooking>2</Cooking>
+    </skillGains>
+	<forcedTraits>
+	  <QuickSleeper />
+	  <GreatMemory />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Munitorum menial</title>
+    <defName>BEWH_MunitorumMenial</defName>
+    <titleShort>menial</titleShort>
+    <baseDesc>[PAWN_nameDef] was a menial of the Departmento Munitorum, responsible for minor tasks in the logistics and support of the Astra Militarum. [PAWN_possessive] life was dominated by bulk cooking of Militarum rations, scrubbing floors, and running message slips back and forth between [PAWN_possessive] superiors. [PAWN_pronoun] became used to functioning with very little sleep and working as fast as [PAWN_pronoun] could to get through the day.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_MilitarumBackstories</li>
+	  <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Cooking</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>Intellectual</li>
+	  <li>Caring</li>
+    </workDisables>
+    <skillGains>
+	  <Cooking>3</Cooking>
+    </skillGains>
+	<forcedTraits>
+	  <QuickSleeper />
+	  <Industriousness>1</Industriousness>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>servant</title>
+    <defName>BEWH_Servant</defName>
+    <titleShort>servant</titleShort>
+    <baseDesc>[PAWN_nameDef] was a domestic worker bound in service to an Imperial noble house, part of a vast staff responsible for upkeep of palatial mansion-blocks and estates. [PAWN_pronoun] became used to running off very little sleep and working as hard as [PAWN_pronoun] could to avoid censure or possible servitorisation as punishment for dereliction - habits that are very hard to break.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ImperiumBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Cooking</li>
+	  <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Cooking>3</Cooking>
+    </skillGains>
+	<forcedTraits>
+	  <QuickSleeper />
+	  <Industriousness>1</Industriousness>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>navigator servant</title>
+    <defName>BEWH_NavigatorServant</defName>
+    <titleShort>servant</titleShort>
+    <baseDesc>[PAWN_nameDef] was a domestic worker bound in service to a house of the Navis Nobilite, the sanctioned mutant psykers on whom the Imperium's interstellar travel relies. In addition to being expected to work diligently for long hours, [PAWN_pronoun] and [PAWN_possessive] fellow servants were selected for being less susceptible to the eddies and flurries in the warp caused by the Navigators, so they would be better able to perform their duties without interruption or worse.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ImperiumBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Cooking</li>
+	  <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Cooking>3</Cooking>
+    </skillGains>
+	<forcedTraits>
+	  <QuickSleeper />
+	  <Industriousness>1</Industriousness>
+	  <PsychicSensitivity>-1</PsychicSensitivity>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+    
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>medicae</title>
+    <defName>BEWH_Medicae</defName>
+    <titleShort>medicae</titleShort>
+    <baseDesc>[PAWN_nameDef] operated a medicae practice in an Imperial hive city. [PAWN_pronoun] had to contend with innumerable diseases and laboring accidents in his line of work, and is a skilled surgeon.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Melee>2</Melee>
+	  <Medicine>6</Medicine>
+	  <Social>3</Social>
+    </skillGains>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+	<forcedTraits>
+	  <Immunity>1</Immunity>
+	  <BEWH_Surgeon />
+	</forcedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>chartist officer</title>
+    <defName>BEWH_ChartistOfficer</defName>
+    <titleShort>officer</titleShort>
+    <baseDesc>[PAWN_nameDef] was an officer on a chartist vessel - a voidship that plied the interstellar tradelanes of the Imperium, lacking a navigator and relying on short jumps through the warp to make its slow way from system to system, laden down with cargo and passengers. [PAWN_pronoun] is well-used to commanding underlings and to a life spent in the void. </baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>BEWH_ImperialNavyBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Social>4</Social>
+    </skillGains>
+    <workDisables>
+	  <li>PlantWork</li>
+	  <li>Animals</li>
+    </workDisables>	
+	<forcedTraits>
+	  <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>voidship clan member</title>
+    <defName>BEWH_VoidshipClanMember</defName>
+    <titleShort>lowerdecker</titleShort>
+    <baseDesc>[PAWN_nameDef] was part of a crew clan on the lower decks of an ancient Imperial voidship, tasked with operation of a machine none of them understood but which they regarded almost as divine.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>BEWH_ImperialNavyBackstories</li>
+	  <li>Offworld</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Construction>2</Construction>
+	  <Crafting>3</Crafting>
+    </skillGains>
+    <workDisables>
+      <li>Intellectual</li>
+	  <li>PlantWork</li>
+	  <li>Animals</li>
+    </workDisables>	
+	<forcedTraits>
+	  <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+	</forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>voidsman</title>
+	<titleFemale>voidswoman</titleFemale>
+    <defName>BEWH_Voidsman</defName>
+    <titleShort>voidsman</titleShort>
+    <baseDesc>[PAWN_nameDef] served in the middle-deck crew of an Imperial voidship, performing skilled tasks and being expected to stand in the ship's defense in case of boarding actions.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>BEWH_ImperialNavyBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>2</Shooting>
+	  <Melee>3</Melee>
+	  <Crafting>3</Crafting>
+    </skillGains>
+    <workDisables>
+	  <li>PlantWork</li>
+	  <li>Animals</li>
+    </workDisables>	
+	<forcedTraits>
+	  <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>void pirate</title>
+    <defName>BEWH_VoidPirate</defName>
+    <titleShort>pirate</titleShort>
+    <baseDesc>[PAWN_nameDef] spent many years on a voidship operated by pirates, preying on chartist traders and supply ships. Against the odds, [PAWN_pronoun] has somehow evaded the Emperor's justice until now.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>2</Shooting>
+	  <Melee>4</Melee>
+	  <Medicine>-3</Medicine>
+    </skillGains>
+    <workDisables>
+	  <li>PlantWork</li>
+	  <li>Animals</li>
+	  <li>Intellectual</li>
+    </workDisables>	
+	<forcedTraits>
+	  <Greedy />
+	  <Bloodlust />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>agriworld laborer</title>
+    <defName>BEWH_AgriworldLabourer</defName>
+    <titleShort>agriworld laborer</titleShort>
+    <baseDesc>[PAWN_nameDef] worked as a field laborer on an agriworld in a planet-wide food production operation. [PAWN_pronoun] spent 14-hour shifts tending to endless fields of crops, and had little time for anything else.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Plants>5</Plants>
+	  <Animals>3</Animals>
+	  <Social>-2</Social>
+	  <Intellectual>-4</Intellectual>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>malcontent</title>
+    <defName>BEWH_Malcontent</defName>
+    <titleShort>malcontent</titleShort>
+    <baseDesc>[PAWN_nameDef] lived and worked in a hive city but chafed against the strictures of Imperial society. [PAWN_pronoun] never went as far as insurrection or heresy, but could never accept [PAWN_possessive] place in the Imperium, and sought out subversive art and literature.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+	  <li>Outsider</li>
+	  <li>Madman</li>
+    </spawnCategories>
+    <skillGains>
+	  <Social>3</Social>
+	  <Intellectual>2</Intellectual>
+	  <Artistic>2</Artistic>
+    </skillGains>
+    <workDisables>
+	  <li>None</li>
+    </workDisables>	
+	<forcedTraits>
+	  <Industriousness>-1</Industriousness>
+	  <NaturalMood>-1</NaturalMood>
+	  <FastLearner />
+	</forcedTraits>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>manufactorum worker</title>
+    <defName>BEWH_ManufactorumWorker</defName>
+    <titleShort>worker</titleShort>
+    <baseDesc>[PAWN_nameDef] worked on a production line in a gargantuan manufactorum. [PAWN_possessive] days were spent on repetitive tasks and backbreaking labor.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_MechanicusBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>-2</Intellectual>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>2</Industriousness>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>salvatorium worker</title>
+    <defName>BEWH_SalvatoriumWorker</defName>
+    <titleShort>worker</titleShort>
+    <baseDesc>[PAWN_nameDef] worked in a salvatorium, a gigantic scrapyard dedicated to salvaging usable parts and metals from wrecked equipment. [PAWN_possessive] days were spent hauling immense machine parts and hull plates to furnaces and storage yards, breaking them apart where necessary, and [PAWN_pronoun] relied on [PAWN_possessive] innate strength to make it through each shift.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_MechanicusBackstories</li>
+	  <li>Offworld</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Melee>2</Melee>
+	  <Intellectual>-2</Intellectual>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+	  <Crafting>2</Crafting>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>2</Industriousness>
+	  <Tough />
+	</forcedTraits>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>manufactorum worker</title>
+    <defName>BEWH_ManufactorumWorkerAddict</defName>
+    <titleShort>worker</titleShort>
+    <baseDesc>[PAWN_nameDef] worked on a production line in a gargantuan manufactorum. [PAWN_possessive] days were spent on repetitive tasks and backbreaking labor, and [PAWN_pronoun] spent much of [PAWN_possessive] meagre pay on stims and chems to cope.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_MechanicusBackstories</li>
+	  <li>Offworld</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>-3</Intellectual>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>1</Industriousness>
+	  <DrugDesire>2</DrugDesire>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>chem plant worker</title>
+    <defName>BEWH_ChemWorker</defName>
+    <titleShort>chem worker</titleShort>
+    <baseDesc>[PAWN_nameDef] worked in the bowels of a gargantuan chemworks, producing chemicals necessary for the Imperium's functioning. [PAWN_pronoun] was given insufficient protective gear for the toxic fumes and has never recovered from the privations of the job, while also chasing the highs [PAWN_pronoun] he experienced.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_MechanicusBackstories</li>
+	  <li>Offworld</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>-2</Intellectual>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+	  <Crafting>2</Crafting>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>2</Industriousness>
+	  <Immunity>-1</Immunity>
+	  <DrugDesire>2</DrugDesire>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>hiveskin herder</title>
+    <defName>BEWH_HiveskinHerder</defName>
+    <titleShort>worker</titleShort>
+    <baseDesc>[PAWN_nameDef] was a livestock herder in a hive city - a counterintuitive but surprisingly common occupation. [PAWN_pronoun] was charged with taking herds of grazing animals from in-hive pens to the mossy, grassy hiveskin area under giant transparent windows, tending to the animals until they were slaughtered for meat and hides.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>Animals</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>-2</Intellectual>
+	  <Plants>2</Plants>
+	  <Animals>5</Animals>
+    </skillGains>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+	<forcedTraits>
+	  <Industriousness>1</Industriousness>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>lay Ministorum adept</title>
+    <defName>BEWH_LayMinistorumAdept</defName>
+    <titleShort>lay adept</titleShort>
+    <baseDesc>[PAWN_nameDef] was a lay cleric of the Adeptus Ministorum. [PAWN_pronoun] assisted with cathedrum services and breathed enough incense to last a lifetime, but is unused to manual labor.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Social>3</Social>
+	  <Intellectual>4</Intellectual>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>-1</Industriousness>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Ministorum priest</title>
+    <defName>BEWH_MinistorumPriest</defName>
+    <titleShort>priest</titleShort>
+    <baseDesc>[PAWN_nameDef] was a priest of the Adeptus Ministorum, preaching the glory of the Emperor and the nobility of suffering in the name of Him on Terra. [PAWN_pronoun] has a strong command of rhetoric and thinks lay work is beneath [PAWN_objective].</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <workDisables>
+      <li>ManualDumb</li>
+	  <li>ManualSkilled</li>
+	  <li>Animals</li>
+    </workDisables>
+    <skillGains>
+	  <Social>4</Social>
+	  <Intellectual>5</Intellectual>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>-2</Industriousness>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>historitor</title>
+    <defName>BEWH_Historitor</defName>
+    <titleShort>historitor</titleShort>
+    <baseDesc>[PAWN_nameDef] was once a historitor of the Adeptus Administratum who had the privilege to work within the Imperial Palace on Holy Terra. [PAWN_pronoun] spent [PAWN_possessive] days censoring and revising and reshaping historical accounts to fit Imperial dogma, and [PAWN_possessive] scholarship and powers of recall have been honed to a razor's edge by the work, although speed was never a quality demanded by the Officio Historica.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <workDisables>
+      <li>ManualDumb</li>
+	  <li>ManualSkilled</li>
+	  <li>Animals</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>7</Intellectual>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>-1</Industriousness>
+	  <GreatMemory />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Inquisitorial acolyte</title>
+    <defName>BEWH_InquisitorialAcolyte</defName>
+    <titleShort>acolyte</titleShort>
+    <baseDesc>[PAWN_nameDef] was an acolyte of an Inquisitorial warband. Working under an Inquisitor - or, more frequently, one of the Inquisitor's subordinates - [PAWN_pronoun] became somewhat inured to danger and hardship, providing muscle and an extra gun when called upon.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Social</li>
+	  <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>Caring</li>
+    </workDisables>
+    <skillGains>
+	  <Social>3</Social>
+	  <Shooting>3</Shooting>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+	<forcedTraits>
+	  <Nerves>1</Nerves>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>tech acolyte</title>
+    <defName>BEWH_TechAcolyte</defName>
+    <titleShort>acolyte</titleShort>
+    <baseDesc>[PAWN_nameDef] was trained as a tech acolyte of the Adeptus Mechanicus. While not inducted into the mysteries of the tech-priests, [PAWN_pronoun] is familiar with machines, well-used to constant work, and proficient with mnemonic prayers to aid recall.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>BEWH_ImperialNavyBackstories</li>
+      <li>BEWH_MechanicusBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+	  <li>Crafting</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>5</Intellectual>
+	  <Crafting>5</Crafting>
+	  <Construction>4</Construction>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>1</Industriousness>
+	  <GreatMemory />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>tech adept</title>
+    <defName>BEWH_TechAdept</defName>
+    <titleShort>adept</titleShort>
+    <baseDesc>[PAWN_nameDef] was inducted as a tech adept of the Adeptus Mechanicus. [PAWN_pronoun] did not reach the highest ranks of the priesthood but is as expert with machinery and technology as any unaugmented human alive.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_MechanicusBackstories</li>
+	  <li>BEWH_ImperialNavyBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+	  <li>Crafting</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>7</Intellectual>
+	  <Crafting>7</Crafting>
+	  <Construction>6</Construction>
+    </skillGains>
+	<forcedTraits>
+	  <GreatMemory />
+	  <Transhumanist />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Mechanicus thrall</title>
+    <defName>BEWH_MechanicusThrall</defName>
+    <titleShort>thrall</titleShort>
+    <baseDesc>[PAWN_nameDef] was a thrall in the service of the Adeptus Mechanicus. The lowest in Mechanicus society, above only lobotomised servitors, thralls are used for menial work of all kinds and treated as expendable by many tech-priests. [PAWN_pronoun] was lucky not to be worked to death.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_MechanicusBackstories</li>
+	  <li>BEWH_ImperialNavyBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Shooting>-2</Shooting>
+	  <Melee>-2</Melee>
+	  <Intellectual>-2</Intellectual>
+	  <Social>-2</Social>
+	  <Crafting>1</Crafting>
+	  <Construction>1</Construction>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>1</Industriousness>
+	</forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>peasant</title>
+    <defName>BEWH_FeudalPeasant</defName>
+    <titleShort>peasant</titleShort>
+    <baseDesc>[PAWN_nameDef] was a peasant on a feudal world with a largely medieval level of technology. [PAWN_pronoun] lived as a subsistence farmer and survived several plagues before he left his homeworld.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>-2</Intellectual>
+	  <Plants>5</Plants>
+	  <Animals>4</Animals>
+	  <Construction>2</Construction>
+	  <Medicine>-4</Medicine>
+    </skillGains>
+	<forcedTraits>
+	  <Immunity>1</Immunity>
+	</forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>yeoman</title>
+    <defName>BEWH_FeudalYeoman</defName>
+    <titleShort>yeoman</titleShort>
+    <baseDesc>[PAWN_nameDef] was a yeoman on a feudal world with a largely medieval level of technology, expected to fulfill [PAWN_possessive] duty in [PAWN_possessive] liege lord's levies in times of war.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Melee>4</Melee>
+	  <Plants>2</Plants>
+	  <Animals>2</Animals>
+    </skillGains>
+    <disallowedTraits>
+	  <BEWH_Serf />
+    </disallowedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>feudal noble</title>
+    <defName>BEWH_FeudalNoble</defName>
+    <titleShort>noble</titleShort>
+    <baseDesc>[PAWN_nameDef] was a vassal noble on a feudal world with a largely medieval level of technology, expected to fulfill [PAWN_possessive] duty to [PAWN_possessive] liege lord and living off the labor of serfs and tenants.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>ManualDumb</li>
+	  <li>ManualSkilled</li>
+    </workDisables>
+    <skillGains>
+	  <Melee>6</Melee>
+	  <Social>3</Social>
+    </skillGains>
+    <disallowedTraits>
+	  <BEWH_Serf />
+    </disallowedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+ 
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>footman</title>
+	<titleFemale>footwoman</titleFemale>
+    <defName>BEWH_KnightWorldFootman</defName>
+    <titleShort>footman</titleShort>
+    <baseDesc>[PAWN_nameDef] lived on a Knight world, a planet organized along feudal aristocratic lines in service to maintaining and operating Knights, the ancient walking machines who can dominate most battlefields throughout the galaxy. [PAWN_pronoun] was a lower-class subject serving in the standing army of the Knight Houses - part soldier, part constable.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Shooting>2</Shooting>
+	  <Melee>2</Melee>
+	  <Animals>2</Animals>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef> 
+ 
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>noble</title>
+    <defName>BEWH_ImperialNoble</defName>
+    <titleShort>noble</titleShort>
+    <baseDesc>[PAWN_nameDef] was a noble on an Imperial world, with unimaginable privilege compared to the people around [PAWN_objective]. [PAWN_possessive] life was one of unceasing luxury, and [PAWN_pronoun] expects the very best to be provided for [PAWN_objective] even now.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>Madman</li>
+      <li>Cult</li>
+    </spawnCategories>
+    <workDisables>
+      <li>ManualDumb</li>
+	  <li>ManualSkilled</li>
+    </workDisables>
+    <skillGains>
+	  <Melee>2</Melee>
+	  <Social>3</Social>
+    </skillGains>
+	<forcedTraits>
+	  <Jealous />
+	</forcedTraits>
+    <disallowedTraits>
+	  <Industriousness>1</Industriousness>
+	  <BEWH_Serf />
+    </disallowedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+ 
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>deathworlder</title>
+    <defName>BEWH_Deathworlder</defName>
+    <titleShort>deathworlder</titleShort>
+    <baseDesc>[PAWN_nameDef] lived on a deathworld - a planet where even the flora and fauna are totally inimcal to human life and existence is a struggle. [PAWN_pronoun] had to be extremely tough to survive to adulthood in such a place.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+      <li>Madman</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Shooting>4</Shooting>
+	  <Melee>5</Melee>
+	  <Medicine>2</Medicine>
+	  <Social>-3</Social>
+	  <Intellectual>-3</Intellectual>
+    </skillGains>
+    <disallowedTraits>
+      <Wimp />
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>	
+    <forcedTraits>
+	  <Nimble />
+	  <Tough />
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>  
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Administratum clerk</title>
+    <defName>BEWH_AdministratumClerk</defName>
+    <titleShort>clerk</titleShort>
+    <baseDesc>[PAWN_nameDef] was a clerk in the Adeptus Administratum. [PAWN_pronoun] spent [PAWN_possessive] life among parchment, quills, and the odours of cogitators and servitors, destroying [PAWN_possessive] body in service to the demands of record-keeping and accounts.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <skillGains>
+	  <Shooting>-2</Shooting>
+	  <Melee>-3</Melee>
+	  <Social>1</Social>
+	  <Intellectual>3</Intellectual>
+    </skillGains>
+    <disallowedTraits>
+      <Tough />
+    </disallowedTraits>	
+    <forcedTraits>
+	  <Immunity>-1</Immunity>
+    </forcedTraits>
+    <forcedTraits>
+	  <Delicate MayRequire="Ludeon.RimWorld.Biotech"/>
+    </forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>	
+  </BackstoryDef>  
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>nightshift laborer</title>
+    <defName>BEWH_NightshiftLabourer</defName>
+    <titleShort>night worker</titleShort>
+    <baseDesc>[PAWN_nameDef] was a manufactorum worker assigned to the night shift to allow production to continue around the clock. [PAWN_pronoun] has never been able to adapt to different hours.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_MechanicusBackstories</li>
+      <li>Madman</li>
+      <li>Cult</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+	  <Intellectual>-2</Intellectual>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+	<forcedTraits>
+	  <Industriousness>2</Industriousness>
+	  <NightOwl />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>  
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>hive ganger</title>
+    <defName>BEWH_HiveGanger</defName>
+    <titleShort>hive ganger</titleShort>
+    <baseDesc>[PAWN_nameDef] was a member of a gang in a hive city. Living outside of the Lex Imperialis, [PAWN_pronoun] had to survive on [PAWN_possessive] wits and cunning.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_GangerBackstories</li>
+	  <li>BEWH_ChaosBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>2</Shooting>
+	  <Melee>3</Melee>
+	  <Social>2</Social>
+	  <Crafting>2</Crafting>
+	  <Medicine>1</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <forcedTraits>
+	  <Nimble />
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>stim ganger</title>
+    <defName>BEWH_StimGanger</defName>
+    <titleShort>stim ganger</titleShort>
+    <baseDesc>[PAWN_nameDef] was a member of a stim-dealing gang in a hive city. Living outside of the Lex Imperialis, [PAWN_pronoun] had to survive on [PAWN_possessive] wits and cunning - and a few hits of whatever [PAWN_pronoun] managed to skim off the stash.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_GangerBackstories</li>
+	  <li>Pirate</li>
+      <li>Madman</li>
+      <li>Cult</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Melee>3</Melee>
+	  <Social>2</Social>
+	  <Medicine>3</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <forcedTraits>
+	  <Nimble />
+	  <DrugDesire>1</DrugDesire>
+    </forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>underhive ganger</title>
+    <defName>BEWH_UnderhiveGanger</defName>
+    <titleShort>ganger</titleShort>
+    <baseDesc>[PAWN_nameDef] was a member of a gang in the deep levels of a hive city. Living outside of the Lex Imperialis, [PAWN_pronoun] had to survive on [PAWN_possessive] wits and cunning.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_GangerBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>2</Shooting>
+	  <Melee>3</Melee>
+	  <Social>1</Social>
+	  <Crafting>2</Crafting>
+	  <Medicine>1</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <forcedTraits>
+	  <Nimble />
+	  <Undergrounder />
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Cold Trader</title>
+    <defName>BEWH_ColdTrader</defName>
+    <titleShort>Cold Trader</titleShort>
+    <baseDesc>[PAWN_nameDef] was a member of a illegitimate mercantile cartel focused on trading between xenos and humanity. Trade in xeno-artefacts is strictly forbidden by Imperial law and precepts, but people like [PAWN_nameDef] who engage in the 'Cold Trade' can find patronage and protection from official figures such as Rogue Traders or radically-inclined Inquisitors as long as they prove themselves useful.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_GangerBackstories</li>
+	  <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Social</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>3</Shooting>
+	  <Melee>2</Melee>
+	  <Social>2</Social>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+    <forcedTraits>
+	  <FastLearner />
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Redemptionist</title>
+    <defName>BEWH_Redemptionist</defName>
+    <titleShort>Redemptionist</titleShort>
+    <baseDesc>[PAWN_nameDef] was a member of the Cult of the Redemption in the deep levels of the hive city of Necromunda. [PAWN_pronoun] and [PAWN_possessive] fellow cultists were convinced that Necromunda's poverty, inequality, and brutality were evidence of a living hell in the most literal sense. They believed that they were obligated to fight the triad evils of mutation, heresy, and psyker witchcraft, and to show no mercy to those who did not adhere to these beliefs.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_GangerBackstories</li>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Melee>4</Melee>
+	  <Social>1</Social>
+	  <Plants>-4</Plants>
+	  <Animals>-4</Animals>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+	  <li>Caring</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <forcedTraits>
+	  <DrugDesire>-1</DrugDesire>
+	  <Undergrounder />
+	  <Masochist />
+	  <Ascetic />
+	  <Abrasive />
+    </forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>smuggler</title>
+    <defName>BEWH_Smuggler</defName>
+    <titleShort>smuggler</titleShort>
+    <baseDesc>[PAWN_nameDef] made a living smuggling illicit goods into an Imperial hive city. It was a profitable enterprise, although having to keep [PAWN_possessive] operation hidden from the enforcers made [PAWN_objective] paranoid.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_GangerBackstories</li>
+	  <li>BEWH_ChaosBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Social</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Social>5</Social>
+    </skillGains>
+    <workDisables>
+	  <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+	<forcedTraits>
+	  <Nerves>-1</Nerves>
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>data broker</title>
+    <defName>BEWH_DataBroker</defName>
+    <titleShort>broker</titleShort>
+    <baseDesc>[PAWN_nameDef] made a living as a data broker in a hive city, providing [PAWN_possessive] services both to legitimate mercantile conglomerates and to illegal cartels. [PAWN_pronoun] is most at home in noospheric data streams and has cultivated mnemonic techniques to mentally order the information [PAWN_possessive] living relies on.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_GangerBackstories</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Social</li>
+	  <li>Intellectual</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Social>2</Social>
+	  <Intellectual>5</Intellectual>
+    </skillGains>
+    <workDisables>
+	  <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+	<forcedTraits>
+	  <GreatMemory />
+	  <QuickSleeper />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>enforcer</title>
+    <defName>BEWH_Enforcer</defName>
+    <titleShort>enforcer</titleShort>
+    <baseDesc>[PAWN_nameDef] was an enforcer in one of the Imperium's hive cities. Like the rest of those brutal police, [PAWN_pronoun] was used to breaking heads and rounding up habscum who broke the Lex.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>3</Shooting>
+	  <Melee>3</Melee>
+	  <Social>2</Social>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+	  <li>Caring</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <disallowedTraits>
+	  <Kind />
+    </disallowedTraits>	
+	<forcedTraits>
+	  <Bloodlust />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>sanctioner</title>
+    <defName>BEWH_Sanctioner</defName>
+    <titleShort>sanctioner</titleShort>
+    <baseDesc>[PAWN_nameDef] was a sanctioner in a hive city's enforcer corps. Sanctioners operate as kidnap teams and death squads, trained for assaults on Lex-breaking targets who need greater force brought to bear than patrolling enforcers can handle.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>2</Shooting>
+	  <Melee>6</Melee>
+	  <Social>-4</Social>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+	  <li>Caring</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <disallowedTraits>
+	  <Kind />
+    </disallowedTraits>	
+	<forcedTraits>
+	  <Psychopath />
+	  <Bloodlust />
+	</forcedTraits>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>probator</title>
+    <defName>BEWH_Probator</defName>
+    <titleShort>probator</titleShort>
+    <baseDesc>As a probator in a hive city's enforcer corps, [PAWN_nameDef] was a detective, charged with investigation of Lex-breaking and apprehension of Lex-breakers.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>4</Shooting>
+	  <Social>4</Social>
+	  <Intellectual>3</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+      <DrugDesire>-1</DrugDesire>
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>enforcer</title>
+    <defName>BEWH_StationEnforcer</defName>
+    <titleShort>enforcer</titleShort>
+    <baseDesc>[PAWN_nameDef] was an enforcer on a void station, part of the brutal police enforcing the Imperium's laws and norms. [PAWN_pronoun] was used to breaking heads and rounding up scum who threatened the stability of the station.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Shooting>3</Shooting>
+	  <Melee>3</Melee>
+	  <Social>2</Social>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+	  <li>Caring</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <disallowedTraits>
+	  <Kind />
+    </disallowedTraits>	
+	<forcedTraits>
+	  <Bloodlust />
+	  <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+	</forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>recolliger</title>
+    <defName>BEWH_Recolliger</defName>
+    <titleShort>recolliger</titleShort>
+    <baseDesc>[PAWN_nameDef] was part of a recolliger clan on a derelict voidship. [PAWN_pronoun] was dropped off with the rest of the clan to salvage the ship, hoping to be picked up by another ship at some point in the future.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+      <li>Madman</li>
+    </spawnCategories>
+    <skillGains>
+	  <Crafting>3</Crafting>
+	  <Mining>3</Mining>
+      <Social>2</Social>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+	<forcedTraits>
+      <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>asteroid miner</title>
+    <defName>BEWH_AsteroidMiner</defName>
+    <titleShort>miner</titleShort>
+    <baseDesc>[PAWN_nameDef] was an asteroid miner based on a void station. [PAWN_pronoun] endured the rough conditions and became familiar with ores, minerals, and mining machinery.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Mining</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Crafting>2</Crafting>
+	  <Mining>6</Mining>
+	  <Plants>-2</Plants>
+	  <Animals>-2</Animals>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+	<forcedTraits>
+      <WH40k_Voidhand MayRequire="anndra.40kbackstories" />
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>habspouse</title>
+    <defName>BEWH_Habspouse</defName>
+    <titleShort>habspouse</titleShort>
+    <baseDesc>[PAWN_nameDef] was a habspouse, looking after domestic affairs for [PAWN_possessive] family. [PAWN_pronoun] can make a palatable meal out of unflavoured protein blocks and nutribars, a rare skill in itself.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Cooking</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Cooking>6</Cooking>
+	  <Social>2</Social>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>stallholder</title>
+    <defName>BEWH_Stallholder</defName>
+    <titleShort>stallholder</titleShort>
+    <baseDesc>[PAWN_nameDef] operated a vendor stall in a mid-hive mercatorium, preparing and serving hot food for the laborers who flooded the block every shift change. [PAWN_possessive] food was edible, but the real trick was standing out from the crowd and selling it.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+	  <li>Social</li>
+    </requiredWorkTags>
+    <skillGains>
+	  <Cooking>2</Cooking>
+	  <Social>4</Social>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>manufactorum overseer</title>
+    <defName>BEWH_Overseer</defName>
+    <titleShort>overseer</titleShort>
+    <baseDesc>[PAWN_nameDef] worked as a floor supervisor in a huge manufactorum. [PAWN_pronoun] is used to bossing menials around and needed some familiarity with [PAWN_possessive] underlings' work to organize each shift properly.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+	  <li>Offworld</li>
+    </spawnCategories>
+    <skillGains>
+	  <Intellectual>1</Intellectual>
+	  <Social>2</Social>
+	  <Crafting>2</Crafting>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>Muse Resplendent</title>
+    <defName>BEWH_MuseResplendent</defName>
+    <titleShort>muse</titleShort>
+    <baseDesc>[PAWN_nameDef] spent some time as a mortal 'muse' at Kanvolis, the Chapter stronghold of the Angels Resplendent, living in relative comfort among the art-loving Astartes on the world of Malpertuis. [PAWN_pronoun] managed to escape with [PAWN_possessive] life during the great convulsion that almost destroyed the Chapter before they were reborn as the harshly puritan Angels Penitent, but bears some psychological scars from the experience.</baseDesc>
+    <spawnCategories>
+      <li>BEWH_ImperiumBackstories</li>
+      <li>Madman</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Artistic</li>
+    </requiredWorkTags>
+    <workDisables>
+      <li>ManualDumb</li>
+	  <li>ManualSkilled</li>
+    </workDisables>
+    <skillGains>
+	  <Artistic>6</Artistic>
+	  <Social>3</Social>
+	  <Intellectual>2</Intellectual>
+    </skillGains>
+	<forcedTraits>
+	  <Jealous />
+	  <TorturedArtist />
+	</forcedTraits>
+    <disallowedTraits>
+	  <Industriousness>1</Industriousness>
+    </disallowedTraits>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>   
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>flect dealer</title>
+    <defName>BEWH_FlectDealer</defName>
+    <titleShort>flect dealer</titleShort>
+    <baseDesc>[PAWN_nameDef] was a middleman in a hive city operation distributing flects, shards of warp-tainted glass that gave visions of other lives and otherworldly beings. [PAWN_pronoun] made a small fortune out of it, but the lure of staring into the flects [PAWN_pronoun] sold was too much for [PAWN_objective]. The warp has left its mark on [PAWN_possessive] psyche.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_GangerBackstories</li>
+	  <li>BEWH_ChaosBackstories</li>
+	  <li>Pirate</li>
+      <li>Madman</li>
+      <li>Cult</li>
+    </spawnCategories>
+    <skillGains>
+	  <Social>4</Social>
+	  <Artistic>5</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <forcedTraits>
+	  <Nerves>-2</Nerves>
+	  <TorturedArtist />
+	  <PsychicSensitivity>2</PsychicSensitivity>
+	  <Disturbing MayRequire="Ludeon.RimWorld.Anomaly"/>
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <slot>Adulthood</slot>
+    <title>flect addict</title>
+    <defName>BEWH_FlectAddict</defName>
+    <titleShort>flect addict</titleShort>
+    <baseDesc>[PAWN_nameDef] was a hive city laborer who got hooked on flects, shards of warp-tainted glass that gave visions of other lives and otherworldly beings. The lure of staring into the flects and imbibing the sights they showed was too much for [PAWN_objective], who spent every coin [PAWN_pronoun] he could scrounge on more of them. The warp has left its mark on [PAWN_possessive] psyche.</baseDesc>
+    <spawnCategories>
+	  <li>BEWH_ImperiumBackstories</li>
+      <li>BEWH_GangerBackstories</li>
+	  <li>BEWH_ChaosBackstories</li>
+	  <li>Pirate</li>
+      <li>Madman</li>
+      <li>Cult</li>
+    </spawnCategories>
+    <skillGains>
+	  <Social>-2</Social>
+	  <Artistic>5</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <disallowedTraits>
+      <Recluse MayRequire="Ludeon.RimWorld.Biotech"/>
+    </disallowedTraits>
+    <forcedTraits>
+	  <Nerves>-2</Nerves>
+	  <TorturedArtist />
+	  <PsychicSensitivity>2</PsychicSensitivity>
+	  <Disturbing MayRequire="Ludeon.RimWorld.Anomaly"/>
+    </forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+   
+</Defs>
