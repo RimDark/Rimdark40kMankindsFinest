@@ -213,6 +213,7 @@
     <Compile Include="DefModExtensions\DefModExtension_CustomChapterGenerated.cs" />
     <Compile Include="DefModExtensions\DefModExtension_GeneFromMaterial.cs" />
     <Compile Include="DefModExtensions\DefModExtension_KeepPrerequisitePermit.cs" />
+    <Compile Include="DefModExtensions\DefModExtension_AspirantLevy.cs" />
     <Compile Include="DefModExtensions\DefModExtension_LivingSaint.cs" />
     <Compile Include="DefModExtensions\DefModExtension_SangprimusPortum.cs" />
     <Compile Include="DefModExtensions\DefModExtension_PhaseDevelopment.cs" />
@@ -279,6 +280,7 @@
     <Compile Include="Workers\Bill_GeneseedImplant.cs" />
     <Compile Include="Workers\Bill_ApplyChapter.cs" />
     <Compile Include="Workers\Bill_PrimarchEmbryo.cs" />
+    <Compile Include="Workers\RoyalTitlePermitWorker_LevyAspirants.cs" />
     <Compile Include="Workers\WorkGiver_CarryMatrixToGeneGestator.cs" />
     <Compile Include="DefModExtensions\DefModExtension_Psyker.cs" />
     <Compile Include="GeneClasses\Gene_Pariah.cs" />

@@ -16,18 +16,24 @@
             <MeleeCooldownFactor>-0.01</MeleeCooldownFactor>
         </statOffsets>
 
-        <requiredSkills>
-            <Shooting>5</Shooting>
-            <Melee>5</Melee>
-        </requiredSkills>
-        <requiredGenesAll>
-            <li>BEWH_ProtoOssmodula</li>
-            <li>BEWH_Musculeator</li>
-            <li>BEWH_Mentanifex</li>
-            <li>BEWH_Vigoranis</li>
-            <li>BEWH_Hyperanatomica</li>
-            <li>BEWH_Furybound</li>
-        </requiredGenesAll>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>5</Shooting>
+                    <Melee>5</Melee>
+                </skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes>
+                    <li>BEWH_ProtoOssmodula</li>
+                    <li>BEWH_Musculeator</li>
+                    <li>BEWH_Mentanifex</li>
+                    <li>BEWH_Vigoranis</li>
+                    <li>BEWH_Hyperanatomica</li>
+                    <li>BEWH_Furybound</li>
+                </genes>
+            </li>
+        </requirements>
 
         <rankTier>0</rankTier>
     </Core40k.RankDef>
@@ -43,10 +49,14 @@
             <MeleeCooldownFactor>-0.02</MeleeCooldownFactor>
         </statOffsets>
 
-        <requiredSkills>
-            <Shooting>7</Shooting>
-            <Melee>7</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>7</Shooting>
+                    <Melee>7</Melee>
+                </skills>
+            </li>
+        </requirements>
 
         <rankTier>2</rankTier>
 
@@ -73,10 +83,14 @@
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.35</CertaintyLossFactor>
         </statOffsets>
 
-        <requiredSkills>
-            <Shooting>9</Shooting>
-            <Melee>9</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>9</Shooting>
+                    <Melee>9</Melee>
+                </skills>
+            </li>
+        </requirements>
 
         <rankTier>5</rankTier>
 
@@ -104,12 +118,16 @@
             <MeleeDodgeChance>2</MeleeDodgeChance>
         </statOffsets>
 
-        <requiredSkills>
-            <Shooting>12</Shooting>
-            <Melee>12</Melee>
-            <Social>5</Social>
-            <Intellectual>6</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>12</Shooting>
+                    <Melee>12</Melee>
+                    <Social>5</Social>
+                    <Intellectual>6</Intellectual>
+                </skills>
+            </li>
+        </requirements>
 
         <rankTier>7</rankTier>
 
@@ -141,10 +159,14 @@
             <li>BEWH_PrimarchImmortality</li>
         </givesAbilities>
 
-        <requiredSkills>
-            <Social>8</Social>
-            <Intellectual>9</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Social>8</Social>
+                    <Intellectual>9</Intellectual>
+                </skills>
+            </li>
+        </requirements>
 
         <rankTier>9</rankTier>
 
@@ -166,9 +188,11 @@
         <description>Vitalseers are Thunder Warrior battlefield medics who use brutal yet highly effective methods to heal their fallen brothers, even reviving them with powerfull electric charges.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Vitalseer</rankIconPath>
 
-        <requiredSkills>
-            <Medicine>8</Medicine>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Medicine>8</Medicine></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MedicalTendQuality>0.1</MedicalTendQuality>
@@ -189,9 +213,11 @@
         <description>Veteran Vitalseers are experienced Thunder Warrior battlefield medics, exceptionally effective at keeping their brothers alive, even in the most brutal conditions.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_VitalseerVeteran</rankIconPath>
 
-        <requiredSkills>
-            <Medicine>13</Medicine>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Medicine>13</Medicine></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MedicalTendQuality>0.25</MedicalTendQuality>
@@ -213,9 +239,11 @@
         <description>Berserkers are highly skilled melee specialists who thrive in the heat of battle. They channel pain into furry, growing deadlier with each injury they sustain.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Shockzerker</rankIconPath>
 
-        <requiredSkills>
-            <Melee>8</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Melee>8</Melee></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MeleeDamageFactor>0.05</MeleeDamageFactor>
@@ -238,9 +266,11 @@
         <description>Veteran Berserkers are exceptionally skilled melee specialists who mastered the art of close combat, making them extrely dangerous opponents. Very few would dare face a Veteran Berserker in melee.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_ShockzerkerVeteran</rankIconPath>
 
-        <requiredSkills>
-            <Melee>10</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Melee>10</Melee></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MeleeDamageFactor>0.05</MeleeDamageFactor>
@@ -259,9 +289,11 @@
         <description>Stormtroopers are ranged specialists who unleash relentless firepower upon the enemy. They prioritize damage output over precision, making them trigger-hungry but extremely dangerous.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_Stormtrooper</rankIconPath>
 
-        <requiredSkills>
-            <Shooting>8</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Shooting>8</Shooting></skills>
+            </li>
+        </requirements>
 
         <givesAbilities>
             <li>BEWH_RangedThunderBoost</li>
@@ -281,9 +313,11 @@
         <description>Veteran Stormtroopers are highly skilled ranged specialists who fire with deadly efficiency. Their experience allows them to maintain overwhelming firepower even in the chaos of battle.</description>
         <rankIconPath>UI/Ranks/ThunderWarriors/BEWH_StormtrooperVeteran</rankIconPath>
 
-        <requiredSkills>
-            <Shooting>10</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Shooting>10</Shooting></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <ShootingAccuracyPawn>-0.07</ShootingAccuracyPawn>

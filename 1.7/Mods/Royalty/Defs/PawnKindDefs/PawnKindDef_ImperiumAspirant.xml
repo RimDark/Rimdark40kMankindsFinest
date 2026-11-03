@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Aspirant of implantation age, levied through permits. Age, xenotype and quality are set by RoyalTitlePermitWorker_LevyAspirants -->
+    <PawnKindDef>
+        <defName>BEWH_ImperiumAspirantPawn</defName>
+        <label>aspirant</label>
+        <race>Human</race>
+        <defaultFactionType>BEWH_ImperiumFaction</defaultFactionType>
+        <initialWillRange>2~4</initialWillRange>
+        <initialResistanceRange>15~24</initialResistanceRange>
+        <combatPower>15</combatPower>
+        <isFighter>false</isFighter>
+        <useFactionXenotypes>false</useFactionXenotypes>
+        <ignoreIdeoApparelColors>true</ignoreIdeoApparelColors>
+        <minGenerationAge>10</minGenerationAge>
+        <maxGenerationAge>14</maxGenerationAge>
+        <!-- Aspirants of 13+ are teenagers and also take an adulthood backstory, so keep that to Imperium civilian ones -->
+        <backstoryFiltersOverride>
+            <li>
+                <categoriesChildhood>
+                    <li>BEWH_AstartesBackstories</li>
+                </categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>BEWH_ImperiumBackstories</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
+        <itemQuality>Normal</itemQuality>
+        <gearHealthRange>1~1</gearHealthRange>
+        <!-- IndustrialBasic covers the kid apparel, so this works for children and teenagers alike -->
+        <apparelTags>
+            <li>IndustrialBasic</li>
+        </apparelTags>
+        <apparelMoney>200~400</apparelMoney>
+        <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+    </PawnKindDef>
+
+</Defs>

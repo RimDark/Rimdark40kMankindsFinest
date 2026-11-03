@@ -11,17 +11,23 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
         <defaultFirstRank>True</defaultFirstRank>
 
-        <requiredSkills>
-            <Shooting>5</Shooting>
-            <Melee>5</Melee>
-        </requiredSkills>
-        <requiredGenesAll>
-            <li>BEWH_SecondaryHeart</li>
-            <li>BEWH_Ossmodula</li>
-            <li>BEWH_Biscopea</li>
-            <li>BEWH_Haemastamen</li>
-            <li>BEWH_LarramansOrgan</li>
-        </requiredGenesAll>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>5</Shooting>
+                    <Melee>5</Melee>
+                </skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes>
+                    <li>BEWH_SecondaryHeart</li>
+                    <li>BEWH_Ossmodula</li>
+                    <li>BEWH_Biscopea</li>
+                    <li>BEWH_Haemastamen</li>
+                    <li>BEWH_LarramansOrgan</li>
+                </genes>
+            </li>
+        </requirements>
 
         <rankTier>0</rankTier>
 
@@ -35,13 +41,17 @@
         <description>Battle-Brothers are fully initiated Astartes, proven in both skill and loyalty. They form the backbone of a Chapter's fighting force, deployed across the galaxy in service of the Emperor's will.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
 
-        <requiredSkills>
-            <Shooting>7</Shooting>
-            <Melee>7</Melee>
-        </requiredSkills>
-        <requiredGenesAll>
-            <li>BEWH_BlackCarapace</li>
-        </requiredGenesAll>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>7</Shooting>
+                    <Melee>7</Melee>
+                </skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes><li>BEWH_BlackCarapace</li></genes>
+            </li>
+        </requirements>
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.05</CertaintyLossFactor>
@@ -60,10 +70,14 @@
         <description>Veterans are warriors honed by centuries of battle. These Space Marines are often equipped with the finest relics and serve as mentors, bodyguards, and champions in the Chapter's most vital conflicts.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Veteran</rankIconPath>
 
-        <requiredSkills>
-            <Shooting>10</Shooting>
-            <Melee>10</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>10</Shooting>
+                    <Melee>10</Melee>
+                </skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.075</CertaintyLossFactor>
@@ -103,10 +117,14 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_Lieutenant</rankIconPath>
         <colonyLimitOfRank>(3, 6)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Social>5</Social>
-            <Intellectual>7</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Social>5</Social>
+                    <Intellectual>7</Intellectual>
+                </skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
@@ -133,12 +151,16 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_Captain</rankIconPath>
         <colonyLimitOfRank>(2, 8)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Shooting>15</Shooting>
-            <Melee>15</Melee>
-            <Social>7</Social>
-            <Intellectual>9</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>15</Shooting>
+                    <Melee>15</Melee>
+                    <Social>7</Social>
+                    <Intellectual>9</Intellectual>
+                </skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.1</CertaintyLossFactor>
@@ -162,15 +184,19 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_ChapterMaster</rankIconPath>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
 
-        <incompatibleRanks>
-            <li>BEWH_AstartesRankChapterAncient</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Shooting>18</Shooting>
-            <Melee>18</Melee>
-            <Social>14</Social>
-            <Intellectual>12</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>18</Shooting>
+                    <Melee>18</Melee>
+                    <Social>14</Social>
+                    <Intellectual>12</Intellectual>
+                </skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks><li>BEWH_AstartesRankChapterAncient</li></ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">-0.5</CertaintyLossFactor>
@@ -198,14 +224,19 @@
         <description>Vanguards are elite warriors trained in stealth, rapid assault, and close-quarters combat. Often equipped with lighter armor and specialized wargear, they strike swiftly behind enemy lines, spreading terror and confusion before vanishing into the shadows.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Vanguard</rankIconPath>
 
-        <requiredSkills>
-            <Intellectual>6</Intellectual>
-        </requiredSkills>
-        <requiredTraitsOneAmong>
-            <Nimble />
-            <SpeedOffset>1</SpeedOffset>
-            <SpeedOffset>2</SpeedOffset>
-        </requiredTraitsOneAmong>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Intellectual>6</Intellectual></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_Traits">
+                <traits>
+                    <Nimble />
+                    <SpeedOffset>1</SpeedOffset>
+                    <SpeedOffset>2</SpeedOffset>
+                </traits>
+                <oneAmong>true</oneAmong>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MoveSpeed>0.05</MoveSpeed>
@@ -235,17 +266,21 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_Ancient</rankIconPath>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Social>10</Social>
-        </requiredSkills>
-        <requiredTraitsOneAmong>
-            <Nerves>2</Nerves>
-            <Nerves>1</Nerves>
-        </requiredTraitsOneAmong>
-
-        <incompatibleRanks>
-            <li>BEWH_AstartesRankChapterMaster</li>
-        </incompatibleRanks>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Social>10</Social></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_Traits">
+                <traits>
+                    <Nerves>2</Nerves>
+                    <Nerves>1</Nerves>
+                </traits>
+                <oneAmong>true</oneAmong>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks><li>BEWH_AstartesRankChapterMaster</li></ranks>
+            </li>
+        </requirements>
 
         <givesVFEAbilities>
             <li>BEWH_RaiseChapterBanner</li>
@@ -272,14 +307,18 @@
         <description>The Helix Adept is an Apothecary-in-training, versed in battlefield triage and the sacred duty of gene-seed retrieval. They learn the arts of life and death under the watchful eye of experienced Apothecaries.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_HelixAdept</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_AstartesRankJudiciar</li>
-            <li>BEWH_AstartesRankAcolytum</li>
-            <li>BEWH_AstartesRankTechmarineNovitiate</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Medicine>9</Medicine>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Medicine>9</Medicine></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_AstartesRankJudiciar</li>
+                    <li>BEWH_AstartesRankAcolytum</li>
+                    <li>BEWH_AstartesRankTechmarineNovitiate</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MedicalTendQuality>0.1</MedicalTendQuality>
@@ -312,9 +351,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_Apothecary</rankIconPath>
         <colonyLimitOfRank>(3, 4)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Medicine>14</Medicine>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Medicine>14</Medicine></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MedicalTendQuality>0.2</MedicalTendQuality>
@@ -348,9 +389,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfTheApothecarion</rankIconPath>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Medicine>18</Medicine>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Medicine>18</Medicine></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MedicalTendQuality>0.4</MedicalTendQuality>
@@ -381,14 +424,18 @@
         <description>Techmarine Novitiates are initiates of the Machine Cult, undergoing rigorous training in the rites of the Omnissiah. Divided in loyalty between their Chapter and Mars, they begin their path by learning to commune with the machine spirit and soothing the "pain" of sacred wargear.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_TechmarineNovitiate</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_AstartesRankJudiciar</li>
-            <li>BEWH_AstartesRankAcolytum</li>
-            <li>BEWH_AstartesRankHelixAdept</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Crafting>8</Crafting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Crafting>8</Crafting></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_AstartesRankJudiciar</li>
+                    <li>BEWH_AstartesRankAcolytum</li>
+                    <li>BEWH_AstartesRankHelixAdept</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <BEWH_ArtificialPartsAffinityFactor>0.05</BEWH_ArtificialPartsAffinityFactor>
@@ -411,9 +458,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_Techmarine</rankIconPath>
         <colonyLimitOfRank>(3, 4)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Crafting>12</Crafting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Crafting>12</Crafting></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <BEWH_ArtificialPartsAffinityFactor>0.05</BEWH_ArtificialPartsAffinityFactor>
@@ -439,9 +488,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfTheForge</rankIconPath>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Crafting>16</Crafting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Crafting>16</Crafting></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <BEWH_ArtificialPartsAffinityFactor>0.1</BEWH_ArtificialPartsAffinityFactor>
@@ -474,21 +525,28 @@
         <description>Acolyta are those who take the first steps on the path of the Librarius. Under the guidance of senior Librarians, they learn to harness and control their psychic potential. Their souls are fortified against the Warp, but constant vigilance is required.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Acolytum</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_AstartesRankTechmarineNovitiate</li>
-            <li>BEWH_AstartesRankHelixAdept</li>
-            <li>BEWH_AstartesRankJudiciar</li>
-        </incompatibleRanks>
-        <requiredGenesOneAmong>
-            <li>BEWH_IotaPsyker</li>
-            <li>BEWH_EpsilonPsyker</li>
-            <li>BEWH_DeltaPsyker</li>
-            <li>BEWH_BetaPsyker</li>
-            <li>BEWH_AlphaPsyker</li>
-        </requiredGenesOneAmong>
-        <requiredSkills>
-            <Intellectual>10</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Intellectual>10</Intellectual></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes>
+                    <li>BEWH_IotaPsyker</li>
+                    <li>BEWH_EpsilonPsyker</li>
+                    <li>BEWH_DeltaPsyker</li>
+                    <li>BEWH_BetaPsyker</li>
+                    <li>BEWH_AlphaPsyker</li>
+                </genes>
+                <oneAmong>true</oneAmong>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_AstartesRankTechmarineNovitiate</li>
+                    <li>BEWH_AstartesRankHelixAdept</li>
+                    <li>BEWH_AstartesRankJudiciar</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <ResearchSpeed>0.1</ResearchSpeed>
@@ -513,9 +571,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_Librarian</rankIconPath>
         <colonyLimitOfRank>(3, 4)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Intellectual>15</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Intellectual>15</Intellectual></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <ResearchSpeed>0.15</ResearchSpeed>
@@ -545,9 +605,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_ChiefLibrarian</rankIconPath>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Intellectual>19</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Intellectual>19</Intellectual></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <ResearchSpeed>0.25</ResearchSpeed>
@@ -578,14 +640,18 @@
         <description>Judiciars are grim enforcers of a Chapter's discipline, ensuring their brothers remain true to their oaths.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_Judiciar</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_AstartesRankTechmarineNovitiate</li>
-            <li>BEWH_AstartesRankAcolytum</li>
-            <li>BEWH_AstartesRankHelixAdept</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Social>9</Social>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Social>9</Social></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_AstartesRankTechmarineNovitiate</li>
+                    <li>BEWH_AstartesRankAcolytum</li>
+                    <li>BEWH_AstartesRankHelixAdept</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <SocialImpact>0.05</SocialImpact>
@@ -612,9 +678,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_Chaplain</rankIconPath>
         <colonyLimitOfRank>(2, 4)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Social>14</Social>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Social>14</Social></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <SocialImpact>0.1</SocialImpact>
@@ -649,9 +717,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_MasterOfSanctity</rankIconPath>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Social>18</Social>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Social>18</Social></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <SocialImpact>0.35</SocialImpact>
@@ -679,9 +749,11 @@
         <description>Fire Support Space Marines wield heavy weaponry to suppress enemy advances and annihilate armored targets. Positioned at the rear of the battle line, they deliver devastating firepower in support of the main assault.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_FireSupport</rankIconPath>
 
-        <requiredSkills>
-            <Shooting>9</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Shooting>9</Shooting></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <RangedCooldownFactor>-0.01</RangedCooldownFactor>
@@ -705,9 +777,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_FireSupportSergeant</rankIconPath>
         <colonyLimitOfRank>(4, 4)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Shooting>12</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Shooting>12</Shooting></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <RangedCooldownFactor>-0.02</RangedCooldownFactor>
@@ -731,9 +805,11 @@
         <description>Close Support Space Marines excel in fast and aggressive assaults. Armed for melee and close-range engagements, they strike hard and fast, disrupting enemy lines with relentless fury.</description>
         <rankIconPath>UI/Ranks/Astartes/BEWH_CloseSupport</rankIconPath>
 
-        <requiredSkills>
-            <Melee>9</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Melee>9</Melee></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MeleeCooldownFactor>-0.01</MeleeCooldownFactor>
@@ -757,9 +833,11 @@
         <rankIconPath>UI/Ranks/Astartes/BEWH_CloseSupportSergeant</rankIconPath>
         <colonyLimitOfRank>(4, 4)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Melee>12</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Melee>12</Melee></skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MeleeCooldownFactor>-0.02</MeleeCooldownFactor>

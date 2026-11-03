@@ -5,6 +5,7 @@
     <exclude>1.5\Source</exclude>
     <exclude>1.6\Source</exclude>
     <exclude>1.7\Source</exclude>
+    <exclude>1.7\Defs\Rank\Test</exclude>
     <exclude>README.md</exclude>
     <exclude>CLAUDE.md</exclude>
     <exclude>.claude</exclude>

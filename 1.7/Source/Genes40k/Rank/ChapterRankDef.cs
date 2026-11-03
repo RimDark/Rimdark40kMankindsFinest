@@ -1,5 +1,4 @@
-﻿using System.Text;
-using Core40k;
+﻿using Core40k;
 using Verse;
 
 namespace Genes40k;
@@ -33,26 +32,12 @@ public class ChapterRankDef : RankDef
         }
     }
 
-    public override string BuildRankBonusString(StringBuilder stringBuilder)
+    public override void DescribeEffects(EffectReport report)
     {
-        var result = base.BuildRankBonusString(stringBuilder);
-        if (unlocksRankIcon == null)
+        base.DescribeEffects(report);
+        if (unlocksRankIcon != null)
         {
-            return result;
+            report.Header("BEWH.MankindsFinest.RankSystem.ShoulderIconUnlock".Translate()).Line(unlocksRankIcon.LabelCap);
         }
-
-        var shoulderIconUnlockStringBuilder = new StringBuilder();
-        shoulderIconUnlockStringBuilder.AppendLine("    " + unlocksRankIcon.LabelCap);
-        var shoulderIconUnlock = "BEWH.MankindsFinest.RankSystem.ShoulderIconUnlock".Translate() + "\n" + shoulderIconUnlockStringBuilder.ToString();
-        if (result.NullOrEmpty())
-        {
-            result = shoulderIconUnlock;
-        }
-        else
-        {
-            result += "\n" + shoulderIconUnlock;
-        }
-
-        return result;
     }
 }

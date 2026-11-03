@@ -97,9 +97,11 @@
             <li>BEWH_MkXPowerArmor</li>
             <li>BEWH_MkXPowerArmorChaplain</li>
         </appliesTo>
-        <mustHaveResearch>
-            <li>BEWH_StasisResurrection</li>
-        </mustHaveResearch>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Research">
+                <projects><li>BEWH_StasisResurrection</li></projects>
+            </li>
+        </requirements>
         <sortOrder>4</sortOrder>
         <slotCost>2</slotCost>
         <givesHediffs>
@@ -180,13 +182,18 @@
         <pawnStatFactors>
             <PsychicSensitivity>1.25</PsychicSensitivity>
         </pawnStatFactors>
-        <mustHaveGeneOneAmong>
-            <li>BEWH_IotaPsyker</li>
-            <li>BEWH_EpsilonPsyker</li>
-            <li>BEWH_DeltaPsyker</li>
-            <li>BEWH_BetaPsyker</li>
-            <li>BEWH_AlphaPsyker</li>
-        </mustHaveGeneOneAmong>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes>
+                    <li>BEWH_IotaPsyker</li>
+                    <li>BEWH_EpsilonPsyker</li>
+                    <li>BEWH_DeltaPsyker</li>
+                    <li>BEWH_BetaPsyker</li>
+                    <li>BEWH_AlphaPsyker</li>
+                </genes>
+                <oneAmong>true</oneAmong>
+            </li>
+        </requirements>
         <incompatibleDecorations>
             <li>BEWH_Upgrade_NullShield</li>
         </incompatibleDecorations>

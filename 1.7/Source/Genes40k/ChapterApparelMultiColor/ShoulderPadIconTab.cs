@@ -70,7 +70,7 @@ public class ShoulderPadIconTab : CustomizerTabDrawer
         var allShoulderIcons = DefDatabase<ShoulderIconDef>.AllDefsListForReading;
         foreach (var shoulderIcon in allShoulderIcons)
         {
-            if (!shoulderIcon.HasRequirements(pawn, out _))
+            if (!shoulderIcon.MeetsRequirements(pawn))
             {
                 continue;
             }

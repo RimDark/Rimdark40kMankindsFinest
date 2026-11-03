@@ -11,10 +11,24 @@
         <rankIconPath>Placeholder</rankIconPath>
         <defaultFirstRank>True</defaultFirstRank>
 
-        <requiredSkills>
-            <Shooting>9</Shooting>
-            <Melee>9</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>9</Shooting>
+                    <Melee>9</Melee>
+                </skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes>
+                    <li>BEWH_ImmunisLeucocyte</li>
+                    <li>BEWH_AthanaticVitae</li>
+                    <li>BEWH_FulguriteNervePlexus</li>
+                    <li>BEWH_AtlasMorphogen</li>
+                    <li>BEWH_MnemosyneMindshield</li>
+                    <li>BEWH_FulgurVitaliumstrand</li>
+                </genes>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MeleeDodgeChance>1</MeleeDodgeChance>
@@ -22,15 +36,6 @@
             <MeleeCooldownFactor>-0.05</MeleeCooldownFactor>
             <RestFallRateFactor>-0.05</RestFallRateFactor>
         </statOffsets>
-
-        <requiredGenesAll>
-            <li>BEWH_ImmunisLeucocyte</li>
-            <li>BEWH_AthanaticVitae</li>
-            <li>BEWH_FulguriteNervePlexus</li>
-            <li>BEWH_AtlasMorphogen</li>
-            <li>BEWH_MnemosyneMindshield</li>
-            <li>BEWH_FulgurVitaliumstrand</li>
-        </requiredGenesAll>
 
         <rankTier>0</rankTier>
     </Genes40k.ChapterRankDef>
@@ -42,10 +47,14 @@
         <rankIconPath>Placeholder</rankIconPath>
         <colonyLimitOfRank>(3, 6)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Shooting>12</Shooting>
-            <Melee>12</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>12</Shooting>
+                    <Melee>12</Melee>
+                </skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MeleeDodgeChance>2</MeleeDodgeChance>
@@ -64,12 +73,16 @@
         <rankIconPath>Placeholder</rankIconPath>
         <colonyLimitOfRank>(2, 8)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Shooting>14</Shooting>
-            <Melee>14</Melee>
-            <Social>7</Social>
-            <Intellectual>5</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>14</Shooting>
+                    <Melee>14</Melee>
+                    <Social>7</Social>
+                    <Intellectual>5</Intellectual>
+                </skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <RestFallRateFactor>-0.05</RestFallRateFactor>
@@ -85,12 +98,16 @@
         <rankIconPath>Placeholder</rankIconPath>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Shooting>18</Shooting>
-            <Melee>18</Melee>
-            <Social>10</Social>
-            <Intellectual>8</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Shooting>18</Shooting>
+                    <Melee>18</Melee>
+                    <Social>10</Social>
+                    <Intellectual>8</Intellectual>
+                </skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <RestFallRateFactor>-0.05</RestFallRateFactor>
@@ -112,13 +129,17 @@
         <description>Sagittarum Custodians hold the firing line with Adrasite and Pyrithite spears, picking apart the foe at range while their brothers close in. Where they stand, nothing reaches the line alive.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_CustodesRankWarden</li>
-            <li>BEWH_CustodesRankVenatari</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Shooting>12</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Shooting>12</Shooting></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_CustodesRankWarden</li>
+                    <li>BEWH_CustodesRankVenatari</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
@@ -140,13 +161,17 @@
         <description>Wardens are the gatekeepers of the Imperial Palace, wielding the Castellan axe. Once a Warden has chosen where to stand, no force in the galaxy will move him.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_CustodesRankSagittarum</li>
-            <li>BEWH_CustodesRankVenatari</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Melee>12</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Melee>12</Melee></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_CustodesRankSagittarum</li>
+                    <li>BEWH_CustodesRankVenatari</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
@@ -171,14 +196,20 @@
         <description>The Venatari are the Custodes' hunters. Borne on jump packs, they fall upon the enemy's leaders and champions before the foe even knows the Ten Thousand have taken the field.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_CustodesRankSagittarum</li>
-            <li>BEWH_CustodesRankWarden</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Melee>10</Melee>
-            <Shooting>10</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Melee>10</Melee>
+                    <Shooting>10</Shooting>
+                </skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_CustodesRankSagittarum</li>
+                    <li>BEWH_CustodesRankWarden</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <MoveSpeed>0.3</MoveSpeed>
@@ -202,10 +233,14 @@
         <rankIconPath>Placeholder</rankIconPath>
         <colonyLimitOfRank>(3, 6)</colonyLimitOfRank>
 
-        <requiredSkills>
-            <Melee>12</Melee>
-            <Shooting>12</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Melee>12</Melee>
+                    <Shooting>12</Shooting>
+                </skills>
+            </li>
+        </requirements>
 
         <statOffsets>
             <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
@@ -233,13 +268,18 @@
         <description>The Vexilus Praetor carries a Vexilla, a sacred standard that is both a rallying point and a weapon in its own right. Its field generators turn aside the enemy's fire, and the sight of it steels every warrior who fights beneath it.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <requiredSkills>
-            <Social>10</Social>
-        </requiredSkills>
-        <requiredTraitsOneAmong>
-            <Nerves>2</Nerves>
-            <Nerves>1</Nerves>
-        </requiredTraitsOneAmong>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Social>10</Social></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_Traits">
+                <traits>
+                    <Nerves>2</Nerves>
+                    <Nerves>1</Nerves>
+                </traits>
+                <oneAmong>true</oneAmong>
+            </li>
+        </requirements>
 
         <statFactors>
             <SocialImpact>1.2</SocialImpact>
@@ -262,15 +302,19 @@
         <description>The Aquilan Shield guards the Imperium's mightiest servants: High Lords, Inquisitors and saints. Its Custodians will place themselves between their charge and any blow, and consider it no sacrifice at all.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_CustodesRankSolarWatch</li>
-            <li>BEWH_CustodesRankShadowkeepers</li>
-            <li>BEWH_CustodesRankEmissaryImperatus</li>
-            <li>BEWH_CustodesRankDreadHost</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Melee>12</Melee>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Melee>12</Melee></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_CustodesRankSolarWatch</li>
+                    <li>BEWH_CustodesRankShadowkeepers</li>
+                    <li>BEWH_CustodesRankEmissaryImperatus</li>
+                    <li>BEWH_CustodesRankDreadHost</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
@@ -298,15 +342,19 @@
         <description>The Solar Watch guards the Sol System and the Throneworld itself. Its Custodians know every stone of the ground they defend, and fight there as nowhere else. Far from home, they are never quite at ease.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_CustodesRankAquilanShield</li>
-            <li>BEWH_CustodesRankShadowkeepers</li>
-            <li>BEWH_CustodesRankEmissaryImperatus</li>
-            <li>BEWH_CustodesRankDreadHost</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Shooting>12</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Shooting>12</Shooting></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_CustodesRankAquilanShield</li>
+                    <li>BEWH_CustodesRankShadowkeepers</li>
+                    <li>BEWH_CustodesRankEmissaryImperatus</li>
+                    <li>BEWH_CustodesRankDreadHost</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <givesHediffs>
             <BEWH_CustodesSolarWatch>
@@ -325,15 +373,19 @@
         <description>The Shadowkeepers guard the Dark Cells beneath the Imperial Palace, where the most dangerous prisoners, artefacts and horrors of the Imperium are kept. They are patient, merciless jailers, and nothing has ever escaped them.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_CustodesRankAquilanShield</li>
-            <li>BEWH_CustodesRankSolarWatch</li>
-            <li>BEWH_CustodesRankEmissaryImperatus</li>
-            <li>BEWH_CustodesRankDreadHost</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Social>8</Social>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills><Social>8</Social></skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_CustodesRankAquilanShield</li>
+                    <li>BEWH_CustodesRankSolarWatch</li>
+                    <li>BEWH_CustodesRankEmissaryImperatus</li>
+                    <li>BEWH_CustodesRankDreadHost</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <NegotiationAbility>0.15</NegotiationAbility>
@@ -356,16 +408,22 @@
         <description>The Emissaries Imperatus speak with the Emperor's voice. They travel the galaxy as His envoys, and few rulers, however proud, can refuse a golden giant standing at their court.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_CustodesRankAquilanShield</li>
-            <li>BEWH_CustodesRankSolarWatch</li>
-            <li>BEWH_CustodesRankShadowkeepers</li>
-            <li>BEWH_CustodesRankDreadHost</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Social>12</Social>
-            <Intellectual>8</Intellectual>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Social>12</Social>
+                    <Intellectual>8</Intellectual>
+                </skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_CustodesRankAquilanShield</li>
+                    <li>BEWH_CustodesRankSolarWatch</li>
+                    <li>BEWH_CustodesRankShadowkeepers</li>
+                    <li>BEWH_CustodesRankDreadHost</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statOffsets>
             <NegotiationAbility>0.2</NegotiationAbility>
@@ -396,16 +454,22 @@
         <description>The Dread Host hunts the Emperor's most hated enemies: traitors, witches and the things that crawl from beyond the veil. When the Dread Host marks a quarry for excision, every one of its Custodians turns upon it.</description>
         <rankIconPath>Placeholder</rankIconPath>
 
-        <incompatibleRanks>
-            <li>BEWH_CustodesRankAquilanShield</li>
-            <li>BEWH_CustodesRankSolarWatch</li>
-            <li>BEWH_CustodesRankShadowkeepers</li>
-            <li>BEWH_CustodesRankEmissaryImperatus</li>
-        </incompatibleRanks>
-        <requiredSkills>
-            <Melee>12</Melee>
-            <Shooting>12</Shooting>
-        </requiredSkills>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Skills">
+                <skills>
+                    <Melee>12</Melee>
+                    <Shooting>12</Shooting>
+                </skills>
+            </li>
+            <li Class="Core40k.PawnRequirement_IncompatibleRanks">
+                <ranks>
+                    <li>BEWH_CustodesRankAquilanShield</li>
+                    <li>BEWH_CustodesRankSolarWatch</li>
+                    <li>BEWH_CustodesRankShadowkeepers</li>
+                    <li>BEWH_CustodesRankEmissaryImperatus</li>
+                </ranks>
+            </li>
+        </requirements>
 
         <statFactors>
             <PsychicSensitivity>0.9</PsychicSensitivity>

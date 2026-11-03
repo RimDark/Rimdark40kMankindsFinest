@@ -6,7 +6,11 @@
         <defName>BEWH_AstartesRankCategory</defName>
         <label>astartes</label>
         <description>Ranks of the Astartes.</description>
-        <unlockedByGene>BEWH_SecondaryHeart</unlockedByGene>
+        <unlockRequirements>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes><li>BEWH_SecondaryHeart</li></genes>
+            </li>
+        </unlockRequirements>
         <ranks>
             <!-- Main line -->
             <li>
@@ -198,7 +202,11 @@
         <defName>BEWH_PrimarchRankCategory</defName>
         <label>primarch</label>
         <description>Ranks of the Primarchs.</description>
-        <unlockedByGene>BEWH_ImmortisGland</unlockedByGene>
+        <unlockRequirements>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes><li>BEWH_ImmortisGland</li></genes>
+            </li>
+        </unlockRequirements>
         <ranks>
             <li>
                 <rankDef>BEWH_AstartesRankChapterMaster</rankDef>
@@ -212,7 +220,11 @@
         <defName>BEWH_ThunderWarriorRankCategory</defName>
         <label>thunder warrior</label>
         <description>Ranks of the Thunder Warriors.</description>
-        <unlockedByGene>BEWH_ProtoOssmodula</unlockedByGene>
+        <unlockRequirements>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes><li>BEWH_ProtoOssmodula</li></genes>
+            </li>
+        </unlockRequirements>
         <ranks>
             <!-- Main line -->
             <li>
@@ -300,7 +312,11 @@
         <defName>BEWH_CustodesRankCategory</defName>
         <label>custodes</label>
         <description>Ranks of the Custodes.</description>
-        <unlockedByGene>BEWH_AtlasMorphogen</unlockedByGene>
+        <unlockRequirements>
+            <li Class="Core40k.PawnRequirement_Genes">
+                <genes><li>BEWH_AtlasMorphogen</li></genes>
+            </li>
+        </unlockRequirements>
         <ranks>
             <!-- Main line -->
             <li>

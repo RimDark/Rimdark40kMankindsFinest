@@ -29,9 +29,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankNeophyte</drawnTextureIconPath>
         <sortOrder>1</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankNeophyte</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankNeophyte/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Battle-Brother -->
@@ -43,9 +45,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankBattleBrother</drawnTextureIconPath>
         <sortOrder>2</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankBattleBrother</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankBattleBrother/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Vanguard -->
@@ -57,9 +61,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankVanguard</drawnTextureIconPath>
         <sortOrder>2.5</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankVanguard</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankVanguard/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Veteran -->
@@ -71,9 +77,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankVeteran</drawnTextureIconPath>
         <sortOrder>3</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankVeteran</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankVeteran/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Devastator -->
@@ -85,9 +93,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankFireSupport</drawnTextureIconPath>
         <sortOrder>3.33</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankDevastator</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankDevastator/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Assault -->
@@ -99,9 +109,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCloseSupport</drawnTextureIconPath>
         <sortOrder>3.66</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankAssault</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankAssault/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Sergeant -->
@@ -112,9 +124,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Sergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankSergeant</drawnTextureIconPath>
         <sortOrder>4</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankSergeant</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankSergeant/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Devastator Sergeant -->
@@ -125,9 +139,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_FireSupportSergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankFireSupportSergeant</drawnTextureIconPath>
         <sortOrder>4.33</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankDevastatorSergeant</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankDevastatorSergeant/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Assault Sergeant -->
@@ -138,9 +154,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_CloseSupportSergeant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankCloseSupportSergeant</drawnTextureIconPath>
         <sortOrder>4.66</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankAssaultSergeant</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankAssaultSergeant/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Lieutenant -->
@@ -151,9 +169,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Lieutenant</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankLieutenant</drawnTextureIconPath>
         <sortOrder>5</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankLieutenant</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankLieutenant/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Chapter Ancient -->
@@ -164,9 +184,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Ancient</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankAncient</drawnTextureIconPath>
         <sortOrder>5.5</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankChapterAncient</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankChapterAncient/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Captain -->
@@ -179,9 +201,11 @@
         <sortOrder>6</sortOrder>
         <useColour>true</useColour>
         <defaultColour>(0.94, 0.69, 0.11)</defaultColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankCaptain</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankCaptain/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Helix Adept -->
@@ -194,9 +218,11 @@
         <sortOrder>7</sortOrder>
         <useColour>true</useColour>
         <defaultColour>(0.64, 0.21, 0.15)</defaultColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankHelixAdept</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankHelixAdept/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Techmarine Novitiate -->
@@ -207,9 +233,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_TechmarineNovitiate</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankTechmarineNovitiate</drawnTextureIconPath>
         <sortOrder>7.25</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankTechmarineNovitiate</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankTechmarineNovitiate/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Acolytum -->
@@ -221,9 +249,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankAcolytum</drawnTextureIconPath>
         <sortOrder>7.50</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankAcolytum</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankAcolytum/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Judiciar -->
@@ -235,9 +265,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankJudiciar</drawnTextureIconPath>
         <sortOrder>7.75</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankJudiciar</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankJudiciar/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Apothecary -->
@@ -250,9 +282,11 @@
         <sortOrder>8</sortOrder>
         <useColour>true</useColour>
         <defaultColour>(0.64, 0.21, 0.15)</defaultColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankApothecary</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankApothecary/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Techmarine -->
@@ -263,9 +297,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_Techmarine</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankTechmarine</drawnTextureIconPath>
         <sortOrder>8.25</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankTechmarine</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankTechmarine/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Librarian -->
@@ -277,9 +313,11 @@
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankLibrarian</drawnTextureIconPath>
         <sortOrder>8.50</sortOrder>
         <useColour>true</useColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankLibrarian</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankLibrarian/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Chaplain -->
@@ -292,9 +330,11 @@
         <sortOrder>8.75</sortOrder>
         <useColour>true</useColour>
         <defaultColour>(0.94, 0.69, 0.11)</defaultColour>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankChaplain</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankChaplain/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Master of the Apothecarion -->
@@ -305,9 +345,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfTheApothecarion</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfTheApothecarion</drawnTextureIconPath>
         <sortOrder>9</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankMasterOfTheApothecarion</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankMasterOfTheApothecarion/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Master of the Forge -->
@@ -318,9 +360,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfTheForge</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfTheForge</drawnTextureIconPath>
         <sortOrder>9.25</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankMasterOfTheForge</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankMasterOfTheForge/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Chief Librarian -->
@@ -331,9 +375,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_ChiefLibrarian</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankChiefLibrarian</drawnTextureIconPath>
         <sortOrder>9.50</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankChiefLibrarian</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankChiefLibrarian/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Master of Sanctity -->
@@ -344,9 +390,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_MasterOfSanctity</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankMasterOfSanctity</drawnTextureIconPath>
         <sortOrder>9.75</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankMasterOfSanctity</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankMasterOfSanctity/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
     <!-- Chapter Master -->
@@ -357,9 +405,11 @@
         <iconPath>UI/Ranks/Astartes/BEWH_ChapterMaster</iconPath>
         <drawnTextureIconPath>Things/Armor/Imperium/PowerArmor/RankIcons/BEWH_ShoulderRankChapterMaster</drawnTextureIconPath>
         <sortOrder>10</sortOrder>
-        <mustHaveRank>
-            <li>BEWH_AstartesRankChapterMaster</li>
-        </mustHaveRank>
+        <requirements>
+            <li Class="Core40k.PawnRequirement_Ranks">
+                <ranks><BEWH_AstartesRankChapterMaster/></ranks>
+            </li>
+        </requirements>
     </Genes40k.ShoulderIconDef>
 
 </Defs>

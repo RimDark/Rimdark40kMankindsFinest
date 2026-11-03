@@ -120,6 +120,147 @@
         <cooldownDays>60</cooldownDays>
     </RoyalTitlePermitDef>
 
+    <!-- Aspirants: baseline children of implantation age who join for good -->
+    <RoyalTitlePermitDef Name="BEWH_LevyAspirantsBase" Abstract="True">
+        <workerClass>Genes40k.RoyalTitlePermitWorker_LevyAspirants</workerClass>
+        <faction>BEWH_ImperiumFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <cooldownDays>60</cooldownDays>
+        <royalAid>
+            <pawnKindDef>BEWH_ImperiumAspirantPawn</pawnKindDef>
+            <targetingRange>39.9</targetingRange>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <!-- x1 Aspirant -->
+    <RoyalTitlePermitDef ParentName="BEWH_LevyAspirantsBase">
+        <defName>BEWH_LevyAspirant</defName>
+        <label>levy aspirant</label>
+        <description>Request a single aspirant of implantation age from the recruiting worlds. Whoever the levy officers could spare that day - expect one passion and little talent. The aspirant joins your colony for good.</description>
+        <minTitle>BEWH_Title1</minTitle>
+        <uiPosition>(0,2)</uiPosition>
+        <royalAid>
+            <favorCost>6</favorCost>
+            <pawnCount>1</pawnCount>
+        </royalAid>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_AspirantLevy">
+                <passionCount>1~1</passionCount>
+                <majorPassionCount>0~0</majorPassionCount>
+                <passionSkillLevel>0~3</passionSkillLevel>
+            </li>
+        </modExtensions>
+    </RoyalTitlePermitDef>
+
+    <!-- x2 Aspirants -->
+    <RoyalTitlePermitDef ParentName="BEWH_LevyAspirantsBase">
+        <defName>BEWH_LevyAspirantCohort</defName>
+        <label>levy aspirant cohort</label>
+        <description>Request 2 aspirants of implantation age. Screened for obvious flaws, each has a few passions, at least one of them for combat. The aspirants join your colony for good.</description>
+        <minTitle>BEWH_Title3</minTitle>
+        <prerequisite>BEWH_LevyAspirant</prerequisite>
+        <uiPosition>(1,2)</uiPosition>
+        <royalAid>
+            <favorCost>10</favorCost>
+            <pawnCount>2</pawnCount>
+        </royalAid>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_AspirantLevy">
+                <passionCount>2~3</passionCount>
+                <majorPassionCount>0~1</majorPassionCount>
+                <combatPassion>true</combatPassion>
+                <passionSkillLevel>2~5</passionSkillLevel>
+                <badTraits>
+                    <Wimp/>
+                    <Pyromaniac/>
+                    <SlowLearner/>
+                    <BodyPurist/>
+                    <Gourmand/>
+                    <Nerves>-1</Nerves>
+                    <Nerves>-2</Nerves>
+                    <NaturalMood>-1</NaturalMood>
+                    <NaturalMood>-2</NaturalMood>
+                    <Industriousness>-1</Industriousness>
+                    <Industriousness>-2</Industriousness>
+                    <SpeedOffset>-1</SpeedOffset>
+                    <DrugDesire>1</DrugDesire>
+                    <DrugDesire>2</DrugDesire>
+                </badTraits>
+                <goodTraits>
+                    <Tough/>
+                    <FastLearner/>
+                    <GreatMemory/>
+                    <QuickSleeper/>
+                    <Nerves>1</Nerves>
+                    <Nerves>2</Nerves>
+                    <NaturalMood>1</NaturalMood>
+                    <NaturalMood>2</NaturalMood>
+                    <Industriousness>1</Industriousness>
+                    <Industriousness>2</Industriousness>
+                    <SpeedOffset>1</SpeedOffset>
+                    <SpeedOffset>2</SpeedOffset>
+                    <ShootingAccuracy>1</ShootingAccuracy>
+                </goodTraits>
+                <goodTraitCount>0~1</goodTraitCount>
+            </li>
+        </modExtensions>
+    </RoyalTitlePermitDef>
+
+    <!-- x3 Aspirants -->
+    <RoyalTitlePermitDef ParentName="BEWH_LevyAspirantsBase">
+        <defName>BEWH_LevyAspirantTithe</defName>
+        <label>levy aspirant tithe</label>
+        <description>Request a tithe of 3 hand-picked aspirants of implantation age. Free of flaws and incapabilities, each arrives with several passions, some of them burning, and at least one desirable trait. The aspirants join your colony for good.</description>
+        <minTitle>BEWH_Title5</minTitle>
+        <prerequisite>BEWH_LevyAspirantCohort</prerequisite>
+        <uiPosition>(2,2)</uiPosition>
+        <royalAid>
+            <favorCost>16</favorCost>
+            <pawnCount>3</pawnCount>
+        </royalAid>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_AspirantLevy">
+                <passionCount>3~4</passionCount>
+                <majorPassionCount>1~2</majorPassionCount>
+                <combatPassion>true</combatPassion>
+                <passionSkillLevel>4~8</passionSkillLevel>
+                <noIncapabilities>true</noIncapabilities>
+                <badTraits>
+                    <Wimp/>
+                    <Pyromaniac/>
+                    <SlowLearner/>
+                    <BodyPurist/>
+                    <Gourmand/>
+                    <Nerves>-1</Nerves>
+                    <Nerves>-2</Nerves>
+                    <NaturalMood>-1</NaturalMood>
+                    <NaturalMood>-2</NaturalMood>
+                    <Industriousness>-1</Industriousness>
+                    <Industriousness>-2</Industriousness>
+                    <SpeedOffset>-1</SpeedOffset>
+                    <DrugDesire>1</DrugDesire>
+                    <DrugDesire>2</DrugDesire>
+                </badTraits>
+                <goodTraits>
+                    <Tough/>
+                    <FastLearner/>
+                    <GreatMemory/>
+                    <QuickSleeper/>
+                    <Nerves>1</Nerves>
+                    <Nerves>2</Nerves>
+                    <NaturalMood>1</NaturalMood>
+                    <NaturalMood>2</NaturalMood>
+                    <Industriousness>1</Industriousness>
+                    <Industriousness>2</Industriousness>
+                    <SpeedOffset>1</SpeedOffset>
+                    <SpeedOffset>2</SpeedOffset>
+                    <ShootingAccuracy>1</ShootingAccuracy>
+                </goodTraits>
+                <goodTraitCount>1~2</goodTraitCount>
+            </li>
+        </modExtensions>
+    </RoyalTitlePermitDef>
+
 
     <!-- Combat -->
 

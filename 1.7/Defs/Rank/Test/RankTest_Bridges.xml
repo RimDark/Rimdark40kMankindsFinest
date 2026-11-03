@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!--
+        Test trees for the framework's rank tree view (dashed "one among" lines and cross-category bridges).
+        Local only: this folder is excluded from the Workshop upload. Both categories need an impossible age,
+        so they only open with god mode on.
+
+        Test A: A1 -> A2 / A3 -> A4 (one among A2, A3: dashed) -> Shared (portal into Test B, declared here)
+                A3 -> Relay (entrance from Test B, implied by Test B's portal) -> A6
+        Test B: B1 -> Shared (entrance from Test A, implied) -> B2..B5 (four, so the portal in Test A shows "+1 more")
+                B2..B4 -> B6 (one among, dashed) -> Relay (portal into Test A with a fixed ghost offset)
+                B5 -> B7 (one among with a single entry: solid)
+    -->
+
+    <Core40k.RankDef Name="BEWH_TestRankBase" Abstract="True">
+        <description>Test rank for the rank tree view. Does nothing.</description>
+        <rankTier>0</rankTier>
+    </Core40k.RankDef>
+
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankA1</defName>
+        <label>test A1</label>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Neophyte</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankA2</defName>
+        <label>test A2</label>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_BattleBrother</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankA3</defName>
+        <label>test A3</label>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Vanguard</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankA4</defName>
+        <label>test A4</label>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Veteran</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankA6</defName>
+        <label>test A6</label>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Captain</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankShared</defName>
+        <label>test shared (A to B)</label>
+        <rankIconPath>UI/Ranks/Astartes/BEWH_Sergeant</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankRelay</defName>
+        <label>test relay (B to A)</label>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Tribune</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankB1</defName>
+        <label>test B1</label>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_CustodianGuard</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankB2</defName>
+        <label>test B2</label>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Allarus</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankB3</defName>
+        <label>test B3</label>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Sagittarum</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankB4</defName>
+        <label>test B4</label>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Venatari</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankB5</defName>
+        <label>test B5</label>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_AquilanShield</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankB6</defName>
+        <label>test B6</label>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_ShieldCaptain</rankIconPath>
+    </Core40k.RankDef>
+    <Core40k.RankDef ParentName="BEWH_TestRankBase">
+        <defName>BEWH_TestRankB7</defName>
+        <label>test B7</label>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_VexilusPraetor</rankIconPath>
+    </Core40k.RankDef>
+
+    <Core40k.RankCategoryDef>
+        <defName>BEWH_TestRankCategoryA</defName>
+        <label>test: bridges A</label>
+        <description>Test tree for the rank tree view.</description>
+        <treeColor>(1, 0.6, 0.2)</treeColor>
+        <unlockRequirements>
+            <li Class="Core40k.PawnRequirement_Age"><minAge>100000</minAge></li>
+        </unlockRequirements>
+        <ranks>
+            <li>
+                <rankDef>BEWH_TestRankA1</rankDef>
+                <displayPosition>(0, 0)</displayPosition>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankA2</rankDef>
+                <displayPosition>(2, -1)</displayPosition>
+                <rankRequirements><BEWH_TestRankA1>1</BEWH_TestRankA1></rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankA3</rankDef>
+                <displayPosition>(2, 1)</displayPosition>
+                <rankRequirements><BEWH_TestRankA1>1</BEWH_TestRankA1></rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankA4</rankDef>
+                <displayPosition>(4, 0)</displayPosition>
+                <rankRequirementsOneAmong>
+                    <BEWH_TestRankA2>1</BEWH_TestRankA2>
+                    <BEWH_TestRankA3>1</BEWH_TestRankA3>
+                </rankRequirementsOneAmong>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankShared</rankDef>
+                <displayPosition>(6, 0)</displayPosition>
+                <rankRequirements><BEWH_TestRankA4>2</BEWH_TestRankA4></rankRequirements>
+                <bridges>
+                    <BEWH_TestRankCategoryB>Portal</BEWH_TestRankCategoryB>
+                </bridges>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankRelay</rankDef>
+                <displayPosition>(6, 2)</displayPosition>
+                <rankRequirements><BEWH_TestRankA3>3</BEWH_TestRankA3></rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankA6</rankDef>
+                <displayPosition>(8, 2)</displayPosition>
+                <rankRequirements><BEWH_TestRankRelay>1</BEWH_TestRankRelay></rankRequirements>
+            </li>
+        </ranks>
+    </Core40k.RankCategoryDef>
+
+    <Core40k.RankCategoryDef>
+        <defName>BEWH_TestRankCategoryB</defName>
+        <label>test: bridges B</label>
+        <description>Test tree for the rank tree view.</description>
+        <treeColor>(0.3, 0.8, 0.8)</treeColor>
+        <unlockRequirements>
+            <li Class="Core40k.PawnRequirement_Age"><minAge>100000</minAge></li>
+        </unlockRequirements>
+        <ranks>
+            <li>
+                <rankDef>BEWH_TestRankB1</rankDef>
+                <displayPosition>(0, 0)</displayPosition>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankShared</rankDef>
+                <displayPosition>(3, 0)</displayPosition>
+                <rankRequirements><BEWH_TestRankB1>1</BEWH_TestRankB1></rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankB2</rankDef>
+                <displayPosition>(5, -1)</displayPosition>
+                <rankRequirements><BEWH_TestRankShared>1</BEWH_TestRankShared></rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankB3</rankDef>
+                <displayPosition>(5, 0)</displayPosition>
+                <rankRequirements><BEWH_TestRankShared>1</BEWH_TestRankShared></rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankB4</rankDef>
+                <displayPosition>(5, 1)</displayPosition>
+                <rankRequirements><BEWH_TestRankShared>1</BEWH_TestRankShared></rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankB5</rankDef>
+                <displayPosition>(5, 2)</displayPosition>
+                <rankRequirements><BEWH_TestRankShared>1</BEWH_TestRankShared></rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankB6</rankDef>
+                <displayPosition>(7, 0)</displayPosition>
+                <rankRequirementsOneAmong>
+                    <BEWH_TestRankB2>1</BEWH_TestRankB2>
+                    <BEWH_TestRankB3>1</BEWH_TestRankB3>
+                    <BEWH_TestRankB4>1</BEWH_TestRankB4>
+                </rankRequirementsOneAmong>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankB7</rankDef>
+                <displayPosition>(7, 2)</displayPosition>
+                <rankRequirementsOneAmong>
+                    <BEWH_TestRankB5>1</BEWH_TestRankB5>
+                </rankRequirementsOneAmong>
+            </li>
+            <li>
+                <rankDef>BEWH_TestRankRelay</rankDef>
+                <displayPosition>(9, 0)</displayPosition>
+                <rankRequirements><BEWH_TestRankB6>1</BEWH_TestRankB6></rankRequirements>
+                <bridges>
+                    <BEWH_TestRankCategoryA>Portal (0, 1.5)</BEWH_TestRankCategoryA>
+                </bridges>
+            </li>
+        </ranks>
+    </Core40k.RankCategoryDef>
+
+</Defs>

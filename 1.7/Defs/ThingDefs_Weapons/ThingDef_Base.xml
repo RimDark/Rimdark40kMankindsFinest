@@ -12,6 +12,10 @@
     <weaponTags Inherit="False">
       <li>BEWH_AstartesRanged</li>
     </weaponTags>
+    <!-- Same class as the Astartes melee weapons, so an Ultratech-noble ideo (the Imperium culture) doesn't make marines pick melee 100x more often -->
+    <weaponClasses>
+      <li>Ultratech</li>
+    </weaponClasses>
     <recipeMaker>
       <researchPrerequisite>BEWH_AstartesWeapons</researchPrerequisite>
       <recipeUsers Inherit="False">

@@ -86,7 +86,7 @@
   <BEWH.MankindsFinest.CommonKeywords.Unknown>Unknown</BEWH.MankindsFinest.CommonKeywords.Unknown>
   <BEWH.MankindsFinest.CommonKeywords.Emperor>The Emperor of Mankind</BEWH.MankindsFinest.CommonKeywords.Emperor>
 
-  <BEWH.MankindsFinest.RankSystem.ShoulderIconUnlock>Power armor shoulder icon:</BEWH.MankindsFinest.RankSystem.ShoulderIconUnlock>
+  <BEWH.MankindsFinest.RankSystem.ShoulderIconUnlock>Power armor shoulder icon</BEWH.MankindsFinest.RankSystem.ShoulderIconUnlock>
 
   <!--=== Buildings ===-->
   <!-- Gestator -->
@@ -489,6 +489,15 @@
   <!-- Custodes ranks -->
   <BEWH.MankindsFinest.Custodes.CannotTeleportThere>Cannot teleport there.</BEWH.MankindsFinest.Custodes.CannotTeleportThere>
   <BEWH.MankindsFinest.Custodes.NoBeaconOnMap>No {0} stands on this map.</BEWH.MankindsFinest.Custodes.NoBeaconOnMap>
+
+  <!-- Aspirant levy permits -->
+  <BEWH.MankindsFinest.Permit.AspirantsArrivedLabel>Aspirants arrived</BEWH.MankindsFinest.Permit.AspirantsArrivedLabel>
+  <BEWH.MankindsFinest.Permit.AspirantsArrivedText>{0} has answered your levy. These aspirants of implantation age have arrived to join your colony:\n\n{1}\n\nWhether they are worthy of the gene-seed is now yours to decide.</BEWH.MankindsFinest.Permit.AspirantsArrivedText>
+  <BEWH.MankindsFinest.Permit.AspirantEntry>{0}, age {1}. Passions: {2}</BEWH.MankindsFinest.Permit.AspirantEntry>
+  <BEWH.MankindsFinest.Permit.AspirantMajorPassion>{0} (burning)</BEWH.MankindsFinest.Permit.AspirantMajorPassion>
+  <BEWH.MankindsFinest.Permit.AspirantNoPassions>none</BEWH.MankindsFinest.Permit.AspirantNoPassions>
+  <BEWH.MankindsFinest.Permit.AspirantCountOne>{0} aspirant</BEWH.MankindsFinest.Permit.AspirantCountOne>
+  <BEWH.MankindsFinest.Permit.AspirantCount>{0} aspirants</BEWH.MankindsFinest.Permit.AspirantCount>
 
   <!-- Other -->
   <BEWH.MankindsFinest.Other.AlreadyUnlocked>This material is already unlocked and present in the Sangprimus Archive for usage in gestators.</BEWH.MankindsFinest.Other.AlreadyUnlocked>
