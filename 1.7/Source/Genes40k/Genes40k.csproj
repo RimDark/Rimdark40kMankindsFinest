@@ -163,6 +163,7 @@
     <Compile Include="HarmonyPatches\HarmonyPatch_SerfSavedByTend.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterRedress.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_SpaceMarineChapterSpawn.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_StartingPawnKindXenotype.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalBreak.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_ZealousFuryStopMentalState.cs" />
     <Compile Include="Hediffs\Hediff_Serf.cs" />

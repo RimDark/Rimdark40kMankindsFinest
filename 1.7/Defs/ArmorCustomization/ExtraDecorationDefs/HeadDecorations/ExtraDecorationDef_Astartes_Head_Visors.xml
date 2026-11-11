@@ -35,6 +35,10 @@
                 <flip>true</flip>
             </dataWest>
         </drawData>
+        <glowChannels>
+            <li>ColourTwo</li>
+            <li>ColourThree</li>
+        </glowChannels>
         <colourable>true</colourable>
         <flipable>true</flipable>
         <colorAmount>3</colorAmount>

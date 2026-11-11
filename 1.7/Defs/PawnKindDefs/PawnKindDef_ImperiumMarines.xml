@@ -24,6 +24,9 @@
 		<nameMaker>BEWH_NamerPersonAstartes</nameMaker>
         <weaponMoney>10000~10000</weaponMoney>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+        <!-- Power armour is stuffable (Patch_StuffableApparel). The player faction only allows synthread apparel at
+             generation, so without this, marines generated for the player (Lost Strike Force) spawn naked. -->
+        <ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
         <weaponTags>
             <li>BEWH_AstartesRanged</li>
             <li>BEWH_AstartesMelee</li>
