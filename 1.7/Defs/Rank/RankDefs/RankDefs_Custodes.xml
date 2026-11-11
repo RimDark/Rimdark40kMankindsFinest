@@ -8,7 +8,7 @@
         <defName>BEWH_CustodesRankCustodianGuard</defName>
         <label>Custodian Guard</label>
         <description>Every member of the Ten Thousand is a demigod of war, made one at a time by the Emperor's own art. A Custodian Guard has no need to prove himself the equal of a Space Marine. He has already surpassed them. He serves the Throne, and nothing else.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_CustodianGuard</rankIconPath>
         <defaultFirstRank>True</defaultFirstRank>
 
         <requirements>
@@ -44,7 +44,7 @@
         <defName>BEWH_CustodesRankShieldCaptain</defName>
         <label>Shield-Captain</label>
         <description>A Shield-Captain leads a Shield Host, a brotherhood of Custodians that might hold a world on its own. Each is a master strategist and a peerless duellist, trusted to judge when the Emperor's guardians must leave the Palace and make war.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_ShieldCaptain</rankIconPath>
         <colonyLimitOfRank>(3, 6)</colonyLimitOfRank>
 
         <requirements>
@@ -70,7 +70,7 @@
         <defName>BEWH_CustodesRankCaptainCommander</defName>
         <label>Tribune</label>
         <description>Tribunes stand above the Shield-Captains, commanding several Shield Hosts at once. Their word carries the weight of the Captain-General himself, and few in the Imperium would dare to question it.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Tribune</rankIconPath>
         <colonyLimitOfRank>(2, 8)</colonyLimitOfRank>
 
         <requirements>
@@ -95,7 +95,7 @@
         <defName>BEWH_CustodesRankCaptainGeneral</defName>
         <label>Captain-General</label>
         <description>The Captain-General is the master of the Adeptus Custodes and the Emperor's chosen guardian. He answers to no High Lord, sits at no council but by choice, and holds the authority to strip any Custodian of his station.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_CaptainGeneral</rankIconPath>
         <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
 
         <requirements>
@@ -127,7 +127,7 @@
         <defName>BEWH_CustodesRankSagittarum</defName>
         <label>Sagittarum Guard</label>
         <description>Sagittarum Custodians hold the firing line with Adrasite and Pyrithite spears, picking apart the foe at range while their brothers close in. Where they stand, nothing reaches the line alive.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Sagittarum</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
@@ -159,7 +159,7 @@
         <defName>BEWH_CustodesRankWarden</defName>
         <label>Custodian Warden</label>
         <description>Wardens are the gatekeepers of the Imperial Palace, wielding the Castellan axe. Once a Warden has chosen where to stand, no force in the galaxy will move him.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Warden</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
@@ -194,7 +194,7 @@
         <defName>BEWH_CustodesRankVenatari</defName>
         <label>Venatari</label>
         <description>The Venatari are the Custodes' hunters. Borne on jump packs, they fall upon the enemy's leaders and champions before the foe even knows the Ten Thousand have taken the field.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Venatari</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
@@ -230,7 +230,7 @@
         <defName>BEWH_CustodesRankAllarus</defName>
         <label>Allarus Custodian</label>
         <description>Allarus Custodians are veterans clad in Terminator plate, chosen for the bloodiest and most decisive fighting. Teleportation arrays carry them into the heart of the foe, where the battle is won or lost.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Allarus</rankIconPath>
         <colonyLimitOfRank>(3, 6)</colonyLimitOfRank>
 
         <requirements>
@@ -266,7 +266,7 @@
         <defName>BEWH_CustodesRankVexilusPraetor</defName>
         <label>Vexilus Praetor</label>
         <description>The Vexilus Praetor carries a Vexilla, a sacred standard that is both a rallying point and a weapon in its own right. Its field generators turn aside the enemy's fire, and the sight of it steels every warrior who fights beneath it.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_VexilusPraetor</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
@@ -300,7 +300,7 @@
         <defName>BEWH_CustodesRankAquilanShield</defName>
         <label>Aquilan Shield</label>
         <description>The Aquilan Shield guards the Imperium's mightiest servants: High Lords, Inquisitors and saints. Its Custodians will place themselves between their charge and any blow, and consider it no sacrifice at all.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_AquilanShield</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
@@ -340,7 +340,7 @@
         <defName>BEWH_CustodesRankSolarWatch</defName>
         <label>Solar Watch</label>
         <description>The Solar Watch guards the Sol System and the Throneworld itself. Its Custodians know every stone of the ground they defend, and fight there as nowhere else. Far from home, they are never quite at ease.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_SolarWatch</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
@@ -371,7 +371,7 @@
         <defName>BEWH_CustodesRankShadowkeepers</defName>
         <label>Shadowkeepers</label>
         <description>The Shadowkeepers guard the Dark Cells beneath the Imperial Palace, where the most dangerous prisoners, artefacts and horrors of the Imperium are kept. They are patient, merciless jailers, and nothing has ever escaped them.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_Shadowkeeper</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
@@ -406,7 +406,7 @@
         <defName>BEWH_CustodesRankEmissaryImperatus</defName>
         <label>Emissary Imperatus</label>
         <description>The Emissaries Imperatus speak with the Emperor's voice. They travel the galaxy as His envoys, and few rulers, however proud, can refuse a golden giant standing at their court.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_EmissaryImperatus</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
@@ -452,7 +452,7 @@
         <defName>BEWH_CustodesRankDreadHost</defName>
         <label>Dread Host</label>
         <description>The Dread Host hunts the Emperor's most hated enemies: traitors, witches and the things that crawl from beyond the veil. When the Dread Host marks a quarry for excision, every one of its Custodians turns upon it.</description>
-        <rankIconPath>Placeholder</rankIconPath>
+        <rankIconPath>UI/Ranks/Custodes/BEWH_DreadHost</rankIconPath>
 
         <requirements>
             <li Class="Core40k.PawnRequirement_Skills">
