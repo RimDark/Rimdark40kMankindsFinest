@@ -349,7 +349,7 @@
         <defName>BEWH_CustodesInterpose</defName>
         <label>Interpose</label>
         <description>Stand guard over an ally. For 30 seconds, half of all violent damage they take is borne by this Custodian instead, as long as he stays on his feet and within 15 cells of them.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityCustodesInterpose</iconPath>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <jobDef>CastAbilityOnThing</jobDef>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
@@ -386,7 +386,7 @@
         <defName>BEWH_CustodesMarkForExcision</defName>
         <label>Mark for excision</label>
         <description>Mark an enemy for death. For 60 seconds, every Custodian of the Dread Host deals far more damage to it.\nThe mark is shared: using it puts every Dread Host's mark on cooldown.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityCustodesMarkForExcision</iconPath>
         <cooldownTicksRange>15000</cooldownTicksRange>
         <jobDef>CastAbilityOnThing</jobDef>
         <targetRequired>true</targetRequired>
@@ -419,7 +419,7 @@
         <defName>BEWH_CustodesVenatariLeap</defName>
         <label>Venatari leap</label>
         <description>Ignite the jump pack and leap to a nearby location.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityCustodesVenatariLeap</iconPath>
         <cooldownTicksRange>1800</cooldownTicksRange>
         <hostile>false</hostile>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
@@ -447,7 +447,7 @@
         <defName>BEWH_CustodesVexillaDefensor</defName>
         <label>Raise Vexilla Defensor</label>
         <description>Plant a Vexilla Defensor. Its field generators turn aside shots and blasts, reducing ranged and explosive damage taken by allies within 12 cells by 20%. Allarus Custodians can teleport to it while it stands.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityCustodesVexillaDefensor</iconPath>
         <abilityClass>Genes40k.Ability_PlaceBanner</abilityClass>
         <needsTicking>true</needsTicking>
         <requireLineOfSight>true</requireLineOfSight>
@@ -474,7 +474,7 @@
         <defName>BEWH_CustodesAllarusTeleport</defName>
         <label>Teleport strike</label>
         <description>Teleport to a location within range. Enemies right beside the landing point are briefly stunned.\nShares its cooldown with Teleport to Vexilla.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityCustodesTeleportStrike</iconPath>
         <groupDef>BEWH_CustodesAllarusTeleportGroup</groupDef>
         <targetRequired>true</targetRequired>
         <hostile>false</hostile>
@@ -503,7 +503,7 @@
         <defName>BEWH_CustodesAllarusTeleportToVexilla</defName>
         <label>Teleport to Vexilla</label>
         <description>Teleport beside the nearest Vexilla Defensor on this map, however far away it stands. Enemies right beside the landing point are briefly stunned.\nShares its cooldown with Teleport strike.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Abilities/BEWH_AbilityCustodesTeleportToVexilla</iconPath>
         <groupDef>BEWH_CustodesAllarusTeleportGroup</groupDef>
         <verbProperties>
             <warmupTime>1</warmupTime>
