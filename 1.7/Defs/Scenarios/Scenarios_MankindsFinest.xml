@@ -46,6 +46,9 @@
                 </li>
 
                 <!-- Player pawns modifiers -->
+                <li Class="Core40k.ScenPart_StartingPawnKindXenotype">
+                    <def>BEWH_StartingPawnKindXenotype</def>
+                </li>
                 <li Class="Genes40k.ScenPart_CrashInjuries">
                     <def>BEWH_CrashInjuries</def>
                     <context>PlayerStarter</context>
