@@ -87,7 +87,7 @@
         </appliesTo>
         <drawData>
             <dataNorth>
-                <layer>72</layer>
+                <layer>80</layer>
                 <offset>(0, 0, 0.37)</offset>
             </dataNorth>
             <dataSouth>
